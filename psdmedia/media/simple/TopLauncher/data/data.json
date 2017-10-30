@@ -1,0 +1,28 @@
+{
+    "id":225,
+    "idref":"20131128_03",
+    "name":"Nombre De video",
+    "description":"Desc Video",
+    "mail":"rlimache@clb.prisadigital.com",
+    "user_id":null,
+    "process_info":null,
+    "begin_of_process":"28-11-2013 16:45:05",
+    "end_of_process":null,
+    "base":null,
+    "islive":false,
+    "isdvr":false,
+    "length":87200,
+    "logo":false,
+    "tags":null,
+    "active":false,
+    "url_thumbnail":"http:\/\/innovacion.prisadigital.com\/top\/201311\/28\/t_7b9401ccf7b7bdc9d12508af0e72ea9e.png",
+    "url_video_still":"http:\/\/innovacion.prisadigital.com\/top\/201311\/28\/7b9401ccf7b7bdc9d12508af0e72ea9e.png",
+    "account":{"id":1,"name":"elpais","description":"El Pais"},
+    "provider":{"id":1,"name":"Prisadigital"},
+    "status":{"id":3,"name":"DELIVERY"},
+    "asset":[{"id":104,"src":"7b9401ccf7b7bdc9d12508af0e72ea9e.mp4","bitrate":600,"codec":"H264","mimetype":"video\/mp4","container":"H264","tag":null,"width":640,"height":360,"size":7423064,"created_at":"2013-11-28T17:54:19+0100","url":[{"id":238,"type_url":{"id":1,"name":"FLASH"},"url":"http:\/\/innovacion-f.akamaihd.net\/z\/top\/201311\/28\/7b9401ccf7b7bdc9d12508af0e72ea9e_600.mp4\/manifest.f4m"},{"id":239,"type_url":{"id":2,"name":"IOS"},"url":"http:\/\/innovacion-f.akamaihd.net\/i\/top\/201311\/28\/7b9401ccf7b7bdc9d12508af0e72ea9e_600.mp4\/master.m3u8"},{"id":240,"type_url":{"id":3,"name":"UDS"},"url":"http:\/\/innovacion.prisadigital.com\/top\/201311\/28\/7b9401ccf7b7bdc9d12508af0e72ea9e_600.mp4"}]},{"id":105,"src":"7b9401ccf7b7bdc9d12508af0e72ea9e.mp4","bitrate":1200,"codec":"H264","mimetype":"video\/mp4","container":"H264","tag":null,"width":704,"height":406,"size":13833368,"created_at":"2013-11-28T17:54:23+0100","url":[{"id":241,"type_url":{"id":1,"name":"FLASH"},"url":"http:\/\/innovacion-f.akamaihd.net\/z\/top\/201311\/28\/7b9401ccf7b7bdc9d12508af0e72ea9e_1200.mp4\/manifest.f4m"},{"id":242,"type_url":{"id":2,"name":"IOS"},"url":"http:\/\/innovacion-f.akamaihd.net\/i\/top\/201311\/28\/7b9401ccf7b7bdc9d12508af0e72ea9e_1200.mp4\/master.m3u8"},{"id":243,"type_url":{"id":3,"name":"UDS"},"url":"http:\/\/innovacion.prisadigital.com\/top\/201311\/28\/7b9401ccf7b7bdc9d12508af0e72ea9e_1200.mp4"}]}],
+    "playlist":[
+        {"id":37,"type_url":{"id":1,"name":"FLASH"},"url":"http:\/\/innovacion-f.akamaihd.net\/z\/top\/201311\/28\/7b9401ccf7b7bdc9d12508af0e72ea9e_,600,1200,.mp4.csmil\/manifest.f4m"},
+        {"id":38,"type_url":{"id":2,"name":"IOS"},"url":"http:\/\/innovacion-f.akamaihd.net\/i\/top\/201311\/28\/7b9401ccf7b7bdc9d12508af0e72ea9e_,600,1200,.mp4.csmil\/master.m3u8"}],
+    "source":{"id":75,"bitrate":1410192,"codec":"AVC Main@L3.0","mimetype":null,"container":"AVC","width":720,"height":405,"size":17812756}
+}

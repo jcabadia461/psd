@@ -1,0 +1,24 @@
+{
+    "config":{
+        "data": [
+            {"name": "content", "value": "audio"}
+        ],
+        "plugins": [
+            {	"id": "omniture",
+                "type": "psd.statistics.plugins.OmniturePlugin",
+                "url": "http://elpaisone.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/elpais_omniture.json"
+            }                      
+        ],
+		
+		
+		
+        "routing": [
+            {"name": "mediaBegin", "plugins": "omniture", "type":"custom"},
+            {"name": "mediaComplete", "plugins": "omniture", "type":"custom"},
+            {"name": "adStart", "plugins": "omniture", "type":"custom"},
+            {"name": "adComplete", "plugins": "omniture", "type":"custom"},
+            {"name": "adSkip", "plugins": "omniture", "type":"custom"},
+            {"name": "mediaHalf", "plugins": "omniture", "type":"custom"}
+        ]
+    }
+}

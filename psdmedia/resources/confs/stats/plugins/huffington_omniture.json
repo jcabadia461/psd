@@ -1,0 +1,48 @@
+{
+    "config": {
+        "events": [
+            {   
+                "name": "mediaBegin", 
+                "events": "event11", 
+                "vars": "eVar3,eVar4,eVar8,eVar9,eVar10,eVar13,eVar14,eVar17,eVar18,eVar19,eVar20,eVar30,eVar35,eVar38,eVar42,eVar45,eVar48,eVar62,eVar63,eVar74,eVar80,eVar81,eVar82",
+                "suites": "prisacomhuffingtonpost"
+            },{ 
+                "name": "mediaComplete", 
+                "events": "event12", 
+                "vars": "eVar3,eVar4,eVar8,eVar9,eVar10,eVar13,eVar14,eVar17,eVar18,eVar19,eVar20,eVar30,eVar35,eVar38,eVar42,eVar45,eVar48,eVar62,eVar63,eVar74,eVar80,eVar81,eVar82",
+                "suites": "prisacomhuffingtonpost"
+            },{
+                "name": "adStart", 
+                "events": "event13", 
+                "vars": "eVar3,eVar4,eVar8,eVar9,eVar10,eVar13,eVar14,eVar17,eVar18,eVar19,eVar20,eVar30,eVar35,eVar38,eVar42,eVar45,eVar48,eVar62,eVar63,eVar74,eVar80,eVar81,eVar82",
+                "suites": "prisacomhuffingtonpost"
+            },{
+                "name": "adComplete", 
+                "events": "event14",
+                "vars": "eVar3,eVar4,eVar8,eVar9,eVar10,eVar13,eVar14,eVar17,eVar18,eVar19,eVar20,eVar30,eVar35,eVar38,eVar42,eVar45,eVar48,eVar62,eVar63,eVar74,eVar80,eVar81,eVar82",
+                "suites": "prisacomhuffingtonpost"
+            },{
+                "name": "adSkip", 
+                "events": "event15", 
+                "vars": "eVar3,eVar4,eVar8,eVar9,eVar10,eVar13,eVar14,eVar17,eVar18,eVar19,eVar20,eVar30,eVar35,eVar38,eVar42,eVar45,eVar48,eVar62,eVar63,eVar74,eVar80,eVar81,eVar82",
+                "suites": "prisacomhuffingtonpost"
+            },{
+                "name": "mediaHalf", 
+                "events": "event79", 
+                "vars": "eVar3,eVar4,eVar8,eVar9,eVar10,eVar13,eVar14,eVar17,eVar18,eVar19,eVar20,eVar30,eVar35,eVar38,eVar42,eVar45,eVar48,eVar62,eVar63,eVar74,eVar80,eVar81,eVar82",
+                "suites": "prisacomhuffingtonpost"
+            }
+        ],
+        "dataMapping": [
+            {"name": "eVar8", "value": "data.name" },
+            {"name": "eVar9", "value": "data.adName" },
+            {"name": "eVar13", "value": "data.tags"},
+            {"name": "eVar38", "value": "data.idTop"},
+            {"name": "eVar42", "value": "data.mediaType"},
+            {"name": "eVar74", "value": "data.duration" },
+            {"name": "eVar80", "value": "data.programa" },
+            {"name": "eVar81", "value": "data.emisora" },
+            {"name": "eVar82", "value": "data.tematica" }
+        ]
+    }
+}

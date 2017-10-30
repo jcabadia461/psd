@@ -1,0 +1,57 @@
+
+<!--<script src='http://sdes1lnx.prisacom.int:33354/psdmedia/media/simple/js/SimpleMediaPlayer.min.js'></script>-->
+<!--script src='http://sdes1lnx.prisacom.int:33354/psdmedia/media/top/widgets/multicam/Multicam.js'></script--> 
+
+<script src='http://prisamusicales.player-top.prisasd.com/psdmedia/media/simple/js/SimpleMediaPlayer.min.js'></script>
+<!--script src='http://prisamusicales.player-top.prisasd.com/psdmedia/media/top/widgets/multicam/Multicam.js'></script-->
+<script src='/psdmedia/media/top/widgets/multicam/Multicam.js'></script>
+
+
+<div style='style:position:relative;'>
+    <div class='capacontenedora' style='width:600px;height:400px;position:absolute;left:10px;top:10px;' id='capa1'></div>
+    <div class='capacontenedora' style='width:300px;height:200px;position:absolute;left:620px;top:10px;' id='capa2'></div>
+    <!--<div class='capacontenedora' style='width:300px;height:200px;position:absolute;left:620px;top:210px;' id='cucu'></div>
+    <div class='capacontenedora' style='width:300px;height:200px;position:absolute;left:920px;top:10px;' id='ono'></div>
+    <div class='capacontenedora' style='width:300px;height:200px;position:absolute;left:920px;top:210px;' id='unu'> </div>-->
+</div>
+
+<style>
+.capacontenedora{
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+</style> 
+
+<script>
+
+    containers = ["capa1","capa2"];
+    
+	conf = {
+        "id_cuenta": "los40videos",
+        "media_type": "video",
+		"topPlayer":{media:{"autoplay":true}},
+		"dev":false
+    };
+	
+
+    signals = ["40PremiosCam1","YuNotePierdasNada"];
+    
+	imagenes = ["http://vdvmedia.los40.com/top/201411/26/20141126133120_1417005147_still.jpg"];
+	
+	//containers = ["casa","coco","cucu","ono","unu"];
+
+    /*conf = {
+        "id_cuenta": "los40videos",
+        "media_type": "video",
+        "id_player": "109",
+        "dev": true
+    };*/
+	//signals = ["20140929185014","20141126133120","20141126133120","20140929174533","20140929174533"];
+
+    //mm = new Multicam(containers,conf,signals); 
+    mm = new Multicam(containers,conf,[116,115],signals,imagenes);
+    mm.run();
+
+</script>
+

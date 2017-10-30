@@ -1,0 +1,28 @@
+/*   ---------------------------------------------- vienen del style.css ---------------------------------   */
+
+/* PORTAL PlaySER ====================================================================================================================== */
+
+/* Estilos para pantalla con resolucion 1024 (incluye mayoria de tablets en horizontal) 
+@import url("css/desktop.css");
+
+/* Estilos para tablet 
+@import url("css/tablet.css") screen and (max-width: 999px);
+
+/* Ajustes tablet-movil 
+@import url("css/tablet_movil.css") screen and (max-width: 730px);
+
+/* Estilos para movil 
+@import url("css/movil.css") screen and (max-width: 650px);*/
+
+/*   ---------------------------------------------- vienen del playertop_style.css ---------------------------------   */
+/* Estilos playertop en portal PlaySER para pantalla con resolucion 1024 (incluye mayoria de tablets en horizontal) */
+@import url("css/playertop_desktop.css");
+
+/* Estilos playertop en portal PlaySER para tablet */
+@import url("css/playertop_tablet.css") screen and (max-width: 999px);
+
+/* Ajustes playertop en portal PlaySER tablet-movil */
+@import url("css/playertop_tablet_movil.css") screen and (max-width: 730px);
+
+/* Estilos playertop en portal PlaySER para movil */
+@import url("css/playertop_movil.css") screen and (max-width: 650px);

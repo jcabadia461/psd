@@ -1,0 +1,41 @@
+{
+    "config":{
+        "data": [
+            {"name": "content", "value": "video"}
+        ],
+        "plugins": [
+            {	"id": "omniture",
+                "type": "psd.statistics.plugins.OmniturePlugin",
+                "url": "http://elpaisone.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/elpais_omniture.json"
+            },
+
+            {   "id": "comscorevideo",
+                "type": "psd.statistics.plugins.ComscoreVideoPlugin",
+                "url": "http://elpaisone.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/comscorevideo_elpais.json"
+            },   
+
+			
+             {	"id": "logtrust",
+                "type": "psd.statistics.plugins.LogTrustPlugin",
+                "url": "http://elpaisone.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/elpais_logtrust.json"
+            }                         
+        ],
+        "routing": [
+            {"name": "mediaBegin", "plugins": "logtrust,omniture,comscorevideo", "type":"custom"},
+            {"name": "mediaComplete", "plugins": "logtrust,omniture,comscorevideo", "type":"custom"},
+            {"name": "adStart", "plugins": "logtrust,omniture,comscorevideo", "type":"custom"},
+            {"name": "adComplete", "plugins": "logtrust,omniture,comscorevideo", "type":"custom"},
+            {"name": "adSkip", "plugins": "logtrust,omniture,comscorevideo", "type":"custom"},
+            {"name": "mediaHalf", "plugins": "logtrust,omniture,comscorevideo", "type":"custom"},
+            {"name": "mediaTimeInterval", "plugins": "logtrust,comscorevideo", "type":"custom"},
+
+            {"name": "mediaPause", "plugins": "comscorevideo", "type":"custom"},
+            {"name": "mediaResume", "plugins": "comscorevideo", "type":"custom"},
+            {"name": "mediaFirstQuart", "plugins": "comscorevideo", "type":"custom"},
+            {"name": "mediaThirdQuart", "plugins": "comscorevideo", "type":"custom"},
+            {"name": "adError", "plugins": "comscorevideo", "type":"custom"},
+            {"name": "rrss", "plugins": "comscorevideo", "type":"custom"},
+            {"name": "button", "plugins": "comscorevideo", "type":"custom"}
+        ]
+    }
+}

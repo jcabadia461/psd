@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+
+    <title>Test Signal</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/style_home.css" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/countid.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="conten">
+
+    <div class="head">
+        <div id="logo" class="lineal titleText head_logo"></div>
+        <div id="title" class="lineal titleText head_title"></div>
+        <div class="lineal titleText head_options counter">00:00:00</div>
+
+    </div>
+
+
+    <div id="main" class="main"></div>
+
+</div>
+ <!--   <div class="menu"></div>-->
+
+<script language="JavaScript">
+
+    //--Contador
+
+    $('.counter').countid({
+        clock: true,
+         //dateTime: new Date(),
+        dateTplElapsed: "%H:%M:%S"
+    });
+
+
+    //--cargar configuracion
+    LoadConfi = true;
+
+
+</script>
+<script src="js/controller.js"></script>
+
+</body>
+</html>

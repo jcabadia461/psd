@@ -1,0 +1,51 @@
+
+
+<%-{DOMINIO}-%> = Valor 'host' de la consulta "MEDIO" especificada en el e-mail de especificación de queries
+<%-{ID_VIDEO}-%> = identificador de vídeo de TOP
+<%-{CONTAINER}-%> = 'top_container' + <%-{ID_VIDEO}-%>
+<%-{URL_BASE}-%> = Url del servicio de datos. Eje: http://webfastapi.top.des.prisadigital.int/api
+<%-{ID_CUENTA}-%> = Identificador de cuenta de TOP
+<%-{AD_CONF}-%> = Valor 'url' (o dato manual) de la consulta "COMBO CONFIGURACIÓN PUBLICIDAD" especificada en el e-mail de especificación de queries
+<%-{STATS_CONF}-%> Valor 'url' (o dato manual) de la consulta "COMBO CONFIGURACIÓN ESTADÍSTICAS" especificada en el e-mail de especificación de queries
+<%-{SKIN_ID}-%> = Valor 'value' de la consulta "COMBO SELECCIÓN SKIN DEL PLAYER" especificada en el e-mail de especificación de queries
+<%-{CONFIG_GLOBAL}-%> Valor 'value' de la tabla SKIN_CONFIG, de la consulta "VALORES DE CONFIGURACIÓN GENÉRICOS DEL PLAYER" especificada en el e-mail de especificación de queries
+<%-{CONFIG_SKIN}-%> Valor 'value' de la tabla SKIN_CONFIG, de la consulta "VALORES DE CONFIGURACIÓN DEL SKIN" especificada en el e-mail de especificación de queries
+<%-{CONFIG_VALUE_GLOBAL}-%> Valor 'value' de la tabla SKIN_CONFIG_VALUES, de la consulta "VALORES DE CONFIGURACIÓN GENÉRICOS DEL PLAYER" especificada en el e-mail de especificación de queries
+<%-{CONFIG_VALUE_SKIN}-%> Valor 'value' de la tabla SKIN_CONFIG_VALUES, de la consulta "VALORES DE CONFIGURACIÓN DEL SKIN" especificada en el e-mail de especificación de queries
+
+
+<script type="text/javascript" src="<%-{DOMINIO}-%>/psdmedia/media/simple/js/SimpleMediaPlayer.min.js"></script>
+<div id="<%-{CONTAINER}-%>"></div>
+<script type="text/javascript">
+
+    function loadPlayer()
+    {
+        //Parámetros relacionados con el player
+        var settings = {};
+        settings.ws = {};
+        settings.ws.urlBase = <%-{URL_BASE}-%>;
+        settings.ws.id_video = <%-{ID_VIDEO}-%>;
+        settings.ws.id_cuenta = <%-{ID_CUENTA}-%>;
+        settings.player = {};
+        settings.player.container = <%-{CONTAINER}-%>;
+        settings.ads = {};
+        settings.ads.conf = <%-{DOMINIO}-%><%-{AD_CONF}-%>;
+        settings.skin = {};
+        settings.skin.id = <%-{SKIN_ID}-%>;
+        settings.stats = {};
+        settings.stats.conf = <%-{DOMINIO}-%><%-{STATS_CONF}-%>;
+        settings.security = {};
+
+        <% - Por cada una de las configuraciones globales del skin seleccionado, query "VALORES DE CONFIGURACIÓN GENÉRICOS DEL PLAYER" -%>
+        settings.<%-{CONFIG_GLOBAL}-%> = <%-{CONFIG_VALUE_GLOBAL}-%>;
+
+        <% - Por cada una de las configuraciones específicas del skin seleccionado, query "VALORES DE CONFIGURACIÓN DEL SKIN" -%>
+        settings.<%-{CONFIG_SKIN}-%> = <%-{CONFIG_VALUE_SKIN}-%>;
+
+        var mediaLauncherTop = psd.media.TopLauncher();
+        mediaLauncherTop.addSetting(settings);
+        mediaLauncherTop.init();
+
+    }
+</script>
+

@@ -1,0 +1,25 @@
+{
+    "config":{
+        "data": [
+        ],
+        "plugins": [
+            {	"id": "omniture",
+                "type": "psd.statistics.plugins.OmniturePlugin",
+                "url": "http://kebuenamx.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/kebuenamx_omniture_audio.json"
+            },
+            {  "id": "logtrust",
+                "type": "psd.statistics.plugins.LogTrustPlugin",
+                "url": "http://kebuenamx.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/latam/kebuenaMex_logtrust.json"
+            }             			
+        ],
+        "routing": [
+            {"name": "mediaBegin", "plugins": "omniture,logtrust", "type":"custom"},
+            {"name": "mediaComplete", "plugins": "omniture,logtrust", "type":"custom"},
+            {"name": "adStart", "plugins": "omniture,logtrust", "type":"custom"},
+            {"name": "adComplete", "plugins": "omniture,logtrust", "type":"custom"},
+            {"name": "adSkip", "plugins": "omniture,logtrust", "type":"custom"},
+            {"name": "streamError", "plugins": "logtrust", "type":"custom"},
+			{"name": "mediaTimeInterval", "plugins": "logtrust", "type":"custom"} 
+        ]
+    }
+}

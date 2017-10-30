@@ -1,0 +1,478 @@
+
+/* PORTAL PlaySER - reescritura de desktop.css ====================================================================================================================== */
+
+.wrapper {padding-bottom: 210px; }
+.pie {height: 210px;}
+
+.no-tablet {display: block !important;}
+.no-movil {display: none !important;}
+
+.contenedor {top: 0;}
+
+/* CABECERA PRINCIPAL ====================================================================================================================== */
+
+.cabecera {padding-top: 0;}
+.cabecera .inner {height: 55px; margin: 0; border-top: 0;}
+.cabecera .logo {width: 134px; height: 35px; margin: 10px 0 0 55px;}
+.cabecera .nav-wrapper {margin-top: 0; position: absolute; left: 0;}
+.cabecera .nav-wrapper .menu {display: block; background: transparent; border: 0; color: #fff; cursor: pointer; padding: 0;}
+.cabecera .nav-wrapper,
+.cabecera .nav-wrapper .menu,
+.cabecera ul.aux li  {height: 55px; width: 55px;}
+.cabecera .nav-wrapper .menu:hover,
+.cabecera .nav-wrapper .menu:focus {background: #009fe1}
+.cabecera .nav {position: absolute; z-index: 3; top: 55px; left: 0; display: none; white-space: nowrap; line-height: 53px; margin-top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.3);}
+.cabecera .nav a {color: #fff; text-transform: uppercase; text-decoration: none; font-weight: 700; line-height: 53px; border-bottom: 0; display: block; padding: 0 0 0 14px;}
+.cabecera .nav li {display: block; margin-right: 0; height: 53px; background: #009fe1; border-bottom: 1px solid #80cce6; float: none; width: auto; text-align: left; }
+.cabecera .nav li:last-child {border-bottom: 0; }
+.cabecera .nav li a {color: #fff; float: none}
+.cabecera .nav li a:hover,
+.cabecera .nav li a:focus {color: #fff;}
+.cabecera .nav li.activo a,
+.cabecera .nav li:hover a,
+.cabecera .nav li:focus a {color: #fff;}
+.cabecera .nav .cadenaser a span {color: #009fe1;}
+.cabecera .nav .cadenaser a:hover span,
+.cabecera .nav .cadenaser a:focus span {background-color: #fff;}
+.cabecera .nav li.activo a {position: relative;}
+.cabecera .nav li.activo a:after {content: ""; position: absolute; top: 20px; right: 7px; width: 0; height: 0; border: 6px solid transparent; border-left-color: #fff;}
+.cabecera .nav li.activo a:hover {opacity: 1;}
+
+/* siguenos */
+		
+.cabecera .nav .redes {position: relative; top: auto; right: auto; width: 167px; height: 53px; line-height: auto; margin-left: 0; overflow: hidden}
+.cabecera .redes ul {display: block; padding: 16px 0 0 2px; height: 40px}
+.cabecera .redes span {display: none;}
+.cabecera .redes li { float: left; width: 27px; border: 0; margin: 0 7px 0 0; height: 27px; display: block;   }
+.cabecera .redes li:last-child {margin: 0;} 
+.cabecera .nav .redes a { padding: 0; display: block; width: 32px;}
+.cabecera .redes a span {color: #000 !important}
+.cabecera ul.nav li li { margin: 0 4px 0 0;}
+
+/* usuario y buscador */
+
+.cabecera ul.aux {margin-top: 0}
+.cabecera ul.aux li button span,
+.cabecera ul.aux li a span {line-height: 54px;}
+.cabecera .foto-usuario {height: 45px; width: 45px;}
+.cabecera ul.aux .usuario {top: 55px;}
+
+/* caja columna 2 */
+
+.caja {margin-top: 0; border-top: 0;}
+.caja .article {width: 100%; display: block; margin-bottom: 4px; border: 0;}
+.caja .foto,
+.caja .texto {float: left;} 
+.caja .foto,
+.caja .foto img {width: 100px;} 
+.caja .foto {margin: 0 10px 0 0;} 
+
+/* modulo directos */
+
+div[class*="directos-"] {height: auto; float: none; background: #fff; border: 0;}
+div[class*="directos-"] div[class*="directo-"] {border-bottom: 1px solid #efefef;}
+
+/* simple */
+
+	div.directos-simple div[class*="directo-"] {max-width: 420px; margin: 0 auto;}
+	div.directos-simple div[class*="directo-"] {height: 160px;}
+	div[class*="directos"] div[class*="directo-"] .text {width: 60%;}
+	div[class*="directos"] div[class*="directo-"] .cintillo {font-size: 12px; line-height: 22px; padding-top: 12px;}
+    div[class*="directos"] div[class*="directo-"] .programa {font-size: 15px; line-height: 21px; margin-bottom: 3px;}
+    div[class*="directos"] div[class*="directo-"] .presentador {font-size: 13px; line-height: 15px; font-weight: 600; display: block; }
+    div[class*="directos"] div[class*="directo-"] .btn	{font-size: 12px; margin-top: 6px; padding: 5px 12px; }
+	div[class*="directos"] div[class*="directo-"] .img {height: 100%;}
+		
+/* directos doble */
+
+    .directos-doble .directo-principal,
+    .directos-doble .programas-alternativos {width: auto; float: none; max-width: 440px; margin: 0 auto;}
+	.directos-doble .directo-principal {padding-left: 10px;}
+	div.directos-doble,
+	div.directos-multiple {height: 301px;}
+	div.directos-doble div[class*="directo-"],
+	div.directos-multiple div[class*="directo-"],
+	div.directos-multiple .controles {height: 150px;}
+    div.directos-doble  div[class*="directo-"] .cintillo,
+    div.directos-multiple  div[class*="directo-"] .cintillo {padding-top: 8px; }
+    div.directos-doble  div[class*="directo-"] .presentador,
+    div.directos-multiple  div[class*="directo-"] .presentador {font-size: 11px;}
+	
+/* directos multiple (3 o mas) */
+
+    div.directos-multiple .directo-principal {width: auto; float: none; padding: 0; }
+    div.directos-multiple .programas-alternativos {width: expression(100% - 40px); width: calc(100% - 40px); float: left; padding: 0; height: 150px; }
+	div.directos-multiple div[class*="directo-"] .programa {line-height: 18px; }
+	div.directos-multiple div[class*="directo-"] .text {float: none; padding: 0 10px 0 140px; width: auto;}
+	div.directos-multiple div.directo-principal .img {left: 0;}
+	div.directos-multiple div.programas-alternativos .img {left: -10px;}
+	div[class*="directo-"] .alto_maximo,
+	div.directos-doble div[class*="directo-"] .alto_maximo,
+    div.directos-multiple div[class*="directo-"] .alto_maximo {max-height: 110px;}
+	
+
+/* bloque comentarios */
+
+.comentarios {background: none; }
+
+/* usuario registrado */
+
+.comentarios .registro .usuario { padding: 0 0 0 55px; }
+.comentarios .registro .usuario .foto { top: 0; left: -3px; width: 50px;}
+.comentarios .registro .usuario .nombre {font-size: 15px; line-height: 18px; margin: 5px 0 7px;}
+
+/* pestanas */   /* ------------- presentes en en-directo, emisora, programa y tag ------------- */
+
+.pestanas {}
+.pestanas ul {white-space: nowrap; height: 64px; }
+.pestanas li {width: auto;}
+.pestanas li a {padding: 0 13px;}
+
+/* pestanas en directo : diseno distinto para dejar claro que se puede hacer scroll */
+
+.comentarios .pestanas {position: relative; height: auto; padding-top: 0;}
+.comentarios .pestanas h2 {display: block; width: auto; float: none; line-height: 36px; font-size: 12px;}
+.comentarios .pestanas ul {width: auto; float: none; border-bottom: none; background-color: #f3f3f3;}
+.comentarios .pestanas li {width: auto; background: transparent; border: none;}
+.comentarios .pestanas li a {color: #bbb;}
+.comentarios .pestanas li.ui-state-active {background: transparent; border: none; height: auto; position: relative;}
+.comentarios .pestanas li.ui-state-active:before { position: absolute; left: 50%; top: 0; width: 0; height: 0; border: 11px solid; margin-left: -14px; border-bottom: none; border-color: rgba(0, 0, 0, 0); border-top-color: #e1e1e2; content: "";}
+.comentarios .pestanas li.ui-state-active a {color: #000;}
+
+.comentarios .pestanas ul:before {display: block; width: 100%; height: 2px; position: absolute; top: 0; left: 0; content: ""; border-top: 1px solid #d7d7d7;
+                                background: -moz-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(220,220,220,0) 100%); 
+                                background: -webkit-linear-gradient(top, rgba(220,220,220,1) 0%,rgba(220,220,220,0) 100%);
+                                background: -o-linear-gradient(top, rgba(220,220,220,1) 0%,rgba(220,220,220,0) 100%); 
+                                background: -ms-linear-gradient(top, rgba(220,220,220,1) 0%,rgba(220,220,220,0) 100%); 
+                                background: linear-gradient(to bottom, rgba(220,220,220,1) 0%,rgba(220,220,220,0) 100%); 
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcdcdc', endColorstr='#dcdcdc',GradientType=1 ); 
+}
+.comentarios .pestanas ul:after {display: block; width: 100%; height: 5px; position: absolute; bottom: 0; left: 0; content: ""; border-bottom: 1px solid #e6e6e6;
+                                background: -moz-linear-gradient(top, rgba(230,230,230,0) 0%, rgba(230,230,230,1) 100%); 
+                                background: -webkit-linear-gradient(top, rgba(230,230,230,0) 0%,rgba(230,230,230,1) 100%);
+                                background: -o-linear-gradient(top, rgba(230,230,230,0) 0%,rgba(230,230,230,1) 100%); 
+                                background: -ms-linear-gradient(top, rgba(230,230,230,0) 0%,rgba(230,230,230,1) 100%); 
+                                background: linear-gradient(to bottom, rgba(230,230,230,0) 0%,rgba(230,230,230,1) 100%); 
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e6e6', endColorstr='#e6e6e6',GradientType=1 ); 
+}
+
+
+
+.comentarios .registro .login { padding: 0 20px;}
+.comentarios .registro .loguearse { margin-right: 0; }
+.comentarios .registro .enlacessinregistro { width: auto; height: auto; position: static; border-left: none; border-top: 1px solid #efefef; padding-left: 0; padding-top: 20px; margin-top: 20px; }
+.comentarios .registro .enlacessinregistro a.boton { width: auto; max-width: 240px; margin: 0 auto;}
+.comentarios .registro .capainfo {height: auto; margin-bottom: 15px;}
+.enlacessinregistro .capa_ventajas { width: 100%; top: 10px; box-sizing: border-box;}
+.enlacessinregistro .capa_ventajas:before { right: 50%; margin-right: -20px;}
+
+/* sin o hay comentarios */
+
+.sin-comentarios .paginacion:first-child {top: 17px;}
+
+/* PAGINA BUSCADOR ====================================================================================================================== */
+
+.p_buscador .header-buscador .borde {margin: 15px auto; width: 90%;}
+.p_buscador .header-buscador .inner input[type="text"] { padding-left: 10px;}
+.p_buscador .header-buscador .inner .buscar { padding: 0; width: 48px; height: 48px; text-indent: -9999px;}
+.p_buscador .header-buscador .inner .icon-lupa { display: block; position: absolute; top: 18px; right: 18px; color: #fff; font-size: 20px;}
+
+/* pestanas */
+
+.p_buscador .paginacion:first-child {top: 7px;}
+.p_buscador .resultados {padding: 14px 0;}
+.p_buscador .resultados span {display: none;}
+.p_buscador .resultados em:after {border-top-width: 7px; bottom: -14px; margin-left: -7px;}
+
+/* filtros */
+
+.buscador .filtros {top: 49px;}
+.filtros .contenido {margin-top: 0;}
+.filtros .inner {padding: 40px 0 0 0;}
+.filtros .encabezado,
+.filtros .boton {padding: 11px 0 0;}
+.filtros .encabezado .icon-flecha-dch {display: none;}
+.filtros .contenedor-filtros {margin: 0 2%; border-top: 1px solid #efefef;}
+[class^="filtro-"] {margin: 0 0.5%; width: 23.5%; position: static;}
+.filtro-fecha {width: 19%;}
+.filtro-programa {width: 28%;}
+[class^="filtro-"] .nombre {padding: 2px 0 1px; width: 100%; margin: 10px 0 5px;}
+[class^="filtro-"] .nombre .txt,
+[class^="filtro-"] .nombre .icon-flecha-down,
+[class^="filtro-"] .nombre .icon-ok {margin: 0;}
+[class^="filtro-"] .nombre span {display: block;}
+[class^="capa-filtro-"] {left: -3px; top: 40px;}
+[class^="capa-filtro-"] .contenido {max-height: 200px;}
+.capa-filtro-tematica,
+.capa-filtro-emisora {left: auto; right: -3px;}
+.filtro-fecha .capa-filtro-fecha {width: 300px;}
+.filtro-fecha .capa-filtro-fecha.elegir-fechas {width: 300px; height: 640px;}
+.filtro-fecha .capa-filtro-fecha .rangos {width: 100%;}
+.filtro-fecha .desde-hasta {margin: 5px 0 0 0;}
+.filtro-fecha .desde-hasta ul {float: left;}
+.filtro-fecha .desde-hasta ul li {float: left; margin-right: 8px;}
+.filtro-fecha .desde-hasta ul li .icon-flecha-dch {line-height: 20px;}
+.filtro-fecha .desde-hasta ul li .label {display: block; float: none;}
+.filtro-fecha .desde-hasta ul li .icon-flecha-dch {float: none; margin-left: 0; clear: left; transform: rotate(90deg); margin-left: 40px;}
+.filtro-fecha .desde-hasta ul li input {padding: 8px 5px 7px; width: 85px;}
+.filtro-fecha .desde-hasta .aplicar {margin: 34px 0 0 0; padding: 0 10px; float: left;}
+.filtro-fecha .elegir-fechas .desde-hasta {height: 80px;}
+.filtro-fecha .capa-filtro-fecha .calendario {width: 100%;}
+
+/* filtro desactivado */
+
+.capa-explicacion {top: 74px;}
+.capa-explicacion .close {right: 10px; top: 10px;}
+.capa-explicacion p {max-width: 190px; margin: 0 auto;}
+
+	
+/* PAGINA A LA CARTA ====================================================================================================================== */
+
+.header-buscador { margin-bottom: 0; padding-bottom: 15px;}
+.header-buscador .inner { padding: 0 10px; position: relative; height: 60px;}
+.header-buscador.con-filtro .inner { padding-right: 10px; height: 120px;}
+.header-buscador .ancho-buscador input {width: 100%; box-sizing: border-box; margin: 0 0 10px; padding: 0 10px;}
+
+.p_a-la-carta .main h2 {line-height: 54px;}
+
+/* filtro fecha en a la carta */
+
+.header-buscador .filtros {clear: left; position: relative; top: 0; right: 0; width: 300px;}
+.header-buscador .filtros .filtro-fecha {width: auto;}
+.header-buscador .filtros .filtro-fecha .nombre {margin: 0;}
+.header-buscador .filtros .activado .nombre {margin-left: 3px; padding: 2px 10px 1px;}
+.header-buscador .filtros .filtro-fecha .nombre .txt {margin-right: 5px;}
+.header-buscador .filtros .filtro-fecha .nombre .txt,
+.header-buscador .filtros .filtro-fecha .nombre .icon-flecha-down {display: inline;}
+.header-buscador .filtros .activado .nombre .icon-flecha-down {display: none;}
+.header-buscador .filtro-fecha .capa-filtro-fecha {left: 0; margin: 0;}
+.capa-predictiva {top: -11px; bottom: auto;}
+.capa-predictiva ol.listado li,
+.capa-predictiva ul.listado li {padding-left: 10px;}
+.bloque.listado li {width: 100%;}
+.bloque.listado .select {width: 100%; margin: 0 0 18px; float: none;}
+.bloque.listado select {font-size: 12px}
+.bloque.listado .btn {width: 80px; float: right;}
+.bloque.emisoras ul {margin-left: 10px; background: #009fe1; width: auto; padding: 10px 0}
+.bloque.emisoras li {width: 33%; padding-left: 0; margin-bottom: 0; white-space: nowrap}
+.bloque.emisoras li a {height: auto; }
+.bloque.emisoras .text {margin: 0;}
+.bloque.emisoras .nombre {line-height: 19px; overflow: hidden; text-overflow: ellipsis;}
+.bloque.emisoras li a:hover,
+.bloque.emisoras li a:focus {background: #009fe1;} 
+.bloque.emisoras li a:hover .nombre,
+.bloque.emisoras li a:focus .nombre {color: #000;}
+.bloque.listado.emisoras li, 
+.bloque.listado.secciones li {width: 50%; }
+.bloque.listado .nombre {font-size: 12px;}
+.bloque.listado a:hover .icon-flecha-right-narrow,
+.bloque.listado a:focus .icon-flecha-right-narrow {display: none;}
+.bloque.emisoras li a,
+.bloque.secciones li a {padding: 9px;}
+
+/* PAGINA PROGRAMA ====================================================================================================================== */
+
+.header-programa-emisora {padding: 0; background: #009fe1; border: solid #fff; border-width: 1px 0;}
+.header-programa-emisora .inner {height: 150px; padding: 0; margin: 0 10px;}
+.header-programa-emisora .foto {left: 0; bottom: auto; top: 0; height: 87px; width: 100px;}
+.header-programa-emisora .text {padding: 0 0 0 100px; position: relative; height: 77px;}
+.header-programa-emisora .text h1 {line-height: 20px; font-size: 18px; max-height: 56px; margin-top: 5px;}
+.header-programa-emisora .text h1 span {font-size: 14px; line-height: 1;}
+.header-programa-emisora .datos {font-size: 10px; line-height: 14px;}
+.header-programa-emisora ul.redes,
+.header-programa-emisora .datos + ul.redes {display: block; position: absolute; z-index: 20; bottom: -25px; right: 0;}
+.header-programa-emisora ul.redes:before,
+.header-programa-emisora .datos + ul.redes:before {display: none;}
+.header-programa-emisora ul.redes span,
+.header-programa-emisora ul.redes li {vertical-align: middle; font-size: 16px;}
+.header-programa-emisora ul.redes li.encabezado {display: none;}
+.header-programa-emisora ul.redes li a {position: relative; top: -2px; padding: 0 4px;}
+.header-programa-emisora ul.nav {bottom: 0; left: 0; border-top: 1px solid #000; width: 100%;}
+.header-programa-emisora ul.nav ul,
+.header-programa-emisora ul.nav li,
+.header-programa-emisora ul.nav li a {height: 28px;}
+.header-programa-emisora ul.nav li {font-size: 11px; margin-right: 11px;}
+.header-programa-emisora ul.nav li a {line-height: 32px;}
+.header-programa-emisora ul.nav li a em {display: none;}
+.header-programa-emisora ul.nav li.item-secciones {margin-right: 6px; position: static;}
+.header-programa-emisora ul.nav li.externo {margin-right: 5px;}
+.header-programa-emisora ul.nav li.externo:last-child {margin-right: 0;}
+.header-programa-emisora ul.nav li.externo span {margin-right: 0; background-color: transparent; color: #000;}
+.header-programa-emisora ul.nav li.externo .icon-flecha-right-bold {display: inline-block;}
+.header-programa-emisora .sidebar {width: 100%; height: 32px; top: auto; right: auto; bottom: 32px; left: 0; margin: 0; padding: 0;}
+.header-programa-emisora .media {margin: 0;}
+.header-programa-emisora .media h2 {border-width: 1px 0 0; font-size: 11px; line-height: 23px; font-weight: 400;}
+.header-programa-emisora .media h2 em {display: none;}
+.header-programa-emisora .feed {float: none; position: absolute; left: 64px; top: 8px; line-height: 1;}
+.header-programa-emisora .feed a {margin-right: 10px;}
+.header-programa-emisora .feed em {display: none;}
+.header-programa-emisora .feed [class*="icon-"] {font-size: 17px}
+.header-programa-emisora .feed .icon-rss {font-size: 15px}
+.header-programa-emisora .btn-primary {position: absolute; z-index: 20; width: auto; left: auto; right: 60px; bottom: 5px; height: 22px; border-radius: 3px; padding: 0 10px; line-height: 22px;}
+.header-programa-emisora .btn .btn-text {font-size: 10px;}
+.header-programa-emisora .btn .icon-hablar {margin-left: 2px; font-size: 14px;}
+.header-programa-emisora .btn .btn-text:after,
+.header-programa-emisora .btn-primary em {display: none;}
+.capa-secciones {top: -17px; left: 0;}
+.header-programa-emisora ul.nav .capa-secciones li {font-size: 13px;}
+.header-programa-emisora ul.nav .capa-secciones li a {line-height: 25px;}
+
+/* si no hay foto */
+
+.header-programa-emisora.no-foto .text {padding-left: 0;}
+.header-programa-emisora.no-foto ul.nav {left: 0;}
+
+/* cabecera emisora */
+
+.header-emisora .inner {height: 120px;}
+.header-emisora .text {padding: 0; height: 47px; margin-top: 9px;}
+.header-emisora .text h1 {max-height: none; height: 40px; padding-right: 110px; display: table-cell; vertical-align: middle;}
+.header-emisora .datos {display: none;}
+.header-emisora ul.redes,
+.header-emisora .datos + ul.redes {bottom: -27px; right: 0;}
+.header-emisora ul.redes > span {display: inline;}
+.header-emisora .btn-primary {bottom: 42px; height: auto; padding: 5px 13px;}
+.header-emisora .btn .btn-text {font-size: 14px;}
+.header-emisora .btn-primary .icon-equalizer {display: none;}
+.header-emisora ul.nav  li {margin-right: 11px;}
+.header-emisora ul.nav  li:first-child {margin-right: 18px;}
+
+/* cabecera tematica */
+
+.header-tematica .inner {height: 60px;}
+.header-tematica .text {padding: 0; height: 47px; margin-top: 9px;}
+
+/* cabecera seccion de programa */
+
+.header-programa-emisora .seccion {padding: 10px 0 8px 10px; margin-bottom: -1px;}
+.header-programa-emisora .seccion h4 {font-size: 12px; line-height: 14px; width: 97%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+/* listados */
+
+ol.listado li {padding-left: 40px;}
+ol.listado li:before {width: 40px; line-height: 54px; font-size: 30px;}
+ul.listado li .info .presentador,
+ol.listado li .info .presentador {max-width: 45%;}
+
+/* caja ficha de emisora */
+
+.ficha-emisora {margin-top: 10px;}
+.ficha-emisora .cabecerilla .vermas {padding: 2px 7px 1px; top: 15px}
+.ficha-emisora .inner ul li {float: none; width: 100%;}
+.ficha-emisora .inner ul li:last-child {padding-bottom: 20px;}
+
+/* paginacion */
+
+.paginacion {text-align: center; margin: 10px 0;}
+.paginacion button {height: 36px; width: 36px; line-height: 36px; font-size: 17px;}
+.paginacion .txt {margin: 0;}
+.paginacion em {display: none;}
+.paginacion:first-child {top: 117px; right: 10px;}
+.paginacion:first-child .txt,
+.paginacion:first-child .txt {display: none;}
+
+/* PAGINA DETALLE DE AUDIO ====================================================================================================================== */
+ 
+.detalle h1 {font-size: 22px; line-height: 26px; margin-bottom: 10px;}
+.detalle .firma {font-size: 11px; line-height: 11px;}
+.detalle .firma .data:before,
+.detalle .firma .actualizado:before {font-size: 11px; margin: 0 2px;}
+.detalle p {font-size: 13px; line-height: 17px;}
+.detalle .botonera {margin: 15px 0;}
+.detalle .principal .btn-primary	{padding: 10px 16px;}
+.detalle .principal .duracion {font-size: 12px;}
+.modulo-compartir {margin: 15px 0;}
+.modulo-compartir ul li {width: 30%; margin-right: 4px;}
+.modulo-compartir ul li.email,
+.modulo-compartir ul li.whatsapp {width: 17%;}
+.modulo-compartir ul li:last-child {margin-right: 0;}
+.modulo-compartir .boton-enviar,
+.modulo-compartir .email button,
+.modulo-compartir .whatsapp button {width: 100%; height: 35px;}
+.modulo-compartir .boton-enviar,
+.modulo-compartir .contador {line-height: 33px;}
+.modulo-compartir [class^="icon-"] {width: 20px; font-size: 12px;}
+.modulo-compartir .contador {font-size: 11px; max-width: 61%;}
+.modulo-compartir .form-mail {left: auto; right: -66px; top: -6px;}
+
+/* listado en caja columna 2 */
+
+.sidebar ol.listado li {padding-right: 50px; padding-left: 22px;}
+.sidebar ol.listado li .btn {width: 40px; height: 40px; top: 5px;}
+.sidebar ol.listado li .btn .txt {display: none;}
+.sidebar ol.listado li .btn .icon-equalizer {display: block;}
+.sidebar ol.listado li:before {font-size: 12px; line-height: 36px; width: 20px; color: #666;}
+.sidebar ol.listado li:hover:before,
+.sidebar ol.listado li:focus:before {color: #404040;}
+
+
+/* PAGINA PARRILLA ====================================================================================================================== */
+
+.p_parrilla {border-top: 0;}
+.p_parrilla .pestanas li em {display: none;}
+.p_parrilla .pestanas li span {display: inline;}
+.programacion-diaria .mas-directos {margin-top: 20px;}
+.programacion-diaria .cab-columna {padding: 15px 0 10px; position: relative;}
+
+/* cambiar de parrilla */
+
+.programacion-diaria .cab-columna .cambio-emisora {margin: 10px 0; position: static; display: block;}
+.programacion-diaria .cab-columna .btn-primary {padding: 3px 12px 2px;}
+.programacion-diaria .cab-columna .btn-primary span.btn-text:after,
+.programacion-diaria .cab-columna .btn-primary span.icon-flecha-down {margin-left: 5px;}
+.programacion-diaria .seleccion-emisora {top: 25px; left: 0; width: 300px;}
+.programacion-diaria ul li a {padding: 7px 0;}
+.programacion-diaria .texto {padding: 0 7px;}
+.programacion-diaria .texto .hora {width: 40px;}
+.programacion-diaria .texto .programa {font-size: 13px;}
+.programacion-diaria .texto .locutor {font-size: 12px; margin: 0 0 0 40px;}
+.programacion-diaria .nivel-2 .texto {margin-left: 47px;}
+.programacion-diaria .nivel-2 .texto .hora {font-size: 10px;}
+.programacion-diaria .nivel-2 .texto .programa {font-size: 11px; float: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.programacion-diaria .nivel-2 .texto .locutor {font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+/* PLAYER ====================================================================================================================== */
+
+.playertop-wrapper {height: 90px;}
+.playertop-wrapper.hidden {height: 2px;}
+.playertop-wrapper .switch {border-radius: 100%; width: 40px; height: 40px; top: -50px; box-shadow: none; border: 1px solid transparent;} 
+.playertop-wrapper.hidden .switch {background-color: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.05);} 
+.playertop-wrapper .switch .ico_sonido {left: 10px;} 
+.playertop-wrapper .switch .icon-flecha-down:before {position: absolute; left: 50%; transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); top: 42px; width: 0; height: 0; border: 4px solid; border-color: rgba(0, 0, 0, 0); content: ""; border-bottom: none; border-top-color: #191e22;}
+.playertop-wrapper .switch .icon-flecha-up:before {position: absolute; left: 50%; transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); top: 42px; width: 0; height: 0; border: 8px solid; border-color: rgba(0, 0, 0, 0); content: "";border-top: none; border-bottom-color: #191e22;}
+
+/* PIE ====================================================================================================================== */
+
+.pie .inner {border-top: 0;}
+.pie .inner a {color: #fff;}
+.pie .inner li:after {content: ""; letter-spacing: initial }
+.pie .inner .logo {width: 70px; height: 30px; margin: 0;}
+.pie .nav-wrapper {position: relative;}
+.pie .nav-wrapper button {display: block; float: right; height: 47px; width: 50px; margin: -8px -10px 0 0; background: transparent; border: 0; color: #666666; cursor: pointer; padding: 0; font-size: 30px;}
+.pie .nav-wrapper button span {line-height: 45px;}
+.pie .nav-wrapper button.activo {background: #000; color: #fff}
+.pie .nav-wrapper ul {position: absolute; bottom: 8px; right: -10px; background: #000; box-shadow: -1px -2px 5px 0 rgba(0, 0, 0, 0.3); display: none;}
+.pie .nav-wrapper ul li {display: block; border-top: 1px solid #333; padding: 0 10px 0 15px; text-align: right; line-height: 50px;}
+
+/* TELON ====================================================================================================================== */
+
+/* capa contenido adultos */
+
+.cnt_mensaje {width: 300px; padding: 20px;}
+.cnt_mensaje p {font-size: 20px; line-height: 28px; margin: 0 0 10px;}
+.cnt_mensaje p span {padding-bottom: 10px; margin-bottom: 10px;}
+.cnt_mensaje p.texto {font-size: 14px; line-height: 20px;}
+.cnt_mensaje a,
+.cnt_mensaje a.ultimo {padding: 10px 19px; margin-top: 10px;}
+
+/* capa preroll de video */
+
+.preroll {width: 300px; height: 170px;}
+
+/* PUBLIS ====================================================================================================================== */
+
+.publi_luto_horizontal > div {margin-bottom: 0;}
+.cabecera .envoltorio_publi {display: none;}  /* ESTO HABRIA QUE QUITARLO PARA LA SALIDA */
+.publi_luto_vertical > div:before {background-size: auto 68px;}
+.publi-intercalada .envoltorio_publi {display: none;}
+

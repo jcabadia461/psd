@@ -1,0 +1,24 @@
+{
+    "config":{
+        "data": [
+            {"name": "content", "value": "audio"}
+        ],
+        "plugins": [
+            {	"id": "omniture",
+                "type": "psd.statistics.plugins.OmniturePlugin",
+                "url": "http://playertop.rockandpop.cl/psdmedia/resources/confs/stats/plugins/latam/rockPopChile_omniture.json" 
+            },
+            {  "id": "logtrust",
+                "type": "psd.statistics.plugins.LogTrustPlugin",
+                "url": "http://playertop.rockandpop.cl/psdmedia/resources/confs/stats/plugins/latam/rockPopChile_logtrust.json"
+            }
+        ],
+        "routing": [
+            {"name": "mediaBegin", "plugins": "omniture,logtrust", "type":"custom"},
+            {"name": "mediaComplete", "plugins": "omniture,logtrust", "type":"custom"},
+            {"name": "adStart", "plugins": "omniture,logtrust", "type":"custom"},
+            {"name": "adComplete", "plugins": "omniture,logtrust", "type":"custom"},
+            {"name": "adSkip", "plugins": "omniture,logtrust", "type":"custom"}
+        ]
+    }
+}

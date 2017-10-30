@@ -1,0 +1,163 @@
+
+/* PORTAL PlaySER - reescritura de desktop.css ====================================================================================================================== */
+
+/* estructura */
+
+body {overflow-y: auto;}
+.wrapper {width: 100%;}
+.contenedor {position: relative;}
+
+.no-desktop {display: block !important;}
+.no-tablet {display: none !important;}
+
+/* CABECERA ====================================================================================================================== */
+
+.cabecera {padding-top: 30px;}
+.cabecera .inner {position: relative}
+.cabecera .logo {margin-right: 3%;}
+.cabecera .nav li {margin-right: 0; width: 13%; text-align: center;}
+.cabecera .nav .redes  {position: absolute; top: -26px; right: -10px; width: 190px; height: 18px; line-height: 18px; margin: 0;}
+.cabecera .nav .redes ul  {height: 18px;}
+.cabecera .nav .redes li {width: auto; margin: 0; line-height: 20px;}
+.cabecera .redes span {line-height: 20px;}
+.cabecera .nav .redes a {width: 27px; height: 20px;}
+.cabecera .nav .redes a span {line-height: 20px;}
+
+/* content ====================================================================================================================== */
+
+.contenedor {position: relative;}
+.main {width: 100%; margin: 0; padding: 0 10px; box-sizing: border-box; float: none;}
+.sidebar {width: auto; float: none; clear: both; padding: 0 10px; box-sizing: border-box; margin: 20px 0 0;}
+
+/* caja columna 2 */
+
+.caja {margin: 10px 0 20px;}
+.caja .article {width: 25%; display: table-cell; margin: 0; border-right: 4px solid #e1e1e2;}
+.caja .article:last-child {border-right: 0;}
+.caja .foto,
+.caja .texto {float: none;} 
+.caja .foto,
+.caja .foto img {width: 100%;} 
+.caja .foto {margin: 0 0 10px 0;} 
+
+/* modulo directos */
+
+    /* directos simple */
+    .directos-simple .directo-principal {padding: 0 10px; max-width: 640px; width: expression(100% - 20px); width: calc(100% - 20px);}
+
+    /* directos doble */
+	div.directos-doble,
+    div.directos-doble div[class*="directo-"] {height: 180px;}
+    
+    /* directos multiple */
+	div.directos-multiple,
+    div.directos-multiple div[class*="directo-"] {height: 170px;}
+	div.directos-multiple .directo-principal {width: expression(50% - 30px); width: calc(50% - 30px); float: left; padding-left: 10px; }
+    div.directos-multiple .programas-alternativos {width: expression(50% - 20px); width: calc(50% - 20px); float: left; padding-left: 10px;}
+	div.directos-multiple .controles {width: 40px;}
+    div.directos-multiple .controles button {font-size: 30px}    
+    
+    /* programa */
+    .directos-doble div[class*="directo-"] .text,
+    .directos-multiple div[class*="directo-"] .text {width: 53%;}
+    .directos-doble div[class*="directo-"] .alto_maximo {max-height: 130px;}
+    .directos-multiple div[class*="directo-"] .alto_maximo {max-height: 128px;}
+	.directos-doble div[class*="directo-"] .cintillo,
+    .directos-multiple div[class*="directo-"] .cintillo {font-size: 12px; line-height: 25px; padding-top: 10px;}
+    .directos-doble div[class*="directo-"] .programa,
+    .directos-multiple div[class*="directo-"] .programa {font-size: 17px; line-height: 22px; margin-bottom: 2px;}
+	.directos-doble div[class*="directo-"] .presentador,
+    .directos-multiple div[class*="directo-"] .presentador,
+	.directos-doble div[class*="directo-"] .hora,
+	.directos-multiple div[class*="directo-"] .hora,
+	.directos-doble div[class*="directo-"] .hora:before ,
+    .directos-multiple div[class*="directo-"] .hora:before {font-size: 11px; font-weight: 600; line-height: 16px; /*max-height: 16px; overflow: hidden; */}
+	.directos-doble div[class*="directo-"] .btn,
+    .directos-multiple div[class*="directo-"] .btn {font-size: 12px; padding: 7px 10px; margin-top: 6px;}
+	.directos-doble div[class*="directo-"] .btn .btn-text:after,
+	.directos-multiple div[class*="directo-"] .btn .btn-text:after {margin-left: 5px;}
+	.directos-doble div[class*="directo-"] .btn .icon-equalizer,
+	.directos-multiple div[class*="directo-"] .btn .icon-equalizer {font-size: 15px; margin-left: 5px;}
+.directos-doble div[class*="directo-"] .btn .icon-video,
+	.directos-multiple div[class*="directo-"] .btn .icon-video {font-size: 15px; margin-left: 8px;}
+    
+
+/* PAGINA A LA CARTA ====================================================================================================================== */
+
+.bloque.listado .buscador {padding: 18px 10px;}
+ul.listado li .btn,
+ol.listado li .btn {display: block;}
+
+/* listado en caja columna 2 */
+
+.sidebar ol.listado li {padding-right: 130px; padding-left: 50px;}
+.sidebar ol.listado li .btn {width: auto; height: auto; background-color: #404040; color: #fff; top: 9px;}
+.sidebar ol.listado li .btn .txt {display: block;}
+.sidebar ol.listado li .btn .icon-equalizer {display: none;}
+.sidebar ol.listado li:last-child {border-bottom: 0;}
+.sidebar ol.listado li:before {font-size: 45px; line-height: 55px; width: 45px; color: #999;}
+
+.header-buscador.con-filtro .inner { padding-right: 260px;}
+
+/* filtro fecha en a la carta */
+
+.header-buscador .filtros {width: 240px;}
+
+/* PAGINA PROGRAMA ====================================================================================================================== */
+
+.header-programa-emisora {padding: 11px 0 8px 0;}
+.header-programa-emisora .text {padding-right: 210px;}
+.header-programa-emisora .sidebar {width: 200px; margin: 0 10px 0 0; padding: 0; }
+.header-programa-emisora .btn-primary {width: 200px; padding: 0 5px; text-align: center;}
+.header-programa-emisora .btn-primary .btn-text {font-size: 11px;}
+.header-programa-emisora .btn .btn-text:after {margin-left: 4px;}
+.header-programa-emisora .btn .icon-hablar {font-size: 16px; margin-left: 8px;}
+
+.header-tematica .inner {height: 85px;}
+
+/* cabecera seccion de programa */
+
+.header-programa-emisora .seccion {margin-bottom: -9px; padding: 16px 0 13px 145px;}
+.header-programa-emisora .seccion h4 {font-size: 16px; line-height: 18px;}
+
+/* caja ficha de emisora */
+
+.ficha-emisora .cabecerilla .vermas {padding: 7px 22px 6px; top: 10px}
+.ficha-emisora .inner ul li {float: left; width: 50%;}
+.ficha-emisora .inner ul li:last-child {padding-bottom: 10px;}
+
+/* pestanas */
+
+.p_programa .pestanas ul,
+.p_seccion .pestanas ul {float: left; width: 320px;}
+
+/* PAGINA PARRILLA ====================================================================================================================== */
+
+.programacion-diaria .cab-columna h3 {font-size: 14px; }
+
+/* TELON ====================================================================================================================== */
+
+/* capa preroll de video */
+
+.preroll {width: 700px; height: 390px;}
+
+/* PUBLIS ====================================================================================================================== */
+
+/* 980 en cabecera */
+
+.cabecera .publi_luto_vertical > div {position: relative; margin-bottom: 30px; margin-top: -30px;}
+
+/* 728 intercalado en cuerpo */
+
+.publi-intercalada {display: block; margin-top: 10px;}
+.publi-intercalada .envoltorio_publi {text-align: center; padding: 10px 0 6px;}
+.publi-intercalada .publi_luto_vertical > div {margin: 0;}
+
+/* robapaginas */
+
+.contenedor .envoltorio_publi {width: 100%; background-color: rgba(0, 0, 0, 0.08);}
+.publi_luto_horizontal > div {margin: 10px auto;}
+
+/* PLAYER ====================================================================================================================== */
+
+.playertop-wrapper {width: 100%; left: 0; margin: 0;}

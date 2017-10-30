@@ -1,0 +1,59 @@
+<style>
+*{
+	transition-duration: 0.01s;
+}
+</style>
+
+<div style='width:300px;height:160px;background:red;position:fixed;right:100px;bottom:100px;' id='asd'></div>
+
+<script>
+
+asd = document.getElementById("asd");
+
+moviendo = false;
+xx = asd.offsetLeft;
+fuera = false;
+touch0 = 0;
+recorrido = 0;
+recorrible = (window.innerWidth - xx);
+
+asd.addEventListener("touchstart",function(ev){
+	moviendo = true;
+	touch0 = event.targetTouches[0].pageX;
+});
+asd.addEventListener("touchend",function(ev){
+	moviendo = false;
+	asd.style.opacity = 1;
+	
+	if(!fuera){
+		asd.style.left = xx;
+		asd.style.transitionDuration = "0.01s";
+	}
+	else{
+		asd.style.transitionDuration = "0.1s";
+		asd.style.left = window.innerWidth;
+	}
+});
+asd.addEventListener("touchmove",function(ev){
+    var touch = event.targetTouches[0];
+	recorrido = asd.offsetLeft - xx;
+	
+	
+	var razon = (touch.pageX,touch.pageX - touch0);
+	//if(parseInt(asd.style.left)<=xx){
+	if((parseInt(asd.offsetLeft) + razon)>=xx){
+		asd.style.left = (asd.offsetLeft + razon) + "px";
+		asd.style.opacity = (100 - recorrido*100/recorrible*2)/100;
+			
+		if(asd.offsetLeft>window.innerWidth - 150){
+			fuera = true;
+			console.log("FUERA");
+		}else{
+			fuera = false;
+		}
+	}
+	
+	touch0 = touch.pageX;
+});
+
+</script>

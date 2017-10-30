@@ -1,0 +1,1130 @@
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+span{
+	--color:white;
+}
+
+a{
+	color:black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c0c0c0;
+    position: relative;
+    overflow: hidden;
+}
+
+.mm-ply-hidden {
+    display: none;
+}
+
+.mm-ply-widget,
+.mm-ply-widget-dialogo {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    min-width: 320px;
+}
+
+.mm-ply-widget * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mm-ply-widget-controls,
+.mm-ply-widget-progress {
+    vertical-align: top;
+    height: 50px;
+}
+
+.mm-ply-leftbuttons,
+.mm-ply-rightbuttons {
+    display: inline-block;
+}
+
+
+/* <editor-fold desc="Controles"> */
+.mm-ply-logo,
+.mm-ply-banner,
+.mm-ply-play,
+.mm-ply-rewind,
+.mm-ply-forward {
+    background-color: #000;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.mm-ply-logo img {
+    width: 31px;
+    height: 19px;
+    margin-top: 16px;
+    margin-left: 9px;
+    margin-right: 10px;
+}
+
+.mm-ply-banner {
+    display: none;
+}
+
+.mm-ply-play,
+.mm-ply-rewind,
+.mm-ply-forward {
+    background-color: #fff;
+    vertical-align: top;
+    text-align: center;
+}
+
+.mm-ply-play svg {
+    width: 41px;
+    height: 41px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    fill: rgba(1,144,206,1);
+    cursor: pointer;
+}
+
+.mm-ply-rewind,
+.mm-ply-forward {
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.mm-ply-rewind svg,
+.mm-ply-forward svg {
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    margin-left:5px;
+    cursor: pointer;
+}
+
+.mm-ply-rewind span,
+.mm-ply-forward span {
+    display: block;
+}
+/* </editor-fold> */
+
+/* <editor-fold desc="Barra de progreso"> */
+.mm-ply-widget-progress > div {
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.mm-ply-widget-progress .mm-ply-program-data {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-data-season,
+.mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-title {
+    display: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    display: block;
+}
+
+.mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-data-name {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 11px;
+}
+
+.mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-data-name:after {
+    content: "\00a0/\00a0";
+    display: inline-block;
+}
+
+.mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-data-season {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11px;
+}
+
+.mm-ply-widget-progress .mm-ply-progress-container,
+.mm-ply-widget-progress .mm-ply-volume-container  {
+    height: 20px;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+.mm-ply-widget-progress .mm-ply-progress,
+.mm-ply-widget-progress .mm-ply-volume {
+    height: 5px;
+    position: relative;
+    background-color: #d5d5d5;
+}
+
+.mm-ply-widget-progress .mm-ply-volume-container {
+    width: 26%;
+    padding-left: 4%;
+    display: none;
+}
+
+.mm-ply-widget-progress .mm-ply-volume-container svg {
+    fill: #000;
+    width: 18px;
+    height: 12px;
+    float: left;
+    margin-left: -22px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.mm-ply-widget-progress .mm-ply-volume > div {
+    display: inline-block;
+}
+
+.mm-ply-widget-progress .mm-ply-volume .mm-ply-volume-drag {
+    border-radius: 51%;
+    width: 12px;
+    height: 12px;
+    background-color: #0190ce;
+    position: absolute;
+    top: -3px;
+    left: 35%;
+    cursor: pointer;
+}
+
+.mm-ply-widget-progress .mm-ply-volume .mm-ply-volume-bar {
+    position: absolute;
+    top: 0; bottom: 0;  left: 0;
+    width: 35%;
+    background-color: #000;
+}
+
+.mm-ply-widget-progress .mm-ply-progress div:first-of-type {
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 30%;
+    background-color: #0190ce;
+}
+
+.mm-ply-widget-progress .mm-ply-time {
+    font-size: 12px;
+    font-weight: 700;
+    width: 50%;
+    display: inline-block;
+}
+
+.mm-ply-widget-progress .mm-ply-current-time {
+    text-align: left;
+}
+
+.mm-ply-widget-progress .mm-ply-total-time {
+    text-align: right;
+}
+/* </editor-fold> */
+
+/* <editor-fold desc="Bloque social"> */
+.mm-ply-social {
+    display: none;
+    text-align: right;
+    vertical-align: top;
+    margin-top: 15px;
+}
+
+.mm-ply-social > * {
+    vertical-align: middle;
+}
+
+.mm-ply-social > *:nth-child(n+2) {
+    margin-left: 6px;
+}
+
+.mm-ply-social-buttons {
+    display: inline-block;
+}
+
+.mm-ply-social .mm-ply-compartir-button {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    margin-left: 1px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+.mm-ply-social .mm-ply-descargar svg,
+.mm-ply-social .mm-ply-suscribir svg {
+    fill: #0190ce;
+    width: 15px;
+    height: 20px;
+}
+
+.mm-ply-social > .mm-ply-compartir-button span {
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+	--background:black;
+}
+
+.mm-ply-social .mm-ply-embed {
+    background-color: #353535;
+}
+
+.mm-ply-social .mm-ply-embed span {
+    font-size: 9px;
+    font-weight: 900;
+    line-height: 18px;
+    color: #fff;
+}
+/* </editor-fold> */
+
+/* <editor-fold desc="Boton mas..."> */
+.mm-ply-more {
+    height: 50px;
+    display: inline-block;
+
+    background-color: #fff;
+    vertical-align: top;
+    text-align: center;
+
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 21px;
+    height: 5px;
+}
+
+.mm-ply-more svg {
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    margin-left:5px;
+}
+
+.mm-ply-more svg {
+    fill: #0190ce;
+}
+/* </editor-fold> */
+
+/* <editor-fold desc="Cuadros de dialógo"> */
+.mm-ply-widget-dialogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.mm-ply-widget-dialogo .mm-ply-header {
+    height: 30px;
+}
+
+.mm-ply-widget-dialogo .mm-ply-content {
+    height: 70px;
+    width: 100%;
+    position: relative;
+}
+
+.mm-ply-widget-dialogo .mm-ply-close {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.mm-ply-widget-dialogo .mm-ply-close svg {
+    width: 15px;
+    height: 15px;
+    fill: rgba(255,255,255,.4);
+}
+/* </editor-fold> */
+
+/* <editor-fold desc="Diálogo de opciones"> */
+.mm-ply-opciones {
+    background-color: #000;
+}
+
+.mm-ply-opciones .mm-ply-content:before,
+.mm-ply-opciones .mm-ply-compartir-button:before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.mm-ply-opciones .mm-ply-logo {
+    width: 52px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 19px;
+}
+
+.mm-ply-opciones .mm-ply-buttons {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mm-ply-compartir-button {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: rgba(255,255,255,.2);
+    margin-right: 1px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mm-ply-compartir-button svg {
+    width: 50%;
+    height: 50%;
+    fill: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -1px;
+}
+.mm-ply-opciones .mm-ply-compartir-button.mm-ply-descargar {
+    margin-left: 20px;
+}
+
+.mm-ply-opciones .mm-ply-compartir-button.mm-ply-suscribir {
+    margin-right: 5px;
+}
+
+.mm-ply-compartir-button.mm-ply-facebook {
+    background-color: #43609c;
+}
+
+.mm-ply-compartir-button.mm-ply-twitter {
+    background-color: #23a9e6;
+}
+
+.mm-ply-compartir-button.mm-ply-whatsapp {
+    background-color: #199a48;
+}
+/* </editor-fold> */
+
+/* <editor-fold desc="Dialogo de suscribirse"> */
+.mm-ply-suscripcion {
+    background-color: #0190ce;
+}
+
+.mm-ply-suscripcion .mm-ply-content {
+    color: #fff;
+    text-align: center;
+    height: 100%;
+}
+
+.mm-ply-suscripcion .mm-ply-content:before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.mm-ply-suscripcion svg {
+    width: 21px;
+    height: 21px;
+    fill: #fff;
+}
+
+.mm-ply-suscripcion .mm-ply-buttons {
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: left;
+    margin-bottom: 2px;
+}
+
+.mm-ply-buttons > svg {
+    margin-left: -22px;
+}
+
+.mm-ply-buttons > div {
+    margin-top: 2px;
+}
+
+.mm-ply-suscripcion .mm-ply-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-bottom: 10px;
+}
+
+.mm-ply-suscripcion .mm-ply-suscribir-button {
+    display: inline-block;
+    width: 61px;
+    height: 61px;
+    text-align: center;
+    background-color: rgba(255,255,255,.2);
+    padding-top: 10px;
+    margin-right: 1px;
+    cursor: pointer;
+}
+
+.mm-ply-suscripcion .mm-ply-suscribir-button:hover {
+    background-color: rgba(255,255,255,.5);
+}
+
+.mm-ply-suscripcion .mm-ply-suscribir-button span {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+}
+/* </editor-fold> */
+
+/* <editor-fold desc="Dialogo de embeber"> */
+.mm-ply-embeber {
+    background-color: rgba(0,0,0,.9);
+    min-width: 768px;
+}
+
+.mm-ply-embeber .mm-ply-content {
+    height: 100px;
+    overflow: hidden;
+}
+
+.mm-ply-embeber .mm-ply-leftblock {
+    float: left;
+    width: 417px;
+    height: 100%;
+    margin-top: 12px;
+}
+
+.mm-ply-embeber .mm-ply-leftblock > div {
+    display: inline-block;
+}
+
+.mm-ply-embeber .mm-ply-fullblock {
+    overflow: hidden;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 15px;
+    margin-top: 12px;
+}
+
+.mm-ply-embeber .mm-ply-content .mm-ply-leftblock > div:first-of-type {
+    width: 160px;
+    margin-left: 25px;
+    text-align: left;
+}
+
+.mm-ply-embeber .mm-ply-content .mm-ply-leftblock > div:first-of-type span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.mm-ply-embeber .mm-ply-content .mm-ply-leftblock > div:nth-child(2) {
+    margin-left: 35px;
+    color: #fff;
+    font-size: 16px;
+    width: 46%;
+}
+
+.mm-ply-embeber .mm-ply-content .mm-ply-leftblock > div:nth-child(2) span,
+.mm-ply-embeber .mm-ply-content .mm-ply-fullblock .texto {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #fff;
+    display: block;
+    margin-bottom: 17px;
+}
+
+.mm-ply-embeber .mm-ply-content .mm-ply-fullblock input[type=text],
+.mm-ply-embeber .mm-ply-content .mm-ply-leftblock select {
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.mm-ply-embeber .mm-ply-content .mm-ply-fullblock input[type=text] {
+    width: 67%;
+    display: inline-block;
+    margin-right: 2%;
+    text-align: left;
+}
+
+.mm-ply-embeber .mm-ply-content .mm-ply-fullblock .boton {
+    width: 30%;
+    color: #0190ce;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    display: inline-block;
+}
+/* </editor-fold> */
+
+
+@media(min-width: 768px) and (max-height: 239px) {
+    .mm-ply-more {
+        display: none;
+    }
+
+    .mm-ply-widget-controls {
+        float: left;
+        vertical-align: top;
+        display: inline-block;
+        height: 100px;
+    }
+
+    .mm-ply-widget-progress {
+        vertical-align: top;
+        height: 100px;
+        overflow: hidden;
+    }
+
+
+    .mm-ply-logo,
+    .mm-ply-banner {
+        width: 100px;
+        height: 100px;
+        vertical-align: top;
+    }
+
+    .mm-ply-logo img {
+        width: 62px;
+        height: 38px;
+        margin-top: 32px;
+        margin-left: 18px;
+    }
+
+    .mm-ply-banner img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .mm-ply-banner {
+        display: inline-block;
+    }
+
+    .mm-ply-social {
+        display: inline-block;
+    }
+
+    .mm-ply-play svg {
+        width: 60px;
+        height: 60px;
+        fill: rgba(1,144,206,1);
+        margin-top: 20px;
+        margin-right: 0;
+    }
+
+    .mm-ply-rewind svg,
+    .mm-ply-forward svg {
+        margin-top: 35px;
+    }
+
+    .mm-ply-rewind svg {
+        margin-left: 10px;
+    }
+
+    .mm-ply-widget-progress .mm-ply-program-data {
+        display: inline-block;
+        width: 56%;
+        margin-top: 24px;
+        margin-bottom: 10px;
+    }
+
+    .mm-ply-widget-progress .mm-ply-social {
+        width: 43%;
+        padding-left: 0;
+    }
+
+    .mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-data-season
+    {
+        display: block;
+    }
+
+    .mm-ply-widget-progress .mm-ply-progress-container {
+        width: 59%;
+        margin-right: 14%;
+        margin-top: 5px;
+    }
+
+    .mm-ply-widget-progress .mm-ply-volume-container {
+        display: inline-block;
+        margin-top: 5px;
+    }
+
+    .mm-ply-suscripcion .mm-ply-buttons {
+        height: 100%;
+    }
+
+    .mm-ply-suscripcion .mm-ply-buttons {
+        vertical-align: middle;
+        height: auto;
+    }
+
+    .mm-ply-buttons > div {
+        display: inline-block;
+    }
+
+    .mm-ply-suscripcion .mm-ply-title {
+        font-size: 20px;
+        margin-right: 37px;
+    }
+
+    .mm-ply-suscripcion > svg {
+        width: 23px;
+        height: 23px;
+        margin: 0 9px 0 0;
+    }
+
+    .mm-ply-suscripcion .mm-ply-suscribir-button {
+        width: 70px;
+        height: 70px;
+    }
+
+    .mm-ply-suscripcion svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .mm-ply-suscripcion .mm-ply-suscribir-button span {
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 1024px) and (max-height: 239px) {
+    .mm-ply-widget-progress .mm-ply-progress-container {
+        width: 70%;
+        margin-right: 3%;
+    }
+
+    .mm-ply-social > .mm-ply-compartir-button {
+        width: 80px;
+    }
+
+    .mm-ply-social > .mm-ply-compartir-button span {
+        display: inline-block;
+    }
+
+    .mm-ply-social > .mm-ply-compartir-button svg {
+        width: auto;
+    }
+
+    .mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-title {
+        font-size: 16px;
+        line-height: 17px;
+    }
+
+    .mm-ply-suscripcion .mm-ply-suscribir-button {
+        width: 71px;
+        height: 71px;
+    }
+
+    .mm-ply-suscripcion svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media(min-height: 240px) {
+    body {
+        max-width: 240px;
+        max-height: 240px;
+        width: 240px;
+        height: 240px;
+    }
+
+    .mm-ply-opciones,
+    .mm-ply-suscripcion,
+    .mm-ply-embeber {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-width: 0;
+        height: auto;
+        width: auto;
+    }
+
+    .mm-ply-widget {
+        height: 46px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        min-width: 240px;
+        max-width: 240px;
+    }
+
+    .mm-ply-widget .mm-ply-logo {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background-color: transparent;
+        width: 62px;
+        height: 38px;
+    }
+
+    .mm-ply-widget .mm-ply-logo img {
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+    }
+
+    .mm-ply-more {
+        position: absolute;
+        bottom: 225px;
+        right: 7px;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .mm-ply-more svg {
+        fill: #fff;
+        margin: 0;
+    }
+
+    .mm-ply-widget-progress .mm-ply-program-data  {
+        display: block;
+        position: absolute;
+        left: 8px;
+        bottom: 56px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-data-season {
+        display: block;
+        color: #fff;
+    }
+
+    .mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-data-season .mm-ply-program-data-name {
+        display: block;
+    }
+
+    .mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-data-season .mm-ply-program-data-name:after {
+        content: normal;
+    }
+
+    .mm-ply-rewind,
+    .mm-ply-forward,
+    .mm-ply-social,
+    .mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-title {
+        display: none!important;
+    }
+
+    .mm-ply-banner {
+        display: block;
+        position: absolute;
+        height: 194px;
+        bottom: 46px;
+        left: 0;
+        right: 0;
+        width: auto;
+        overflow: hidden;
+    }
+
+    .mm-ply-banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .mm-ply-widget-controls {
+        height: 46px;
+        display: inline-block;
+        float: left;
+    }
+
+    .mm-ply-play {
+        width: 46px;
+        height: 46px;
+    }
+
+    .mm-ply-play svg {
+        height: 80%;
+        margin: 5px;
+    }
+
+    .mm-ply-widget-progress {
+        height: 46px;
+        overflow: hidden;
+        padding-top: 21px;
+    }
+
+    .mm-ply-time-container {
+        text-align: right;
+    }
+
+    .mm-ply-time-container .mm-ply-time {
+        width: auto;
+    }
+
+    .mm-ply-time-container .mm-ply-time.mm-ply-current-time:after {
+        content: "\00a0/\00a0";
+        display: inline-block;
+    }
+
+    .mm-ply-widget-dialogo .mm-ply-content {
+        position: static;
+        height: 100%;
+        text-align: center;
+    }
+
+    .mm-ply-widget-dialogo .mm-ply-content:before {
+        content: normal;
+    }
+    
+    .mm-ply-separatorhelper {
+        display: block!important;
+    }
+
+    .mm-ply-opciones .mm-ply-compartir-button.mm-ply-descargar,
+    .mm-ply-opciones .mm-ply-content .mm-ply-logo {
+        margin-left: 0;
+    }
+
+    .mm-ply-opciones .mm-ply-buttons {
+        right: 0;
+        width: 100%;
+    }
+
+    .mm-ply-suscripcion .mm-ply-buttons {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .mm-ply-suscripcion .mm-ply-buttons > svg {
+        width: 32px;
+        height: 32px;
+        position: relative;
+        left: -65px;
+        top: 30px;
+    }
+
+    .mm-ply-suscripcion .mm-ply-buttons > div {
+        margin-top: 10px;
+    }
+
+    .mm-ply-suscripcion .mm-ply-buttons .mm-ply-title {
+        display: inline-block;
+        margin-left: 25%;
+        text-align: left;
+    }
+
+    .mm-ply-suscripcion .mm-ply-suscribir-button {
+        margin-bottom: 1px;
+    }
+}
+
+@media(min-height: 269px) and (min-width: 646px) {
+    body {
+        max-width: 646px;
+        max-height: 269px;
+        width: 646px;
+        height: 269px;
+    }
+
+    .mm-ply-widget {
+        height: 100%;
+        background-color: #000;
+        min-width: 646px;
+        max-width: 646px;
+
+    }
+
+    .mm-ply-widget:before {
+        content: " ";
+        display: block;
+        height: 100%;
+        margin-bottom: -64px;
+    }
+
+    .mm-ply-widget-controls,
+    .mm-ply-widget-progress {
+        height: 64px;
+        background-color: #fff;
+    }
+
+    .mm-ply-widget .mm-ply-banner {
+        bottom: 64px;
+        width: 206px;
+        height: 206px;
+    }
+
+    .mm-ply-widget .mm-ply-logo {
+        position: absolute;
+        left: auto;
+        right: 15px;
+        top: 15px;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .mm-ply-widget .mm-ply-logo img {
+        width: 81px;
+        height: 49px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mm-ply-more {
+        display: none;
+    }
+
+    .mm-ply-play {
+        width: 64px;
+        height: 64px;
+    }
+
+    .mm-ply-forward,
+    .mm-ply-rewind {
+        display: inline-block!important;
+        margin-top: 12px;
+    }
+
+    .mm-ply-widget-progress .mm-ply-progress-container {
+        width: 69%;
+        margin-right: 4%;
+        margin-top: 8px;
+    }
+    .mm-ply-widget-progress .mm-ply-volume-container {
+        display: inline-block;
+        margin-top: 8px;
+    }
+
+    .mm-ply-widget-progress .mm-ply-social {
+        display: inline-block!important;
+        position: absolute;
+        bottom: 64px;
+        left: 235px;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        text-align: left;
+    }
+
+    .mm-ply-widget-progress .mm-ply-social .mm-ply-social-buttons {
+        float: right;
+    }
+
+    .mm-ply-widget-progress .mm-ply-social .mm-ply-compartir-button {
+        width: 40px;
+        height: 40px;
+        padding-top: 8px;
+    }
+
+    .mm-ply-widget-progress .mm-ply-social .mm-ply-compartir-button svg {
+        fill: #fff;
+    }
+
+    .mm-ply-widget-progress .mm-ply-program-data {
+        left: 235px;
+        top: 41px;
+        bottom: auto;
+    }
+
+    .mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-data-name {
+        margin-bottom: 10px;
+    }
+
+    .mm-ply-widget-progress .mm-ply-program-data .mm-ply-program-title {
+        display: inline-block!important;
+        color: #fff;
+        margin-top: 17px;
+        width: 70%;
+        white-space: normal;
+    }
+
+    .mm-ply-suscripcion .mm-ply-buttons {
+        margin-top: 70px;
+    }
+
+    .mm-ply-suscripcion .mm-ply-buttons > svg {
+        position: static;
+        width: 23px;
+        height: 23px;
+        margin-right: 9px;
+    }
+
+    .mm-ply-suscripcion .mm-ply-buttons .mm-ply-title {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .mm-ply-suscripcion .mm-ply-suscribir-button {
+        margin-bottom: 1px;
+        width: 70px;
+        height: 70px;
+        padding-top: 16px;
+    }
+
+    .mm-ply-separatorhelper {
+        display: none!important;
+    }
+
+    .mm-ply-embeber .mm-ply-leftblock,
+    .mm-ply-embeber .mm-ply-leftblock > div,
+    .mm-ply-embeber .mm-ply-fullblock {
+        display: block !important;
+        width: auto !important;
+        height: auto !important;
+        float: none !important;
+        text-align: left;
+        margin-left: 0!important;
+        padding-left: 0!important;
+    }
+    .mm-ply-embeber .mm-ply-leftblock,
+    .mm-ply-embeber .mm-ply-fullblock {
+        margin-left: 41px!important;
+    }
+
+    .mm-ply-embeber .mm-ply-leftblock {
+        margin-top: 34px;
+    }
+
+    .mm-ply-embeber .mm-ply-content .mm-ply-leftblock > div:nth-child(1) {
+        margin-bottom: 48px;
+    }
+
+    .mm-ply-embeber .mm-ply-content .mm-ply-leftblock > div:nth-child(2) span,
+    .mm-ply-embeber .mm-ply-content .mm-ply-fullblock .texto {
+        margin-bottom: 12px;
+    }
+
+    .mm-ply-embeber .mm-ply-content .mm-ply-leftblock select {
+        width: 95%;
+    }
+
+    .mm-ply-embeber .mm-ply-content .mm-ply-fullblock input[type=text] {
+        width: 77%;
+    }
+
+    .mm-ply-embeber .mm-ply-content .mm-ply-fullblock .boton {
+        width: 20%;
+    }
+}

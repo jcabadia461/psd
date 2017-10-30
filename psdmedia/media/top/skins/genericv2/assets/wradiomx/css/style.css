@@ -1,0 +1,23 @@
+
+/* PORTAL PlaySER ====================================================================================================================== */
+
+/* reset */
+@import url("reset.css");
+
+/* fuentes */
+@import url("fuentes.css");
+
+/* iconos */
+@import url("http://play.wradio.com.mx/bundles/playweb/css/iconos.css");
+
+/* Estilos para pantalla con resolucion 1024 (incluye mayoria de tablets en horizontal) */
+@import url(desktop.css);
+
+/* Estilos para tablet */
+@import url(tablet.css) screen and (max-width: 999px);
+
+/* Ajustes tablet-movil */
+@import url(tablet_movil.css) screen and (max-width: 730px);
+
+/* Estilos para movil */
+@import url(movil.css) screen and (max-width: 650px);

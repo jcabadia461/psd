@@ -1,0 +1,22 @@
+{
+    "config":{
+        "data": [
+        ],
+        "plugins": [
+            {	"id": "omniture",
+                "type": "psd.statistics.plugins.OmniturePlugin",
+                "url": "http://radiole.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/radiole_omniture_audio.json"
+            }     
+        ],
+        "routing": [
+            {"name": "mediaBegin", "plugins": "omniture", "type":"custom"},
+            {"name": "mediaComplete", "plugins": "omniture", "type":"custom"},
+            {"name": "adStart", "plugins": "omniture", "type":"custom"},
+            {"name": "adComplete", "plugins": "omniture", "type":"custom"},
+            {"name": "adSkip", "plugins": "omniture", "type":"custom"},
+            {"name": "mediaHalf", "plugins": "omniture", "type":"custom"},
+            {"name": "mediaFirstQuart", "plugins": "omniture", "type":"custom"},
+            {"name": "mediaThirdQuart", "plugins": "omniture", "type":"custom"}
+        ]
+    }
+}

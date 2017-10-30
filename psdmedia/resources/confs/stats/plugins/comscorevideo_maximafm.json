@@ -1,0 +1,13 @@
+{
+    "config": {
+        "dataMapping": [
+			{"name": "C1", "value": "1"},
+			{"name": "C2", "value": "8671776"},
+			{"name": "C3", "value": "Prisa Musica"},
+			{"name": "C4", "value": "MAXIMA.FM"},
+			{"name": "C5", "value": "1"},
+			{"name": "C6", "value": ""},
+			{"name": "C10", "value": ""}
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "title": "PRISA DIGITAL (Señal de Akamai players a 640x360 - 16:9)",
+    "logo": "<img src=\"img/logo-brand.png\">",
+    "css":"yu_style.css",
+    "signal": [
+        {
+            "name": "YuLos40",
+            "subTitle": "YU - Señal Primaria( Señal 'f4m' )",
+            "type": "iframe",
+            "URL": "http://instanceplayer.prisasd.com/widget/v1/player/los40videos/video/67/20160225170404"
+        },
+        {
+            "name": "YuLos40",
+            "subTitle": "YU - Señal Primaria( Señal 'm3u8' )",
+            "type": "hls",
+            "hls":
+                {
+                    "id_cuenta": "los40videos",
+                    "media_type": "video",
+                    "id_media": "20160225170404",
+                    "poster":"http://vdvmedia.los40.com/top/20162/12/YuNotePierdasNada2016_1455272527_thumbnail.jpg"
+                }
+            ,
+            "URL": "video_hls.html?medio=yu"
+        },
+        {
+            "name": "YuLos40",
+            "subTitle": "YU - Señal Secundaria( Señal 'f4m' )",
+            "type": "iframe",
+            "URL": "http://instanceplayer.prisasd.com/widget/v1/player/los40videos/video/67/20160225165835"
+        },
+        {
+            "name": "YuLos40",
+            "subTitle": "YU - Señal Secundaria ( Señal 'm3u8' )",
+            "type": "hls",
+            "hls":
+                {
+                    "id_cuenta": "los40videos",
+                    "media_type": "video",
+                    "id_media": "20160225165835",
+                    "poster":"http://vdvmedia.los40.com/top/20162/12/YuNotePierdasNada2016_1455272527_thumbnail.jpg"
+                }
+            ,
+            "URL": "video_hls.html?medio=yu"
+        }
+
+    ]
+
+
+
+}

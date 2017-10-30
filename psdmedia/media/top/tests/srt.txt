@@ -1,0 +1,32 @@
+{"values":
+"1 00:00:00,000 --> 00:00:02,580 buenos días Pepa ayer se jugó un partido que 
+2 00:00:02,580 --> 00:00:05,130 no debería haberse disputado Se debería haber aplazado 
+3 00:00:05,130 --> 00:00:07,680 el Fútbol Club Barcelona Unión Deportiva Las Palmas 
+4 00:00:07,680 --> 00:00:10,260 pero el Barça lo pidió demasiado tarde pidió 
+5 00:00:10,260 --> 00:00:13,020 que se aplazara el mismo domingo por la mañana pero 
+6 00:00:13,020 --> 00:00:15,760 en cuanto se enteró que si eso ocurría puesto 
+7 00:00:15,760 --> 00:00:18,340 que los Mossos d'Esquadra garantizaban la seguridad dentro del 
+8 00:00:18,340 --> 00:00:21,010 recinto perdería los tres puntos de ayer 
+9 00:00:21,010 --> 00:00:23,919 más otros tres de sanción enseguida recalaron 
+10 00:00:23,919 --> 00:00:26,799 dijeron que bueno que se jugaba pero a puerta vacía para 
+11 00:00:26,799 --> 00:00:29,459 mostrar la solidaridad con todo lo que estaba pasando ayer en Barcelona 
+12 00:00:29,459 --> 00:00:32,060 ya en Cataluña pero si de verdad tenía eso pensado 
+13 00:00:32,060 --> 00:00:34,610 el Barça jugarlos sin público por qué 
+14 00:00:34,610 --> 00:00:37,309 no lo hicieron oficial días antes podía haberlo hecho oficial 
+15 00:00:37,309 --> 00:00:39,920 el jueves o el viernes y que así no fueran cuarenta 
+16 00:00:39,920 --> 00:00:43,010 mil o cincuenta mil aficionados a las puertas del Camp Nou arremolinan 
+17 00:00:43,010 --> 00:00:45,800 doce allí viendo que la puerta estaba cerrada creo que el Barça 
+18 00:00:45,800 --> 00:00:48,710 ayer debería haber estado por encima de los puntos y haber pensaba 
+19 00:00:48,710 --> 00:00:51,310 en una decisión coherente que era no jugará 
+20 00:00:51,310 --> 00:00:54,140 el partido y otra pregunta Pepa quién puso 
+21 00:00:54,140 --> 00:00:56,720 ese partido el domingo uno de octubre coincidiendo con el 
+22 00:00:56,720 --> 00:00:59,440 referéndum la Liga y Mediapro 
+23 00:00:59,440 --> 00:01:01,960 Tebas Jaume Roures que son 
+24 00:01:01,960 --> 00:01:04,630 los encargados de poner y fijar los horarios de los partidos 
+25 00:01:04,630 --> 00:01:07,420 no era mejor haberlo puesto por ejemplo el sábado 
+26 00:01:07,420 --> 00:01:10,089 era necesario ponerlo al mismo día del referéndum 
+27 00:01:10,089 --> 00:01:12,730 pues tendrá que contestar a todas estas preguntas por 
+28 00:01:12,730 --> 00:01:15,250 un lado Bartomeu por otro Tebas por 
+29 00:01:15,250 --> 00:01:17,840 otro Roures qué le agradecemos que cediera 
+30 00:01:17,840 --> 00:01:20,480 su centro internacional de prensa a todos los periodistas 
+31 00:01:20,480 --> 00:01:23,330 previo pago de diez euros cada uno hasta 32 00:01:23,000 --> 00:01:23,000 luego Pepa"}

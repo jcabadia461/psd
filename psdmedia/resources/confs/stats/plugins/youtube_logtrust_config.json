@@ -1,0 +1,71 @@
+{
+    "config": {
+        "events": [
+            {
+                "name": "mediaBegin",
+                "events": "event11",
+                "vars": "v1,v2,v3,v4,v8,v9,v13,v17,v20,v24,v25,v30,v35,v39,v42,v43,v45,v48,v70,v80,v81,v82,i1,i2,i4,i6,i8",
+                "suites": "prisacomelpaiscom,prisacomglobal"
+            },
+            {
+                "name": "mediaComplete",
+                "events": "event12",
+                "vars": "v1,v2,v3,v4,v8,v9,v13,v17,v20,v24,v25,v30,v35,v39,v42,v43,v45,v48,v70,v80,v81,v82,i1,i2,i4,i6,i8",
+                "suites": "prisacomelpaiscom,prisacomglobal"
+            },
+            {
+                "name": "adStart",
+                "events": "event13",
+                "vars": "v1,v2,v3,v4,v8,v9,v13,v17,v20,v24,v25,v30,v35,v39,v42,v43,v45,v48,v70,v80,v81,v82,i1,i2,i4,i6,i8",
+                "suites": "prisacomelpaiscom,prisacomglobal"
+            },
+            {
+                "name": "adComplete",
+                "events": "event14",
+                "vars": "v1,v2,v3,v4,v8,v9,v13,v17,v20,v24,v25,v30,v35,v39,v42,v43,v45,v48,v70,v80,v81,v82,,i1,i2,i4,i6,i8",
+                "suites": "prisacomelpaiscom,prisacomglobal"
+            },
+            {
+                "name": "adSkip",
+                "events": "event15",
+                "vars": "v1,v2,v3,v4,v8,v9,v13,v17,v20,v24,v25,v30,v35,v39,v42,v43,v45,v48,v70,v80,v81,v82,i1,i2,i4,i6,i8",
+                "suites": "prisacomelpaiscom,prisacomglobal"
+            },
+            {
+                "name": "mediaHalf",
+                "events": "event79",
+                "vars": "v1,v2,v3,v4,v8,v9,v13,v17,v20,v24,v25,v30,v35,v39,v42,v43,v45,v48,v70,v80,v81,v82,i1,i2,i4,i6,i8",
+                "suites": "prisacomelpaiscom,prisacomglobal"
+            }
+        ],
+        "dataMapping": [
+            {"name": "v1", "value": "data.channelSubsection" },
+            {"name": "v2", "value": "data.playerName" },
+            {"name": "v3", "value": "data.pagename" },
+            {"name": "v4", "value": "data.channelSection" },
+            {"name": "v8", "value": "data.name" },
+            {"name": "v9", "value": "data.adName" },
+            {"name": "v13", "value": "data.tags" },
+            {"name": "v17", "value": "data.channel" },
+            {"name": "v20", "value": "data.media" },
+            {"name": "v24", "value": "data.adposition" },
+            {"name": "v25", "value": "data.keywords" },
+            {"name": "v30", "value": "data.domain" },
+            {"name": "v35", "value": "data.time" },
+            {"name": "v39", "value": "data.Title" },
+            {"name": "v42", "value": "data.mediaType"},
+            {"name": "v43", "value": "data.uid"},
+            {"name": "v45", "value": "data.topPageTitle"},
+            {"name": "v48", "value": "data.weekDay"},
+            {"name": "v70", "value": "data.format" },
+            {"name": "v80", "value": "data.programa" },
+            {"name": "v81", "value": "data.emisora" },
+            {"name": "v82", "value": "data.tematica" },
+            {"name": "i2", "value": "data.duration" },
+            {"name": "i4", "value": "data.idTop" },
+            {"name": "i6", "value": "data.tags" },
+            {"name": "i8", "value": "data.trafficsource" }
+
+        ]
+    }
+}

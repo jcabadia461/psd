@@ -1,0 +1,32 @@
+{
+    "config":{
+        "data": [
+        ],
+        "plugins": [
+		
+		  {	"id": "omniture",
+                "type": "psd.statistics.plugins.OmniturePlugin",
+                "url": "http://meristation.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/meristation_omniture.json"
+            },		
+			
+				{   "id": "comscorevideo",
+                "type": "psd.statistics.plugins.ComscoreVideoPlugin",
+                "url": "http://meristation.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/comscorevideo_meristation.json"
+            },   
+           
+             {	"id": "logtrust",
+                "type": "psd.statistics.plugins.LogTrustPlugin",
+                "url": "http://meristation.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/logtrust_meristation.json"
+            }              
+        ],
+        "routing": [
+            {"name": "mediaBegin", "plugins": "logtrust,comscorevideo,omniture", "type":"custom"},
+            {"name": "mediaComplete", "plugins": "logtrust,comscorevideo,omniture", "type":"custom"},
+            {"name": "adStart", "plugins": "logtrust,comscorevideo,omniture", "type":"custom"},
+            {"name": "adComplete", "plugins": "logtrust,comscorevideo,omniture", "type":"custom"},
+            {"name": "adSkip", "plugins": "logtrust,comscorevideo,omniture", "type":"custom"},
+            {"name": "mediaHalf", "plugins": "logtrust,comscorevideo,omniture", "type":"custom"},
+            {"name": "adError", "plugins": "logtrust", "type":"custom"}
+        ]
+    }
+}

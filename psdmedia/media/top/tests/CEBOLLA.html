@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+</head>
+<script type="text/javascript" src="http://10.90.1.61:33354/psdmedia/media/simple/js/SimpleMediaPlayer.min.js"></script><!--Jacob-->
+
+<body>
+
+
+            <div id="container0" style='width:50%;height:120px;float:left;position:relative;'></div><!--contenedor de video-->
+            <div id="listita" style='width:25%;height:400px;background:red;float:left;position:relative;'></div>
+            <div id="listita2" style='width:25%;height:400px;background:red;float:left;position:relative;'></div>
+
+<script type="text/javascript">
+
+	rui = function(){
+		loadPlaylist();
+	}
+
+
+c_player = {
+        "dev": false,
+        "id_cuenta": "playser",
+        "media_type": "audio",
+        "id_player": "81",
+        "id_media": "",
+        "id_container": "container0"
+
+    };
+c_playlist = {
+		"dev": false,
+        "URL_list":"http://fapi-top.prisasd.com/api/buscar/playser/audio/?idref=000WB0003920151021125949,000WB0660320151021124956,ser_galicia_hoyporhoygalicia_20151021_122000_122500,cadenaser_hoyporhoy_20151021_090000_100000,cadenaser_hoyporhoy_20151021_080000_090000,ser_galicia_hoyporhoygalicia_20151021_122000_122500,cadenaser_hoyporhoy_20151021_090000_100000,cadenaser_hoyporhoy_20151021_080000_090000,ser_galicia_hoyporhoygalicia_20151021_122000_122500,cadenaser_hoyporhoy_20151021_090000_100000,cadenaser_hoyporhoy_20151021_080000_090000",
+        "repeat": "all",
+        "id_cuenta": "playser",
+        "id_container_playlist": "listita",
+        "skin":"lista",
+        "autoNext":true,
+        "skinPlaylist":"lista"
+};
+
+var cebolla = new psd.media.TopEmbedPlaylist(c_player,c_playlist);
+cebolla.init();
+
+
+</script>
+
+
+
+</body>
+</html>
+

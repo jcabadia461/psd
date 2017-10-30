@@ -1,0 +1,100 @@
+
+/* PLAYER movil en playser - reescritura de playertop-desktop.css ====================================================================================================================== */
+
+.no-tablet {display: block !important;}
+.no-movil {display: none !important;}
+
+.playertop,
+.playertop .playertop-inner {height: 90px;}
+.playertop .playertop-inner {padding-left: 90px}
+.playertop-wrapper .switch {right: 60px;}
+.playertop .control {border: 0; width: 80px; height: 62px; margin: 15px 0 0;}
+.playertop .play {border-width: 3px; height: 61px; width: 61px; margin-top: -3px;}
+.playertop .play .ico span {font-size: 20px; line-height: 61px; height: 61px; width: 61px; margin: -12px 0 0 -12px;}
+.playertop .play .ico .icon-play {padding-left: 5px; width: 56px;}
+.playertop .control .label {display: block; position: absolute; top: -12px; left: 74px; white-space: nowrap; font-size: 12px;}
+.ico_sonido {left: 76px; top: -30px;}
+.playertop .control .volume {display: none}
+.playertop .info {padding-top: 32px;}
+.playertop .info .programa {padding: 0; height: 27px; line-height: 27px; margin-left: 0;}
+.playertop .info .emisora .nombre {border: 0; height: 27px; font-size: 10px; font-weight: normal; line-height: 27px; background: none; padding: 0 2px 0 0; max-width: 160px; white-space: nowrap; overflow: hidden;}
+.playertop .info .titulo {font-size: 12px;}
+.playertop .info .titulo em {display: none;}
+.playertop .info .emisora {top: -5px;}
+.playertop .info .emisora .conf {border: 0; padding: 0; height: 23px; line-height: 12px; width: 23px; background-color: transparent;}
+.playertop .info .emisora .conf span {display: none;}
+.playertop .info .emisora .conf span[class*="icon"] {display: inline; color: #ffae00;}
+.playertop .info .track-wrapper {padding: 0 10px 0 55px; margin-left: 0; height: 17px;}
+.playertop .info span[class*="-time"] {top: 0;}
+.playertop .info .total-time {display: none;}
+
+/* capas desplegables */
+
+.playertop .info .form-mail,
+.playertop .info .embed,
+.playertop .info .conf-emisora {background-color: #ffae00; top: 0; bottom: auto; padding-right: 41px; height: 90px;}
+.playertop .info .form-mail .form-mail-inner {margin-right: -37px; padding-right: 0;}
+.playertop .info .embed .inner-embed,
+.playertop .info .conf-emisora .inner-conf {margin-right: -41px; padding: 0;}
+.playertop .info .conf-emisora {top: auto; bottom: -9px;}
+.playertop .info .label  {display: none;}
+.playertop .info .select {width: auto; float: none; height: 28px; border-bottom: 1px solid #14181b; border-right: 0; }
+.playertop .info .inner-conf .select,
+.playertop .info .inner-conf .select + .select {width: 100%;}
+.playertop .info .inner-conf .select select,
+.playertop .info .inner-conf .select + .select select {width: 129%;}
+.playertop .info .control-conf {position: relative; padding-left:5px; width: auto; display: block; overflow: hidden;}
+.playertop .info .control-conf .btn-secundary  {float: left; margin-top: 4px;}
+.playertop .info .form-mail .action {left: 5px; top: auto; bottom: 3px;}
+.playertop .info .form-mail .close {bottom: 0; top: auto}
+.playertop .info .embed .control-conf {width: auto;}
+.playertop .info .embed .code {border-bottom: 1px solid #000; float: none; width: 100%; line-height: 12px;}
+.playertop .info .embed .inner-embed .control-conf .btn-secundary  {margin-top: 3px;}
+
+.playertop .share {padding-top: 15px;}
+
+/* PLAYER en iframe de usuario ====================================================================================================================== */
+
+.playertop-embebido .info .emisora {padding-left: 100px;}
+.playertop-embebido .info .titulo em {display: none;}
+.playertop-embebido .info .titulo .logo {display: block; height: 15px; width: 35px; left: 0; margin-top: 0; top: -18px;}
+.playertop-embebido .info .titulo .logo:hover,
+.playertop-embebido .info .titulo .logo:focus {opacity: 0.7;}
+.playertop-embebido .ico_sonido {left: 45px; top: -30px;}
+.playertop-embebido .control .label {left: 147px;}
+.playertop-embebido .control .volume {display: block; position: absolute; height: 36px; width: 90px; float: none; z-index: 4; margin-left: 0; bottom: -9px; left: 82px;}
+.playertop-embebido .volume .ico {background-color: transparent;}
+.playertop-embebido .info .total-time {display: block;}
+.playertop-embebido .info .track-wrapper {margin-left: 110px; padding-right: 65px;}
+.playertop-embebido .volume .dot,
+.playertop-embebido .info .track .dot {width: 7px; height: 7px; top: -2px;}
+
+.playertop-embebido.playertop-touch .volume {display: none;}
+.playertop-embebido.playertop-touch .info .track-wrapper {margin-left: 0;}
+
+@media screen and (max-width: 300px) { /* para tamanos inferiores a 300px en movil (iphone 4) */
+
+	.playertop-embebido.playertop-touch .control .label,
+	.playertop-embebido.playertop-touch .info .total-time {display: none;}
+	.playertop-embebido.playertop-touch .info .track-wrapper {padding-right: 10px;}
+	.playertop-embebido.playertop-touch .info .emisora .nombre {max-width: 140px;}
+
+}
+
+@media screen and (max-width: 320px) { /* por debajo de 320 en escritorio */
+	
+	.playertop-embebido .info .emisora .nombre {max-width: 85px; text-overflow: ellipsis;} /* en directo: acortamos nombre emisora */
+	.playertop-embebido .info .total-time {display: none;} /* a la carta: quitamos tiempo total */
+	.playertop-embebido .info .track-wrapper {padding-right: 10px;}
+
+}
+
+@media screen and (max-width: 340px) { /* para tamanos inferiores a 300px en escritorio quitamos volumen */
+
+	.playertop-embebido .info .track-wrapper {margin-left: 0;}
+	.playertop-embebido .control .volume,
+	.playertop-embebido .control .label {display: none;}
+	.playertop-embebido .info .emisora {padding-left: 0;}
+}
+
+

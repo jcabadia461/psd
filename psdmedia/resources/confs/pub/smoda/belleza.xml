@@ -1,0 +1,116 @@
+<publicidad activo="1">
+	
+	<!-- POSICIONES -->
+	<posiciones>
+		<!-- Preroll -->
+		<posicion id="preroll" request="DART_PREROLL">
+			<options>
+				<option type="video" activo="1" carcasa="carcasa_video" />
+				<option type="loader" activo="1" />
+				<option type="asq" activo="1" carcasa="carcasa_asq" />
+			</options>
+		</posicion>
+		
+		<!-- Postroll --> 
+		<!--<posicion id="postroll" request="DART_POSTROLL">
+			<options>
+				<option type="video" activo="1" carcasa="carcasa_postroll" />
+				<option type="loader" activo="1" />
+				<option type="asq" activo="1" carcasa="carcasa_asq" />
+			</options>
+		</posicion>-->
+	</posiciones>
+	 
+	<requests>
+		<request id="DART_PREROLL" parser="4">
+			<proveedor>realmedia</proveedor>
+			<url>
+				<src>http://pubads.g.doubleclick.net/gampad/ads</src> 
+				<vars>
+					<var name="sz">640x480</var>
+					<var name="iu">/5574/es.n5574.smoda/videos//belleza</var>
+					<var name="ciu_szs"></var>
+					<var name="impl">s</var>
+					<var name="gdfp_req">1</var>
+					<var name="env">vp</var>
+					<var name="output">xml_vast2</var>
+					<var name="unviewed_position_start">1</var> 
+					<var name="url">$PLAYER[referrer]</var>
+					<var name="correlator">$RANDOM[10]</var>
+					<var name="cust_params">paiskey%3Dsmoda_player%2Cpalabraclave2%26pos%3Dpre</var>
+				</vars>
+			</url>
+		</request>
+		<!--<request id="DART_POSTROLL" parser="4">
+			<proveedor>realmedia</proveedor>
+			<url>
+				<src>http://pubads.g.doubleclick.net/gampad/ads</src> 
+				<vars>
+					<var name="sz">640x480</var>
+					<var name="iu">/5574/es.n5574.smoda/videos//belleza</var>
+					<var name="ciu_szs"></var>
+					<var name="impl">s</var>
+					<var name="gdfp_req">1</var>
+					<var name="env">vp</var>
+					<var name="output">xml_vast2</var>
+					<var name="unviewed_position_start">1</var> 
+					<var name="url">$PLAYER[referrer]</var>
+					<var name="correlator">$RANDOM[10]</var>
+					<var name="cust_params">paiskey%3Dsmoda_player%2Cpalabraclave2%26pos%3Dpost</var>
+				</vars>
+			</url>
+		</request>-->
+
+	</requests> 
+	
+	<!-- CARCASAS -->
+	<carcasas>
+	
+		<carcasa id="carcasa_video" activo="1">
+			<fondo alpha="1" top="0" bottom="0" left="0" right="0" clipReference="LB_PubliFondo" />
+			<titulo hAlign="center" vAlign="top" clipReference="LB_PubliTitulo" />
+			<publicidad top="20" bottom="40" left="5" right="5" />
+			<saltar vAlign="bottom" hAlign="right" clipReference="LB_PubliSalta" />
+			
+			<textos vAlign="bottom" hAlign="left" clipReference="LB_PubliTextos">
+				<textoFijo name="fijo"> 
+					<![CDATA[]]>
+				</textoFijo>
+				<textoVariable name="variable">
+					<![CDATA[]]>
+				</textoVariable>
+			</textos>
+			<segundosSalto>300</segundosSalto>
+		</carcasa>
+		
+		<carcasa id="carcasa_postroll" activo="1">
+			<fondo alpha="1" top="0" bottom="0" left="0" right="0" clipReference="LB_PubliFondo" />
+			<titulo hAlign="center" vAlign="top" clipReference="LB_PubliTitulo" />
+			<publicidad top="20" bottom="40" left="5" right="5" />
+			<saltar vAlign="bottom" hAlign="right" clipReference="LB_PubliSalta" />
+			
+			<textos vAlign="bottom" hAlign="left" clipReference="LB_PubliTextos">
+				<textoFijo name="fijo"> 
+					<![CDATA[La publicidad finalizará en]]>
+				</textoFijo>
+				<textoVariable name="variable">
+					<![CDATA[# segundos]]>
+				</textoVariable>
+			</textos>
+			<segundosSalto>7</segundosSalto>
+		</carcasa>
+		
+		<carcasa id="carcasa_asq" activo="1">
+			<fondo color="0x111111" alpha="0.8" top="10" bottom="10" left="10" right="10" />
+			<titulo hAlign="center" color="0xdddddd" size="24" vAlign="top" top="10" bottom="10" left="10" right="10" text="PUBLICIDAD" />
+			<thumbs color="0x000000" alpha="0.8" top="50" bottom="50" left="10" right="10" gap="20" />
+			<textoTiempo vAlign="bottom" hAlign="left" bottom="20" left="10" color="0xdddddd" size="10" text="Elige un video antes de # segundos" />
+			<segundosSalto>15</segundosSalto>
+		</carcasa>
+
+		
+	</carcasas>
+	
+	<parseador id="4" />
+</publicidad>
+

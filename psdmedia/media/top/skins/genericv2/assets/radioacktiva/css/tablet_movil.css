@@ -1,0 +1,56 @@
+
+/* PORTAL PlaySER - reescritura de desktop.css ====================================================================================================================== */
+
+.wrapper {padding-bottom: 260px;}
+.pie {height: 260px;}
+.cabecera .logo {width: 134px; height: 35px; margin: 20px 2% 0 0;}
+.cabecera .nav li {width: 13.5%;}
+
+/* modulo directos */
+
+div[class*="directos"] div[class*="directo-"] .hora,
+div[class*="directos"] div[class*="directo-"] .hora:before,
+div[class*="directos"] div[class*="directo-"] .btn .btn-text:after,
+div[class*="directos"] div[class*="directo-"] .btn .icon-equalizer {display: none;}
+.directos-doble div[class*="directo-"] .programa,
+.directos-multiple div[class*="directo-"] .programa {line-height: 19px;}
+
+/* ul ol listado: boton pequeno */
+
+ul.listado li,
+ol.listado li {padding-right: 64px;}
+ul.listado li .btn,
+ol.listado li .btn {width: 40px; height: 40px; top: 12px;}
+ul.listado li .btn .txt,
+ol.listado li .btn .txt {display: none}
+ul.listado li .btn .icon-equalizer,
+ol.listado li .btn .icon-equalizer {display: inline-block; line-height: 42px; font-size: 17px; margin-left: -4px;}
+
+/* PAGINA PROGRAMA ====================================================================================================================== */
+
+.header-programa-emisora .text h1 {line-height: 24px; font-size: 20px; max-height: 48px;}
+.header-programa-emisora .text h1 span {font-size: 16px;}
+.header-programa-emisora .datos + ul.redes {display: none;}
+.header-programa-emisora.no-foto .datos + ul.redes,
+.header-programa-emisora.header-emisora ul.redes,
+.header-programa-emisora.header-emisora .datos + ul.redes {display: inline-block;}
+
+.header-programa-emisora ul.nav  li {margin-right: 12px; font-size: 11px;}
+.header-programa-emisora ul.nav  li.item-secciones {margin-right: 9px;}
+.header-programa-emisora ul.nav  li.item-secciones .icon-flecha-down {font-size: 6px; margin-left: 3px;}
+.header-programa-emisora ul.nav  li.externo .icon-flecha-right-bold {display: none;}
+
+/* PAGINA BUSCADOR ====================================================================================================================== */
+
+[class*="filtro-"] {margin: 0 0.93%;}
+
+/* PAGINA PARRILLA ====================================================================================================================== */
+
+.programacion-diaria.con-directos {padding-right: 0;}
+.programacion-diaria .mas-directos {position: static; width: auto;}
+
+/* TELON ====================================================================================================================== */
+
+/* capa preroll de video */
+
+.preroll {width: 600px; height: 320px;}

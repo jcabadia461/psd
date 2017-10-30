@@ -1,0 +1,81 @@
+{
+    "config": {
+        "events": [
+            {
+                "name": "mediaBegin",
+                "events": "event16",
+                "vars": "eVar2,eVar3,eVar4,eVar6,eVar8,eVar9,eVar10,eVar13,eVar22,eVar35,eVar42,eVar43,eVar48,eVar70,eVar13,eVar1,eVar10,eVar43,eVar38,eVar39,eVar64,eVar74,eVar80,eVar81,eVar82,list3,eVar83,eVar84,eVar86,eVar87,eVar88,list2,eVar90",
+                "suites": "prisacomcadenaser,prisacomglobal"
+            },{
+                "name": "mediaComplete",
+                "events": "event17",
+                "vars": "eVar2,eVar3,eVar4,eVar6,eVar8,eVar9,eVar10,eVar13,eVar22,eVar35,eVar42,eVar43,eVar48,eVar70,eVar13,eVar1,eVar10,eVar43,eVar38,eVar39,eVar64,eVar74,eVar80,eVar81,eVar82,list3,eVar83,eVar84,eVar86,eVar87,eVar88,list2,eVar90",
+                "suites": "prisacomcadenaser,prisacomglobal"
+            },{
+                "name": "adStart",
+                "events": "event13",
+                "vars": "eVar2,eVar3,eVar4,eVar6,eVar8,eVar9,eVar10,eVar13,eVar22,eVar35,eVar42,eVar43,eVar48,eVar70,eVar13,eVar1,eVar10,eVar43,eVar38,eVar39,eVar64,eVar74,eVar80,eVar81,eVar82,list3,eVar83,eVar84,eVar86,eVar87,eVar88,list2,eVar90",
+                "suites": "prisacomcadenaser,prisacomglobal"
+            },{
+                "name": "adComplete",
+                "events": "event14",
+                "vars": "eVar2,eVar3,eVar4,eVar6,eVar8,eVar9,eVar10,eVar13,eVar22,eVar35,eVar42,eVar43,eVar48,eVar70,eVar13,eVar1,eVar10,eVar43,eVar38,eVar39,eVar64,eVar74,eVar80,eVar81,eVar82,list3,eVar83,eVar84,eVar86,eVar87,eVar88,list2,eVar90",
+                "suites": "prisacomcadenaser,prisacomglobal"
+            },{
+                "name": "adSkip",
+                "events": "event15",
+                "vars": "eVar2,eVar3,eVar4,eVar6,eVar8,eVar9,eVar10,eVar13,eVar22,eVar35,eVar42,eVar43,eVar48,eVar70,eVar13,eVar1,eVar10,eVar43,eVar38,eVar39,eVar64,eVar74,eVar80,eVar81,eVar82,list3,eVar83,eVar84,eVar86,eVar87,eVar88,list2,eVar90",
+                "suites": "prisacomcadenaser,prisacomglobal"
+            },{
+                "name": "rrss",
+                "events": "event69",
+                "vars": "list3,eVar3,eVar4,eVar8,eVar22,eVar29,eVar35,eVar38,eVar39,eVar42,eVar43,eVar48,eVar69,eVar80,eVar81,eVar82,eVar83,eVar84,eVar86,eVar87,eVar88,list2",
+                "suites": "prisacomcadenaser,prisacomglobal"
+            },{
+                "name": "button",
+                "events": "event33",
+                "vars": "list3,eVar3,eVar4,eVar8,eVar22,eVar29,eVar35,eVar38,eVar39,eVar42,eVar43,eVar48,eVar80,eVar81,eVar82,eVar83,eVar84,eVar86,eVar87,eVar88,list2",
+                "suites": "prisacomcadenaser,prisacomglobal"
+            },{
+                "name": "iniciocompartir",
+                "events": "event65",
+                "vars": "list3,eVar3,eVar4,eVar8,eVar22,eVar29,eVar35,eVar38,eVar39,eVar42,eVar43,eVar48,eVar69,eVar80,eVar81,eVar82,eVar83,eVar84,eVar86,eVar87,eVar88,list2",
+                "suites": "prisacomcadenaser,prisacomglobal"
+            },{
+                "name": "mediaHalf",
+                "events": "event18",
+                "vars": "list3,eVar3,eVar4,eVar8,eVar22,eVar29,eVar35,eVar38,eVar39,eVar42,eVar43,eVar48,eVar69,eVar80,eVar81,eVar82,eVar83,eVar84,eVar86,eVar87,eVar88,list2",
+                "suites": "prisacomcadenaser,prisacomglobal"
+            }
+        ],
+        "dataMapping": [
+            {"name": "eVar1", "value": "data.seccion"},
+            {"name": "eVar2", "value": "data.playerName" },
+            {"name": "eVar3", "value": "page.pageName" },
+            {"name": "eVar4", "value": "page.section" },
+            {"name": "eVar6", "value": "data.tipoContenido" },
+            {"name": "eVar8", "value": "data.name" },
+            {"name": "eVar9", "value": "data.adName" },
+            {"name": "eVar10", "value": "data.objeto_ed"},
+            {"name": "eVar13", "value": "data.tags"},
+            {"name": "eVar38", "value": "data.idTop"},
+            {"name": "eVar42", "value": "data.mediaType"},
+            {"name": "eVar43", "value": "page.userId"},
+            {"name": "eVar64", "value": "data.seccion_escucha"},
+			{"name": "eVar69", "value": "data.rrss"},
+            {"name": "eVar70", "value": "data.mediaTypeMode"},
+            {"name": "eVar74", "value": "data.duration" },
+            {"name": "eVar80", "value": "data.programa" },
+            {"name": "eVar81", "value": "data.emisora" },
+            {"name": "eVar82", "value": "data.tematica" },
+            {"name": "list3", "value": "data.tagsList"},
+			{"name": "eVar83", "value": "data.duration"},
+			{"name": "eVar84", "value": "data.extraccion"},
+			{"name": "eVar86", "value": "data.inicioemision"},
+			{"name": "eVar87", "value": "data.finemision"},
+			{"name": "eVar88", "value": "data.transcripcion"},
+			{"name": "list2", "value": "data.hablantes"},
+			{"name": "eVar29", "value": "data.button"}
+        ]
+    }
+}

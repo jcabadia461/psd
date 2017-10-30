@@ -1,0 +1,19 @@
+{
+    "config":{
+        "data": [
+        ],
+        "plugins": [
+            {	"id": "omniture",
+                "type": "psd.statistics.plugins.OmniturePlugin",
+                "url": "http://playser.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/loteria2014_video_omniture.json"
+            }			
+        ],
+        "routing": [
+            {"name": "mediaBegin", "plugins": "omniture", "type":"custom"},
+            {"name": "mediaComplete", "plugins": "omniture", "type":"custom"},
+            {"name": "adStart", "plugins": "omniture", "type":"custom"},
+            {"name": "adComplete", "plugins": "omniture", "type":"custom"},
+            {"name": "adSkip", "plugins": "omniture", "type":"custom"}
+        ]
+    }
+}

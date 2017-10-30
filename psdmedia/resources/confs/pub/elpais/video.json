@@ -1,0 +1,74 @@
+{
+
+    "adUnitCustom": {
+        "ep_elpais_materia": "/7811748/elpais_materia_$VARS[device]/player_video/$VARS[tecType]",
+        "ep_elpais_buenavida": "/7811748/elpais_buenavida_$VARS[device]/player_video/$VARS[tecType]",
+        "ep_elpais_icon": "/7811748/icon_$VARS[device]/player_video",
+        "ep_elpais_tentaciones": "/7811748/elpais_tentaciones_$VARS[device]/player_video/$VARS[tecType]",
+        "ep_economia_": "/7811748/elpais_finanzas_economia_$VARS[device]/player_video/$VARS[tecType]"
+
+    },
+
+    "position": {
+
+        "preroll":{
+            "request": "preroll",
+            "carcasa": "carcasa_video"
+        },
+        "postroll":{
+            "request": "postroll",
+            "carcasa": "carcasa_video"
+        }
+
+    },
+    "request": {
+
+        "preroll":{
+            "src": "http://pubads.g.doubleclick.net/gampad/ads",
+            "vars": {
+                "sz": "$VARS[adFormat]",
+                "iu": "/7811748/elpais_$VARS[device]/player_video/$VARS[tecType]",
+                "ciu_szs": "",
+                "impl": "s",
+                "gdfp_req": 1,
+                "env": "vp",
+                "output": "xml_vast2",
+                "unviewed_position_start": 1,
+                "url": "$VARS[referrer]",
+                "correlator": "$RANDOM[10]",
+				"hl": "$VARS[hl]",
+                "cust_params": "pbskey=$VARS[pTags]&pos=pre$VARS[vpaid]$VARS[CxSegments]"
+            },
+            "responseController": "ima3"
+        },
+
+        "postroll":{
+            "src": "http://pubads.g.doubleclick.net/gampad/ads",
+            "vars": {
+                "sz": "$VARS[adFormat]",
+                "iu": "/7811748/elpais_$VARS[device]/player_video/$VARS[tecType]",
+                "ciu_szs": "",
+                "impl": "s",
+                "gdfp_req": 1,
+                "env": "vp",
+                "output": "xml_vast2",
+                "unviewed_position_start": 1,
+                "url": "$VARS[referrer]",
+                "correlator": "$RANDOM[10]",
+                "hl": "$VARS[hl]",
+                "cust_params": "pbskey=$VARS[pTags]&pos=pre$VARS[vpaid]$VARS[CxSegments]"
+            },
+            "responseController": "ima3"
+        }
+    },
+    "carcasa":
+    {
+        "carcasa_video":{
+            "colorFondo": "",
+            "titulo": "",
+            "segundosSalto": "9",
+			"skippable": true
+        }
+    }
+}
+

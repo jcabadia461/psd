@@ -1,0 +1,62 @@
+{
+    "position": {
+
+        "preroll":{
+            "request": "preroll",
+            "carcasa": "carcasa_video"
+        },
+        "postroll":{
+            "request": "postroll",
+            "carcasa": "carcasa_video"
+        }
+
+    },
+    "request": {
+
+        "preroll":{
+            "src": "http://pubads.g.doubleclick.net/gampad/ads",
+            "vars": {
+                "sz": "640x480|1x1",
+                "iu": "/7811748/mucharadio_web_ar/player_audio/en_vivo/$VARS[tecType]",
+                "ciu_szs": "",
+                "impl": "s",
+                "gdfp_req": 1,
+                "env": "vp",
+                "output": "xml_vast2",
+                "unviewed_position_start": 1,
+                "url": "$VARS[referrer]",
+                "correlator": "$RANDOM[10]",
+                "cust_params": "pbskey=$VARS[pTags]&pos=pre"  
+            },
+            "responseController": "ima3"
+        },
+
+        "postroll":{
+            "src": "http://pubads.g.doubleclick.net/gampad/ads",
+            "vars": {
+                "sz": "640x480|1x1",
+                "iu": "/7811748/mucharadio_web_ar/player_audio/en_vivo/$VARS[tecType]",
+                "ciu_szs": "",
+                "impl": "s",
+                "gdfp_req": 1,
+                "env": "vp",
+                "output": "xml_vast2",
+                "unviewed_position_start": 1,
+                "url": "$VARS[referrer]",
+                "correlator": "$RANDOM[10]",
+                "cust_params": "pbskey=$VARS[pTags]&pos=pos"
+            },
+            "responseController": "ima3"
+        }
+    },
+    "carcasa":
+    {
+        "carcasa_video":{
+            "colorFondo": "",
+            "titulo": "",
+            "segundosSalto": "9",
+			"skippable": true
+        }
+    }
+}
+

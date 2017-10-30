@@ -1,0 +1,27 @@
+{
+    "config": {
+        "pixelURL":"http://b.scorecardresearch.com/p?c1=2&c2=16790403",
+        "dataMappingPlayList":[
+            {"name": "ns_st_mp", "value": "PSD SimpleMediaPlayer"},
+            {"name": "ns_st_mv", "value": "head"}
+        ],
+        "dataMapping": [
+            {"name": "ns_st_cn", "value": "1"},
+            {"name": "ns_st_ep", "value": "data.name"},
+            {"name": "ns_st_cl", "value": "data.duration"},
+            {"name": "ns_st_pn", "value": "1"},
+            {"name": "ns_st_tp", "value": "1"},
+            {"name": "ns_st_ci", "value": "16790403"},
+            {"name": "ns_st_li", "value": "false"},
+            {"name": "C3", "value": "Prisa%20Musica"},
+            {"name": "C4", "value": "MAXIMA.FM"}
+        ],
+        "events": [
+            {"name": "mediaBegin", "value": "ON_PLAY"},
+            {"name": "mediaStop", "value": "ON_PAUSE"},
+            {"name": "mediaComplete", "value": "ON_STOP"},
+            {"name": "adStart", "value": "ON_AD_PLAY"},
+            {"name": "adComplete", "value": "ON_AD_STOP"}
+        ]
+    }
+}

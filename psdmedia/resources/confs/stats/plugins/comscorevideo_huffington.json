@@ -1,0 +1,13 @@
+{
+    "config": {
+        "dataMapping": [
+			{"name": "C1", "value": "1"},
+			{"name": "C2", "value": "8671776"},
+			{"name": "C3", "value": "Huffingtonpost"},
+			{"name": "C4", "value": "Huffingtonpost"},
+			{"name": "C5", "value": "1"},
+			{"name": "C6", "value": "huffingtonpost.es"},
+			{"name": "C10", "value": ""}
+        ]
+    }
+}

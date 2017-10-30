@@ -1,0 +1,20 @@
+{
+    "config":{
+        "data": [
+        ],
+        "plugins": [
+            {"id": "omniture",
+                "type": "psd.statistics.plugins.OmniturePlugin",
+                "url": "http://besamecostarica.player-top.prisasd.com/psdmedia/resources/confs/stats/plugins/besame_costarica_omniture_video.json"
+            }
+        ],
+        "routing": [
+            {"name": "mediaBegin", "plugins": "omniture", "type":"custom"},
+            {"name": "mediaComplete", "plugins": "omniture", "type":"custom"},
+            {"name": "adStart", "plugins": "omniture", "type":"custom"},
+            {"name": "adComplete", "plugins": "omniture", "type":"custom"},
+            {"name": "adSkip", "plugins": "omniture", "type":"custom"},
+            {"name": "mediaHalf", "plugins": "omniture", "type":"custom"}
+        ]
+    }
+}
