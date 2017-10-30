@@ -1,0 +1,48 @@
+<script src='http://localhost/psdmedia/media/simple/js/lib/SimpleMediaPlayer.lib.js'></script>
+
+<div id='container_video_1433236824' style='width:50%;'></div>
+<br>
+<input type='button' value='show/hide controls' onclick='showhide()'/>
+<br><br>
+<div id='status'></div>
+
+<script>
+player_container = "container_video_1433236824";
+
+mediaTopEmbed = new psd.media.TopEmbed({ 
+      "id_cuenta": "elpais", 
+      "id_player": "113", 
+      "id_media": "b720236b560dfa904154abbb8c4927e9", 
+      "media_type" : "video",                
+      "id_container": player_container,
+      "publiActiva" : false,
+    }
+  ); 
+ 
+onStatusChange = function(ev){
+	console.log(ev.data.status);
+	document.getElementById("status").innerHTML = ev.data.status;
+//este dato puede tener el valor "play" o "pause" y se lanza cada vez que el player cambia de estado. Con esto podéis saber el estado actual del player
+}
+
+  var init = function(){
+      mediaTopEmbed.setRatio(16,9,true);
+mm = mediaTopEmbed.getMediaPlayer().getMediaModule();
+mm.addEventListener(emic.top.event.MediaEvent.ON_STATUS_CHANGE,onStatusChange);
+
+
+    }; 
+    
+    mediaTopEmbed.addEventListener(psd.media.TopEmbedEvent.EVENT_INI,init); 
+
+showhide = function(){
+	
+	divui = document.getElementById("UISkin_" + player_container + "_TopPlayer");
+	
+	if(divui.style.display=="none"){
+		divui.style.display = "block";
+	}else{
+		divui.style.display = "none";
+	}
+}
+</script>

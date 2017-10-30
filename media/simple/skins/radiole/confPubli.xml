@@ -1,0 +1,64 @@
+<publicidad activo="1">
+	
+	<!-- POSICIONES -->
+	<posiciones>
+		
+		<!-- Preroll -->
+		<posicion id="preroll" request="vast_realmedia_simple">
+			<options>
+				<option type="video" activo="1" carcasa="carcasa_video" />
+				<option type="loader" activo="1" />
+				<option type="asq" activo="1" />
+			</options>
+		</posicion>
+
+	</posiciones>
+	
+	<requests>
+		<request id="vast_realmedia_simple" parser="4">
+			<proveedor>realmedia</proveedor> 
+			<url>
+				<src>http://pubads.g.doubleclick.net/gampad/ads</src> 
+				<vars>
+					<var name="sz">640x480</var>
+					<var name="iu">/7811748/radiole_web/player_video</var>
+					<var name="ciu_szs"></var>
+					<var name="impl">s</var>
+					<var name="gdfp_req">1</var>
+					<var name="env">vp</var>
+					<var name="output">xml_vast2</var>
+					<var name="unviewed_position_start">1</var> 
+					<var name="url">$PARAMS[referrer]</var>
+					<var name="correlator">$RANDOM[10]</var>
+					<var name="cust_params">rolekey=$PARAMS[adTags]</var> 
+				</vars>
+			</url>
+		</request>
+
+	</requests>
+	
+	<!-- CARCASAS -->
+	<carcasas>
+	
+		<carcasa id="carcasa_video" activo="1">  
+			<fondo alpha="1" top="0" bottom="0" left="0" right="0" clipReference="LB_PubliFondo" />
+			<titulo hAlign="center" vAlign="top" clipReference="LB_PubliTitulo" />
+			<publicidad top="20" bottom="40" left="5" right="5" />
+			<saltar vAlign="bottom" hAlign="right" clipReference="LB_PubliSalta" />
+			
+			<textos vAlign="bottom" hAlign="left" clipReference="LB_PubliTextos">
+				<textoFijo name="fijo"> 
+					<![CDATA[El vídeo comenzará en]]>
+				</textoFijo>
+				<textoVariable name="variable">
+					<![CDATA[# segundos]]>
+				</textoVariable>
+			</textos>
+			<segundosSalto>1</segundosSalto>
+		</carcasa>
+		
+	</carcasas>
+	
+	<parseador id="4" />
+</publicidad>
+

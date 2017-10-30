@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="2.0.1">
+    <Ad id="Y206YWQ9MTA2ODExJmM9MTAxMQ">
+        <InLine>
+            <AdSystem version="3.0">TritonDigitalCampaignManager</AdSystem>
+            <AdTitle><![CDATA[Audio_big_box-1]]></AdTitle>
+			<Creatives>
+				<Creative sequence="1">                     
+					<CompanionAds>
+												
+						<Companion height="250" width="300">
+							<StaticResource creativeType="image/jpeg">
+								<![CDATA[http://cmodmedia.live.streamtheworld.com/media/cm-image/cm:561.jpg]]>
+							</StaticResource>
+							
+							<TrackingEvents>
+							
+												
+								<Tracking event="creativeView">
+									<![CDATA[http://cmod.live.streamtheworld.com/ondemand/viewtrack?type=cm-spot&cid=Y206YWQ9MTA2ODExJmM9MTAyMSZhPTU2MQ&stid=52079&lsid=12385644&cb=-2113097349]]>
+								</Tracking>    
+																	
+							</TrackingEvents>
+							
+								
+							<AltText>
+								<![CDATA[big_boxOnly]]>
+							 </AltText>
+							
+						</Companion>
+
+						<Companion height="250" width="300">
+							<IFrameResource>
+								<![CDATA[http://cmod.live.streamtheworld.com/ondemand/creative?type=cm-spot&cid=Y206YWQ9MTA2ODExJmM9MTAyMQ&fmt=iframe&stid=52079&lsid=12385644&cb=-2113097349]]>
+							</IFrameResource>
+						</Companion>
+
+						<Companion height="250" width="300">
+							<HTMLResource>
+								<![CDATA[    <img alt='big_boxOnly' src="http://cmod.live.streamtheworld.com/ondemand/viewtrack?type=cm-spot&amp;cid=Y206YWQ9MTA2ODExJmM9MTAyMSZhPTU2MQ&amp;stid=52079&amp;lsid=12385644&amp;cb=-2113097349&amp;redir=http://cmodmedia.live.streamtheworld.com/media/cm-image/cm:561.jpg"/>]]>
+						   </HTMLResource>
+						</Companion>
+					</CompanionAds>                    
+				</Creative>					
+			</Creatives>
+		</InLine>
+    </Ad>         
+</VAST>

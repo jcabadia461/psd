@@ -1,0 +1,78 @@
+<body style='padding:0;margin:0;background:#fff;padding:30px;' onload='/*pintar(0);*/'>
+
+<script type="text/javascript" src="/psdmedia/media/top/js/TopPlayer.lib.js"></script>
+
+<style>
+	hr{
+		border: 1px dashed #aada00;
+	}
+	
+	input{
+	   	background: none repeat scroll 0 0 #aada00;
+    	border: 0 none;
+	    padding: 5px;
+	}
+
+	.var{
+		color:#880088;
+	}
+
+	.texto{
+		color:#3333ff;
+	}
+
+</style>
+
+	<div id='contenedor' style='background:black;width:50px;height:37px;'>
+	</div>
+
+	<div style='width:500px;height:20px;background:#77aa00;margin-top:10px;text-align:center;color:white;padding-top:5px;padding-bottom:5px;' id='barra'>
+		<!--div style='width:0%;height:100%;background:#aada00;' id='donde'></div-->
+		Desplázate por esta barra
+	</div>
+	
+	<!--hr>
+	<input type='button' value='1 frame' onclick='frames = 1;'></input>
+	<input type='button' value='4 frames' onclick='frames = 4;'></input>
+	<input type='button' value='10 frames' onclick='frames = 10;'></input>
+	<input type='button' value='60 frames' onclick='frames = 60;'></input>
+	-->
+	<hr>
+	<input type='button' value='50x37 (default)' onclick='contenedor.style.width=50;contenedor.style.height=37;mos.resetSize();'></input>
+	<input type='button' value='100x74' onclick='contenedor.style.width=100;contenedor.style.height=74;mos.resetSize();'></input>
+	<input type='button' value='100x150' onclick='contenedor.style.width=100;contenedor.style.height=150;mos.resetSize();'></input>
+	<input type='button' value='800x600' onclick='contenedor.style.width=800;contenedor.style.height=600;mos.resetSize();'></input>
+	<hr>
+	
+<script>
+
+mos = new emic.top.ui.Mosaic();
+//mos.init("contenedor","http://media2.meristation.com/topmeri/20151/13/mosaic_f7393ed82ab6a57b08c393a5069e4883.png");
+mos.init("contenedor","http://media2.meristation.com/topmeri/20152/8/mosaic_df13e699383cb44eab8487fca3c2e09f.jpg");
+//alert("A");
+
+barra.onmousemove = function(e){
+	
+	var evento = e || window.event;
+
+	//document.getElementById("donde").style.width = e.x - document.getElementById("donde").offsetLeft|0;
+	mos.paint(parseInt(((evento.clientX - document.getElementById("contenedor").offsetLeft|0))/500 * 100)|0);
+
+}
+
+</script>
+<p>
+<h4>Funcionamiento</h4>
+var <span class='var'>mos</span> = new emic.top.ui.Mosaic();<br>
+<span class='var'>mos</span>.init(<span class='texto'>"contenedor"</span>,<span class='texto'>"http://media2.meristation.com/topmeri/20151/13/mosaic_f7393ed82ab6a57b08c393a5069e4883.png"</span>);<br>
+<br>
+barra.onmousemove = function(e){<br>
+
+var evento = e || window.event;<br>
+
+	<span class='var'>mos</span>.paint(parseInt(((evento.clientX - document.getElementById("contenedor").offsetLeft|0))/500 * 100)|0);<br>
+}<br>
+
+
+</p>
+</body>

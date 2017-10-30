@@ -1,0 +1,13 @@
+
+
+/* Estilos playertop en portal PlaySER para pantalla con resolucion 1024 (incluye mayoria de tablets en horizontal) */
+@import url(playertop_desktop.css);
+
+/* Estilos playertop en portal PlaySER para tablet */
+@import url(playertop_tablet.css) screen and (max-width: 999px);
+
+/* Ajustes playertop en portal PlaySER tablet-movil */
+@import url(playertop_tablet_movil.css) screen and (max-width: 730px);
+
+/* Estilos playertop en portal PlaySER para movil */
+@import url(playertop_movil.css) screen and (max-width: 650px);

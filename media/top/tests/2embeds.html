@@ -1,0 +1,47 @@
+<body onload='onload()'>
+<script src='/psdmedia/media/simple/js/SimpleMediaPlayer.min.js'></script>
+<div id='capa1' style='width:50%;height:400px;float:left;background:gold;'></div>
+<div id='capa2' style='width:50%;height:400px;float:left;background:#fabada'></div>
+
+<script>
+
+    mute = function(evento,embed1,embed2){
+		if(evento.data.status=="play"){
+			embed2.getMediaPlayer().getMediaModule().mute();
+			embed1.getMediaPlayer().getMediaModule().setVolume(0.8);
+		}
+	}
+
+	doListeners = function(){
+	    mediaTopEmbed.getMediaPlayer().getMediaModule().addEventListener(emic.top.event.MediaEvent.ON_STATUS_CHANGE,function(ev){mute(ev,mediaTopEmbed,mediaTopEmbed2)});
+	    mediaTopEmbed2.getMediaPlayer().getMediaModule().addEventListener(emic.top.event.MediaEvent.ON_STATUS_CHANGE,function(ev){mute(ev,mediaTopEmbed2,mediaTopEmbed)});
+	}
+
+	onload2 = function(){
+        mediaTopEmbed2 = new psd.media.TopEmbed({
+        "id_cuenta": "los40videos",
+        "media_type": "video",
+        "id_player": 67,
+        "id_media": "20141126133120",
+        "id_container": "capa2",
+        "dev":true
+        });
+
+        mediaTopEmbed2.addEventListener(psd.media.TopEmbedEvent.EVENT_INI,doListeners);
+	}
+
+	onload = function(){
+	    mediaTopEmbed = new psd.media.TopEmbed({
+        "id_cuenta": "los40videos",
+        "media_type": "video",
+        "id_player": 67,
+        "id_media": "20140929185014",
+        "id_container": "capa1",
+        "dev":true
+        });
+
+		mediaTopEmbed.addEventListener(psd.media.TopEmbedEvent.EVENT_INI,onload2);
+	}
+
+</script>
+</body>

@@ -1,0 +1,443 @@
+/* reset */
+@import url("reset.css");
+
+/* fuentes */
+@import url("fuentes.css");
+
+/* iconos */
+@import url("iconos.css");
+
+/* player base */
+@import url("player_desktop.css");
+
+/* ====================================================================================================================== */
+
+/* PLAYER EN CADENASER.COM
+   Reescritura de player-desktop.css para portal cadenaser.com
+   
+/* ====================================================================================================================== */
+
+/* EN ESCRITORIO
+
+   Estilos comunes todos los huecos de noticia en cadenaser.com
+   
+     cs-grande = fotonoticia (770px)
+     cs-mediano = sumario al centro (545px)
+     cs-pequeno = sumario a un lado (250px)
+   
+   base: modo a la carta (info=a la carta)
+*/
+
+.player {background: #f4f4f4; border: 1px solid #e5e5e5; color: #000;}
+.player .player-inner {box-shadow: none;}
+.player .control {border-color: #ddd;}
+.player .play .loading {background-color: #f4f4f4;}
+.player .play .ico span {margin: -17px 0 0 -17px;}
+.player .play .ico .icon-play,
+.player .play .ico .icon-pause {color: #000;}
+.player .play:hover .ico .icon-play,
+.player .play:focus .ico .icon-play,
+.player .play:hover .ico .icon-pause,
+.player .play:focus .ico .icon-pause {color: #4dc5ad;}
+.player .volume .ico {background-color: transparent;}
+.player .volume .dot,
+.player .info .track .dot {box-shadow: 0 0 0 2px rgba(25, 30, 34, 0.11);}
+.player .volume .dot:hover,
+.player .volume .dot:focus,
+.player .info .track .dot:hover,
+.player .info .track .dot:focus {box-shadow: 0 0 0 2px rgba(0, 159, 255, 1); background: #fff;}
+.player .volume .slider,
+.player .info .track {background: #b0b0b0;}
+.player .info .track .loaded {background: #8e8e8e;}
+.player .info span[class*="-time"] {color: #000;}
+/* ocultamos rotulo esta sonando */
+.player .info .titulo em {display: none;}
+.player .info .programa {margin-left: 0; padding-left: 36px;}
+
+.player .info .titulo span.fade {top: 0;
+                               background: -moz-linear-gradient(left, rgba(244,244,244,0) 0%, rgba(244,244,244,0.99) 99%, rgba(244,244,244,1) 100%); 
+                               background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(244,244,244,0)), color-stop(99%,rgba(244,244,244,0.99)), color-stop(100%,rgba(244,244,244,1))); 
+                               background: -webkit-linear-gradient(left, rgba(244,244,244,0) 0%,rgba(244,244,244,0.99) 99%,rgba(244,244,244,1) 100%);
+                               background: -o-linear-gradient(left, rgba(244,244,244,0) 0%,rgba(244,244,244,0.99) 99%,rgba(244,244,244,1) 100%); 
+                               background: -ms-linear-gradient(left, rgba(244,244,244,0) 0%,rgba(244,244,244,0.99) 99%,rgba(244,244,244,1) 100%); 
+                               background: linear-gradient(to right, rgba(244,244,244,0) 0%,rgba(244,244,244,0.99) 99%,rgba(244,244,244,1) 100%); 
+                               filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#f4f4f4',GradientType=1 ); 
+}
+.player .barra {background-color: rgba(0,0,0,1); border-radius: 0;}
+.player .on .barra {background-color: rgba(0,0,0,0.8);}
+.player .share ul ul button,
+.player .share .redes-active .prim button {color: #000; background: #e4e4e4;}
+.player .share .redes-active .prim button:hover span,
+.player .share .redes-active .prim button:focus span {color: #000;}
+.player .form-mail .txt {color: #fff;}
+.player .info .embed .control-conf {width: 143px;}
+.player .embed .inner-embed {padding-right: 120px;}
+
+/* modo en directo */
+
+.player.en-directo .emisora .nombre {background: #eaeaea; border-color: #eaeaea; padding-right: 0;}
+.player.en-directo .emisora .conf {border-color: #eaeaea;}
+/* capa cambiar emisora */
+.player .info .conf-emisora .inner-conf {padding-right: 110px;}
+.player .info .control-conf {width: 106px;}
+.player .info .inner-conf .select {width: 60%;}
+.player .info .inner-conf .select + .select {width: 40%;}
+.player .info .control-conf .btn-secundary {padding: 0 8px;}
+
+/* PLAYER en ipad ================================================= */
+
+.player-ipad.cs-grande .info .programa {padding-left: 117px;}
+
+
+/* ====================================================================================================================== */
+/* COMUNES PLAYER EN HUECO MEDIANO Y PEQUENO - sumario centrado 545px y alineado 250px ESCRITORIO
+/* COMUNES TAMBIEN PARA PLAYER MINI EN PORTADA PODCASTS - 180px
+/* ====================================================================================================================== */
+
+.cs-mediano,
+.cs-mediano .player-inner {height: 90px;}
+.cs-mediano .player-inner {padding-left: 88px;}
+.cs-mediano .control,
+.cs-pequeno .control,
+.cs-mini .control {border: 0; width: 80px; height: 62px; margin: 15px 0 0;}
+.cs-mediano .play,
+.cs-pequeno .play,
+.cs-mini .play {border-width: 3px; height: 61px; width: 61px; margin-top: -3px;}
+.cs-mediano .play .ico span,
+.cs-pequeno .play .ico span,
+.cs-mini .play .ico span {font-size: 20px; line-height: 61px; height: 61px; width: 61px; margin: -12px 0 0 -12px;}
+.cs-mediano .play .ico .icon-play,
+.cs-pequeno .play .ico .icon-play,
+.cs-mini .play .ico .icon-play {padding-left: 0;}
+.cs-mediano .control .label,
+.cs-pequeno .control .label,
+.cs-mini .control .label {position: absolute; font-size: 12px; right: -67px; top: -12px; margin-left: 0;}
+.cs-mediano .ico_sonido,
+.cs-pequeno .ico_sonido,
+.cs-mini .ico_sonido {top: -21px; left: 0;}
+.cs-mediano .control .volume,
+.cs-pequeno .control .volume,
+.cs-mini .control .volume {position: absolute; bottom: -9px; left: 80px; z-index: 4; float: none; margin-left: 0;}
+.cs-mediano .info,
+.cs-pequeno .info,
+.cs-mini .info {padding-top: 16px;}
+.cs-mediano .info .titulo span,
+.cs-pequeno .info .titulo span,
+.cs-mini .info .titulo span {font-size: 12px;}
+
+.cs-mediano .info .titulo span a b:before {height: 16px; line-height: 16px; width: 20px; left: -20px;}
+.cs-mediano .info .titulo span a.ticker b {margin: 0 10px;}
+
+.cs-mediano .info .emisora,
+.cs-pequeno .info .emisora,
+.cs-mini .info .emisora {top: 0;}
+.cs-mediano .info .programa,
+.cs-pequeno .info .programa,
+.cs-mini .info .programa {padding: 0; top: 8px;}
+.cs-mediano.en-directo .info .programa {height: 36px;}
+.cs-mediano.a-la-carta .track-wrapper,
+.cs-pequeno.a-la-carta .track-wrapper,
+.cs-mini.a-la-carta .track-wrapper {margin-left: 110px;}
+.cs-mediano .ico_sonido {left: 76px; top: -22px;}
+
+/* compartires */
+
+.cs-mediano .share,
+.cs-pequeno .share,
+.cs-mini .share {padding-top: 15px;}
+.cs-mediano .share .redes .prim,
+.cs-pequeno .share .redes .prim,
+.cs-mini .share .redes .prim {display: none;}
+.cs-mediano .share .redes-active .prim,
+.cs-pequeno .share .redes-active .prim,
+.cs-mini .share .redes-active .prim {display: block; float: left; width: 40px;}
+.cs-mediano .share .redes-active .prim,
+.cs-pequeno .share .redes-active .prim button,
+.cs-mini .share .redes-active .prim button {background: #4dc5ad;}
+
+/* capas desplegables */
+
+.cs-mediano .info .form-mail,
+.cs-mediano .info .embed,
+.cs-mediano .info .conf-emisora,
+.cs-pequeno .info .form-mail,
+.cs-pequeno .info .embed,
+.cs-pequeno .info .conf-emisora,
+.cs-mini .info .form-mail,
+.cs-mini .info .embed,
+.cs-mini .info .conf-emisora {background-color: #4dc5ad; top: 0; bottom: auto; padding-right: 41px; height: 90px;}
+.cs-mediano .info .form-mail .form-mail-inner,
+.cs-pequeno .info .form-mail .form-mail-inner,
+.cs-mini .info .form-mail .form-mail-inner {margin-right: -37px; padding-right: 0; padding-left: 5px;}
+.cs-mediano .info .embed .inner-embed,
+.cs-mediano .info .conf-emisora .inner-conf,
+.cs-pequeno .info .embed .inner-embed,
+.cs-pequeno .info .conf-emisora .inner-conf,
+.cs-mini .info .embed .inner-embed,
+.cs-mini .info .conf-emisora .inner-conf {margin-right: -41px; padding: 0;}
+.cs-mediano .info .conf-emisora,
+.cs-pequeno .info .conf-emisora,
+.cs-mini .info .conf-emisora {top: auto; bottom: -11px; height: 92px;}
+.cs-mediano .form-mail .txt,
+.cs-mediano .info .label,
+.cs-pequeno .form-mail .txt,
+.cs-pequeno .info .label,
+.cs-mini .form-mail .txt,
+.cs-mini .info .label  {display: none;}
+.cs-mediano .info .select,
+.cs-pequeno .info .select,
+.cs-mini .info .select {width: auto; float: none; height: 28px; border-bottom: 1px solid #14181b; border-right: 0; }
+.cs-mediano .info .inner-conf .select,
+.cs-mediano .info .inner-conf .select + .select,
+.cs-pequeno .info .inner-conf .select,
+.cs-pequeno .info .inner-conf .select + .select,
+.cs-mini .info .inner-conf .select,
+.cs-mini .info .inner-conf .select + .select {width: 100%;}
+.cs-mediano .info .inner-conf .select select,
+.cs-mediano .info .inner-conf .select + .select select,
+.cs-pequeno .info .inner-conf .select select,
+.cs-pequeno .info .inner-conf .select + .select select,
+.cs-mini .info .inner-conf .select select,
+.cs-mini .info .inner-conf .select + .select select {width: 129%;}
+.cs-mediano .info .control-conf,
+.cs-pequeno .info .control-conf,
+.cs-mini .info .control-conf {position: relative; padding-left:5px; width: auto; display: block; overflow: hidden;}
+.cs-mediano .info .control-conf .btn-secundary,
+.cs-pequeno .info .control-conf .btn-secundary,
+.cs-mini .info .control-conf .btn-secundary  {float: left; margin-top: 5px;}
+.cs-mediano .info .form-mail .action,
+.cs-pequeno .info .form-mail .action,
+.cs-mini .info .form-mail .action {left: 5px; top: auto; bottom: 3px;}
+.cs-mediano .info .form-mail .close,
+.cs-pequeno .info .form-mail .close,
+.cs-mini .info .form-mail .close {bottom: 0; top: auto}
+.cs-mediano .info .control-conf .close,
+.cs-pequeno .info .control-conf .close,
+.cs-mini .info .control-conf .close {top: 4px;}
+.cs-mediano .info .embed .control-conf,
+.cs-pequeno .info .embed .control-conf,
+.cs-mini .info .embed .control-conf {width: auto;}
+.cs-mediano .info .embed .code,
+.cs-pequeno .info .embed .code,
+.cs-mini .info .embed .code {border-bottom: 1px solid #000; float: none; width: 100%; line-height: 12px;}
+.cs-mediano .info .embed .inner-embed .control-conf .btn-secundary,
+.cs-pequeno .info .embed .inner-embed .control-conf .btn-secundary,
+.cs-mini .info .embed .inner-embed .control-conf .btn-secundary  {margin-top: 3px;}
+
+/* modo en directo */
+
+.cs-mediano.en-directo .programa,
+.cs-pequeno.en-directo .programa,
+.cs-mini.en-directo .programa {padding-right: 0;}
+.cs-mediano.en-directo .info .titulo,
+.cs-pequeno.en-directo .info .titulo,
+.cs-mini.en-directo .info .titulo {margin-right: 0;}
+.cs-mediano.en-directo .emisora,
+.cs-pequeno.en-directo .emisora,
+.cs-mini.en-directo .emisora {padding: 0 0 0 100px;}
+.cs-mediano.en-directo .emisora .nombre,
+.cs-pequeno.en-directo .emisora .nombre,
+.cs-mini.en-directo .emisora .nombre {border-width: 4px 0; background: transparent; border-color: transparent;}
+.cs-mediano.en-directo .emisora .conf,
+.cs-pequeno.en-directo .emisora .conf,
+.cs-mini.en-directo .emisora .conf {padding: 0; line-height: 12px; width: 23px; background-color: transparent; border-color: #f4f4f4; border-width: 4px 0;}
+.cs-mediano.en-directo .emisora .conf span,
+.cs-pequeno.en-directo .emisora .conf span,
+.cs-mini.en-directo .emisora .conf span {display: none;}
+.cs-mediano.en-directo .emisora .conf span[class*="icon"] {display: inline; color: #4dc5ad;}
+
+/* PLAYER en ipad ================================================= */
+
+.player-ipad.cs-mediano.player .info .emisora .nombre,
+.player-ipad.cs-mediano .info .programa {padding-left: 0;}
+.player-ipad.cs-mediano.en-directo .emisora {padding: 0;}
+.player-ipad.cs-mediano.a-la-carta .track-wrapper{margin-left: 0;}
+
+
+/* ====================================================================================================================== */
+/* PLAYER EN HUECO PEQUENO sumario alineado a un lado (izq o der) 250px ESCRITORIO
+/* ====================================================================================================================== */
+
+.cs-pequeno,
+.cs-pequeno .player-inner,
+.cs-mini,
+.cs-mini .player-inner {height: 40px;}
+.cs-pequeno .player-inner,
+.cs-mini .player-inner {padding: 0 90px 0 40px;}
+.cs-pequeno .programa,
+.cs-mini .programa {display: none;}
+
+/* play y pausa */
+
+.cs-pequeno .control,
+.cs-pequeno .play,
+.cs-pequeno .play .ico,
+.cs-mini .control,
+.cs-mini .play,
+.cs-mini .play .ico {width: 40px; height: 40px;}
+.cs-pequeno .control,
+.cs-mini .control {margin: 0; padding: 0;}
+.cs-pequeno .play,
+.cs-mini .play {margin: 0; border: none;}
+.cs-pequeno .play .ico .icon-play,
+.cs-mini .play .ico .icon-play {width: 40px;}
+.cs-pequeno .play .ico span,
+.cs-mini .play .ico span {font-size: 14px; line-height: 40px; height: 40px; width: 40px; margin: 0;}
+.cs-pequeno.a-la-carta .control .label,
+.cs-mini.a-la-carta .control .label {display: none;}
+.cs-pequeno .control .volume,
+.cs-mini .control .volume {left: 165px; bottom: 1px; width: 50px;}
+.cs-pequeno .volume .ico,
+.cs-mini .volume .ico {width: 25px;}
+.cs-pequeno .volume .slider,
+.cs-mini .volume .slider {width: 20px;}
+.cs-pequeno .volume .dot,
+.cs-pequeno .info .track .dot,
+.cs-mini .volume .dot,
+.cs-mini .info .track .dot {width: 7px; height: 7px; top: -2px;}
+.cs-pequeno .play .loading,
+.cs-pequeno .play .contenedor_punto,
+.cs-mini .play .loading,
+.cs-mini .play .contenedor_punto {width: 20px; height: 20px;}
+
+/* linea tiempo */
+
+.cs-pequeno .info,
+.cs-mini .info {padding-top: 0;}
+.cs-pequeno .info .track-wrapper,
+.cs-mini .info .track-wrapper {margin-left: 0; padding: 12px 0 0 55px;}
+.cs-pequeno .info span.current-time,
+.cs-mini .info span.current-time {top: 12px;}
+.cs-pequeno .info span.total-time,
+.cs-mini .info span.total-time {display: none;}
+.cs-pequeno .info .track,
+.cs-mini .info .track {margin: 7px 0;}
+
+/* compartires */
+
+.cs-pequeno .share,
+.cs-mini .share {padding-top: 5px; width: 30px; height: 30px;}
+.cs-pequeno .share .redes-active ul ,
+.cs-mini .share .redes-active ul {width: 75px;}
+.cs-pequeno .share li,
+.cs-pequeno .share button,
+.cs-mini .share li,
+.cs-mini .share button {width: 40px;}
+.cs-pequeno .share li:first-child,
+.cs-pequeno .share .open-redes,
+.cs-pequeno .share .close-redes,
+.cs-mini .share li:first-child,
+.cs-mini .share .open-redes,
+.cs-mini .share .close-redes {width: 30px; margin: 0;}
+.cs-pequeno .share button,
+.cs-mini .share button {background: transparent; color: #000;}
+.cs-pequeno .share .icon-share,
+.cs-mini .share .icon-share {font-weight: 700;}
+.cs-pequeno .share li.c-emb,
+.cs-pequeno .share li.c-ml,
+.cs-mini .share li.c-emb,
+.cs-mini .share li.c-ml {display: none!important;} /* este important se puede quitar en produccion */
+
+/* en directo */
+
+.cs-pequeno.en-directo .emisora,
+.cs-mini.en-directo .emisora {display: none;}
+.cs-pequeno.en-directo .control .label,
+.cs-mini.en-directo .control .label {display: block; position: absolute; right: -80px; top: 0; width: 80px; margin: 0; font-size: 12px;}
+
+
+/* ====================================================================================================================== */
+/* PLAYER MINI EN PORTADA PODCASTS en bloque destacados 180px ESCRITORIO SOLO
+/* ====================================================================================================================== */
+
+.cs-mini .player-inner {padding: 0 85px 0 40px;}
+.cs-mini .control .volume {left: 100px;}
+.cs-mini .info .track-wrapper {padding-left: 0;}
+.cs-mini .info span.current-time {display: none;}
+.cs-mini.en-directo .control .label {right: -66px; width: 68px; text-indent: -18px; overflow: hidden;}
+
+
+/* ====================================================================================================================== */
+/* PLAYER EN VERSION MOVIL
+/* ====================================================================================================================== */
+
+/* todos los huecos */
+
+.cs-mediano.player-touch .volume,
+.cs-pequeno.player-touch .volume,
+.cs-mini.player-touch .volume {display: none;}
+.cs-mediano.player-touch .info .track-wrapper,
+.cs-pequeno.player-touch .info .track-wrapper {margin-left: 0;}
+.cs-mediano.player-touch .info .form-mail,
+.cs-pequeno.player-touch .info .form-mail {background-color: #4dc5ad; top: 0; bottom: auto; padding-right: 41px; height: 90px;}
+.cs-mediano.player-touch .info .form-mail .form-mail-inner,
+.cs-pequeno.player-touch .info .form-mail .form-mail-inner {margin-right: -37px; padding-right: 0;}
+.cs-mediano.player-touch .info .form-mail .action,
+.cs-pequeno.player-touch .info .form-mail .action {left: 5px; top: auto; bottom: 3px;}
+.cs-mediano.player-touch .info .form-mail .close,
+.cs-pequeno.player-touch .info .form-mail .close {bottom: 0; top: auto}
+.cs-mediano.player-touch .info .emisora,
+.cs-pequeno.player-touch .info .emisora {padding-left: 100px;}
+.cs-mediano.player-touch .barra,
+.cs-pequeno.player-touch .barra {width: 1px;}
+.cs-mediano.player-touch .inverso,
+.cs-pequeno.player-touch .inverso {left: 0;}
+.cs-mediano.player-touch.en-directo .emisora {padding: 0;}
+.cs-mediano.player-touch.en-directo .emisora .nombre {padding: 0; font-size: 10px;}
+.cs-mediano.player-touch.en-directo .info .emisora .conf span[class*="icon"] {font-size: 20px;}
+.cs-mediano.player-touch.a-la-carta .programa,
+.cs-pequeno.player-touch.a-la-carta .programa {padding-right: 0;}
+.cs-mediano.player-touch.a-la-carta .track-wrapper,
+.cs-pequeno.player-touch.a-la-carta .track-wrapper {margin-left: 0;}
+.cs-mediano.player-touch .info .total-time,
+.cs-pequeno.player-touch .info .total-time {display: none;}
+.cs-mediano.player-touch .info .track-wrapper,
+.cs-pequeno.player-touch .info .track-wrapper {padding-right: 10px;}
+.cs-mini.player-touch .info span.current-time {display: block;}
+.cs-mini.player-touch .player-inner {padding-right: 35px;}
+.cs-mini.player-touch.en-directo .control .label {right: -80px; width: 80px; text-indent: 0; overflow: visible;}
+
+/* boton de play a la derecha: en fotonoticia y sumario centro */
+
+.cs-mediano.player-touch .player-inner {padding-left: 0; padding-right: 90px;}
+.cs-mediano.player-touch .control {width: 100%; padding: 0; float: right; position: absolute; right: auto; left: auto;}
+.cs-mediano.player-touch .control .label {left: 50px;}
+.cs-mediano.player-touch .play {float: right; margin-right: 10px;}
+.cs-mediano.player-touch .info {margin-left: 50px; width: auto; float: none;}
+.cs-mediano.player-touch .info .emisora .nombre {max-width: 155px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.cs-mediano.player-touch .info .track-wrapper {padding-right: 0;}
+.cs-mediano.player-touch .share {right: auto; left: 10px;}
+.cs-mediano.player-touch .share ul ul {right: -111px;}
+.cs-mediano.player-touch .share .redes-active .sec {float: left;}
+.cs-mediano.player-touch .info .embed,
+.cs-mediano.player-touch .info .conf-emisora,
+.cs-mediano.player-touch .info .form-mail {padding-right: 140px; margin-left: -50px;}
+.cs-mediano.player-touch .info .embed .inner-embed,
+.cs-mediano.player-touch .info .conf-emisora .inner-conf {margin-right: -140px;}
+.cs-mediano.player-touch .info .form-mail .form-mail-inner {margin-right: -136px;}
+
+/* sumario a un lado */
+
+.cs-pequeno.player-touch .player-inner {padding-right: 10px;}
+.cs-pequeno.player-touch.en-directo .emisora {display: none;}
+.cs-pequeno.player-touch.en-directo .control .label {display: block; position: absolute; right: auto; left: 40px; top: 0; width: 75px; font-size: 12px;}
+.cs-pequeno.player-touch.en-directo .control .label:after  {display: none;}
+.cs-pequeno.player-touch .info .track-wrapper,
+.cs-mini.player-touch .info .track-wrapper {font-size: 10px; padding-left: 45px;}
+.cs-pequeno.player-touch.a-la-carta .share {display: none;}
+
+/* pelota de arrastre mas grande ============================================================================= */
+
+.player-touch .info .track .dot {width: 17px; height: 17px; top: -7px; box-shadow: 0 0 0 8px rgba(0, 159, 255, 0.2); background: #4dc5ad; transition: none;}
+.player-touch.cs-pequeno .info .track .dot,
+.player-touch.cs-mini .info .track .dot {width: 13px; height: 13px; top: -5px; box-shadow: 0 0 0 4px rgba(0, 159, 255, 0.3);}
+
+@media screen and (max-width: 320px) {
+
+	.cs-mediano.player-touch.en-directo .emisora .nombre,
+	.cs-pequeno.player-touch.en-directo .emisora .nombre {max-width: 133px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+	.cs-pequeno.player-touch .share {display: none;}
+
+}
+
+

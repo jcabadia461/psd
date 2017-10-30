@@ -1,0 +1,191 @@
+
+/* PLAYER movil en playser - reescritura de player-desktop.css ====================================================================================================================== */
+
+.no-tablet {display: block !important;}
+.no-movil {display: none !important;}
+
+.player,
+.player .player-inner {height: 90px;}
+.player .player-inner {padding-left: 0; padding-right: 90px;}
+.player-wrapper .switch {right: 60px;}
+.player .control {border: 0; width: 100%; height: 62px; margin: 15px 0 0; padding: 0; float: right; position: absolute; right: auto; left: auto;}
+.player .play {border-width: 3px; height: 61px; width: 61px; margin-top: -3px; float: right; margin-right: 10px;}
+.player .play .ico span {font-size: 20px; line-height: 61px; height: 61px; width: 61px; margin: -12px 0 0 -12px;}
+.player .play .ico .icon-play {padding-left: 5px; width: 56px;}
+.player .control .label {display: block; position: absolute; top: -12px; left: 35px; white-space: nowrap; font-size: 12px;}
+.ico_sonido {left: 76px; top: -30px;}
+.player .control .volume {display: none}
+.player .info {padding-top: 32px; margin-left: 50px; width: auto; float: none;}
+.player .info .programa {padding: 0; height: 27px; line-height: 27px; margin-left: 0;}
+.player .info .emisora .nombre {border: 0; height: 27px; font-size: 10px; font-weight: normal; line-height: 27px; background: none; padding: 0 2px 0 0; max-width: 155px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.player .info .titulo {font-size: 12px;}
+.player .info .titulo em {display: none;}
+
+.player .info .titulo span a b:before {height: 16px; line-height: 16px; width: 20px; left: -20px;}
+.player .info .titulo span a.ticker b {margin: 0 10px;}
+
+.player .info .emisora {top: -5px;}
+.player .info .emisora .conf {border: 0; padding: 0; height: 23px; line-height: 12px; width: 23px; background-color: transparent;}
+.player .info .emisora .conf span {display: none;}
+.player .info .emisora .conf span[class*="icon"] {display: inline; color: #4dc5ad; font-size: 20px;}
+.player .info .track-wrapper {padding: 0 0 0 55px; margin-left: 0; height: 17px;}
+.player .info .track {margin: 7px 0;}
+.player .info span[class*="-time"] {top: 0;}
+.player .info .total-time {display: none;}
+
+/* capas desplegables */
+
+.player .info .form-mail,
+.player .info .embed,
+.player .info .conf-emisora {background-color: #4dc5ad; top: 0; bottom: auto; padding-right: 140px; height: 90px; margin-left: -50px;}
+.player .info .form-mail .form-mail-inner {margin-right: -136px; padding-right: 0;}
+.player .info .embed .inner-embed,
+.player .info .conf-emisora .inner-conf {margin-right: -140px; padding: 0;}
+.player .info .conf-emisora {top: auto; bottom: -9px;}
+.player .info .label  {display: none;}
+.player .info .select {width: auto; float: none; height: 28px; border-bottom: 1px solid #14181b; border-right: 0; }
+.player .info .inner-conf .select,
+.player .info .inner-conf .select + .select {width: 100%;}
+.player .info .inner-conf .select select,
+.player .info .inner-conf .select + .select select {width: 129%;}
+.player .info .control-conf {position: relative; padding-left:5px; width: auto; display: block; overflow: hidden;}
+.player .info .control-conf .btn-secundary  {float: left; margin-top: 4px;}
+.player .info .form-mail .action {left: 5px; top: auto; bottom: 3px;}
+.player .info .form-mail .close {bottom: 0; top: auto}
+.player .info .embed .control-conf {width: auto;}
+.player .info .embed .code {border-bottom: 1px solid #000; float: none; width: 100%; line-height: 12px;}
+.player .info .embed .inner-embed .control-conf .btn-secundary  {margin-top: 3px;}
+
+/* redes */
+
+.player .share {padding-top: 15px; right: auto; left: 10px;}
+.player .share ul ul {right: -111px;}
+.player .share .redes-active .sec {float: left;}
+
+/* ================================================================================================================================================== */
+/* PLAYER EN IPAD =================================================================================================================================== */
+/* ================================================================================================================================================== */
+
+.player-ipad .player-inner {padding-left: 0;}
+.player-ipad .info .programa {padding: 0;}
+.player-ipad .info .titulo em,
+.player-ipad .control .volume {display: none;}
+.player-ipad .control {border-right: none;}
+.player-ipad  .info .track-wrapper {margin-left: 0;}
+
+/* ================================================================================================================================================== */
+/* PLAYER EMBEBIDO en iframe de usuario ============================================================================================================= */
+/* ================================================================================================================================================== */
+
+.player-embebido .info .emisora {padding-left: 100px;}
+.player-embebido .info .titulo em {display: none;}
+.player-embebido .info .titulo .logo {display: block; height: 15px; width: 35px; left: 0; margin-top: 0; top: -18px;}
+.player-embebido .info .titulo .logo:hover,
+.player-embebido .info .titulo .logo:focus {opacity: 0.7;}
+.player-embebido .ico_sonido {left: 45px; top: -30px;}
+.player-embebido .control .volume {display: block; position: absolute; height: 36px; width: 90px; float: none; z-index: 4; margin-left: 0; bottom: -9px; left: 80px;}
+.player-embebido .volume .ico {background-color: transparent;}
+.player-embebido .info .total-time {display: block;}
+.player-embebido .info .track-wrapper {margin-left: 110px; padding-right: 65px;}
+.player-embebido .volume .dot,
+.player-embebido .info .track .dot {width: 7px; height: 7px; top: -2px;}
+
+/* play a la izquierda en embebido pequeno > SOBREESCRITURA DE PLAYER EN PLAYSER MOVIL */
+
+.player-embebido .player-inner {padding: 0 41px 0 88px;}
+.player-embebido .control {width: 80px; padding-left: 10px; float: left; position: absolute; right: auto; left: 0; top: 0;}
+.player-embebido .control .label {left: 144px;}
+.player-embebido .play {float: left; margin-right: 0;}
+.player-embebido .share {right: 0; left: auto;}
+.player-embebido .share ul ul {right: 33px;}
+.player-embebido .share .redes-active .sec {float: right;}
+.player-embebido .info {margin-left: 0; width: 100%; float: left;}
+.player-embebido .info .embed,
+.player-embebido .info .conf-emisora,
+.player-embebido .info .form-mail {padding-right: 41px; margin-left: 0;}
+.player-embebido .info .embed .inner-embed,
+.player-embebido .info .conf-emisora .inner-conf {margin-right: -41px;}
+.player-embebido .info .form-mail .form-mail-inner {margin-right: -37px;}
+.player-embebido .info .emisora .nombre {max-width: 155px; text-overflow: ellipsis;}
+
+/* y play a la derecha en embebido movil > SOBREESCRITURA DE EMBEBIDO PEQUENO */
+
+.player-embebido.player-touch.player-ipad .player-inner,
+.player-embebido.player-touch .player-inner {padding-left: 0; padding-right: 90px;}
+.player-embebido.player-touch .control {width: 100%; padding: 0; float: right; position: absolute; right: auto; left: auto;}
+.player-embebido.player-touch .control .label {left: 35px;}
+.player-embebido.player-touch .play {float: right; margin-right: 10px;}
+.player-embebido.player-touch .share {right: auto; left: 10px;}
+.player-embebido.player-touch .share ul ul {right: -111px;}
+.player-embebido.player-touch .share .redes-active .sec {float: left;}
+.player-embebido.player-touch .info {margin-left: 50px; width: auto; float: none;}
+.player-embebido.player-touch .info .embed,
+.player-embebido.player-touch .info .conf-emisora,
+.player-embebido.player-touch .info .form-mail {padding-right: 140px; margin-left: -50px;}
+.player-embebido.player-touch .info .embed .inner-embed,
+.player-embebido.player-touch .info .conf-emisora .inner-conf {margin-right: -140px;}
+.player-embebido.player-touch .info .form-mail .form-mail-inner {margin-right: -136px;}
+.player-embebido.player-touch .info .emisora .nombre {max-width: 140px; text-overflow: ellipsis;}
+.player-embebido.player-touch .volume {display: none;}
+
+
+/* tamano pequeno EN MOVIL */
+
+@media screen and (max-width: 650px) { /* por debajo de 650px */
+
+	.player-embebido.player-touch .control .label {left: 105px;}
+	.player-embebido.player-touch .info .track-wrapper {margin-left: 0;}
+	
+}
+
+@media screen and (max-width: 300px) { /* por debajo de 300px */
+
+	.player-embebido.player-touch .control .label,
+	.player-embebido.player-touch .info .total-time {display: none;}
+	.player-embebido.player-touch .info .track-wrapper {padding-right: 0;}
+	.player-embebido.player-touch .info .emisora .nombre {max-width: 85px;}
+
+}
+
+/* tamanos pequenos EN ESCRITORIO */
+
+@media screen and (max-width: 440px) { /* por debajo de 440px */
+
+	.player-embebido .info span.total-time {display: none;} /* a la carta: quitamos el contador global de la barra de avance */
+	.player-embebido .info .track-wrapper {padding-right: 9px; margin-left: 90px;}
+	.player-embebido .info .emisora .nombre {max-width: 69px;} /* en directo: acortamos el nombre de la emisora en directo */
+}
+@media screen and (max-width: 340px) { /* por debajo de 340px > pasamos el volumen arriba */
+
+	.player-embebido .info .track-wrapper {margin-left: 0;}
+	.player-embebido .control .volume {top: -10px; left: 126px;}
+	.player-embebido .volume .slider {width: 40px;}
+	.player-embebido .info .emisora {padding-left: 0;}
+	.player-embebido .control .label,
+	.player-embebido .ico_sonido {display: none;}
+}
+@media screen and (max-width: 320px) { /* por debajo de 320 */
+	
+	.player-embebido .info .emisora .nombre {max-width: 85px; text-overflow: ellipsis;} /* en directo: acortamos nombre emisora */
+	.player-embebido .info .total-time {display: none;} /* a la carta: quitamos tiempo total */
+	.player-embebido .info .track-wrapper {padding-right: 9px;}
+
+}
+
+/* ================================================================================================================================================== */
+/* PLAYER EMBEBIDO Y EN IPAD ======================================================================================================================== */
+/* ================================================================================================================================================== */
+
+.player-ipad.player-embebido .player-inner {padding-left: 88px;}
+.player-ipad.player-embebido .info .programa {padding: 0;}
+.player-ipad.player-embebido .info .titulo em,
+.player-ipad.player-embebido .control .volume {display: none;}
+.player-ipad.player-embebido .control {border-right: none;}
+.player-ipad.player-embebido  .info .track-wrapper {margin-left: 0;}
+
+/* ================================================================================================================================================== */
+/* PLAYER EN TOUCH: pelota arrastre mas grande ====================================================================================================== */
+/* ================================================================================================================================================== */
+
+.player-touch .volume .dot,
+.player-touch .info .track .dot {width: 11px; height: 11px; top: -4px; box-shadow: 0 0 0 3px rgba(0, 159, 255, 0.3);}

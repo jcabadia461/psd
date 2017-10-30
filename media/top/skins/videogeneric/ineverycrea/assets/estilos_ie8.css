@@ -1,0 +1,25 @@
+.videogeneric_datos_video .videogeneric_modulo_datos,
+.videogeneric_estado_off_2 .videogeneric_datos_video {background: transparent url(/psdmedia/media/top/skins/meristation/assets/img/bg_000_70.png) repeat 0 0;}
+.videogeneric_estado_off_2 .videogeneric_datos_video .videogeneric_modulo_datos {background: transparent;}
+.videogeneric_c_compartir .videogeneric_capa,
+.videogeneric_c_relacionados .videogeneric_centrador {background: transparent url(/psdmedia/media/top/skins/meristation/assets/img/bg_000_80.png) repeat 0 0;}
+.videogeneric_contenedor_cargando,
+.videogeneric_thumbnails  .videogeneric_foto {background: transparent url(/psdmedia/media/top/skins/meristation/assets/img/bg_000_50.png) repeat 0 0;}
+.videogeneric_boton a,
+.videogeneric_play,
+.videogeneric_pausa,
+.videogeneric_recargar,
+.videogeneric_boton a .videogeneric_icono,
+a.videogeneric_play_grande,
+.videogeneric_c_relacionados .videogeneric_foto .videogeneric_boton_play {background-image: url(/psdmedia/media/top/skins/meristation/assets/img/spt_iconos.png);}
+.videogeneric_capa_volumen .videogeneric_mascara_volumen {background-image: url(/psdmedia/media/top/skins/meristation/assets/img/mascara_volumen.png);}
+.videogeneric_c_compartir a.videogeneric_red {background-image: url(/psdmedia/media/top/skins/meristation/assets/img/spt_redes.png);}
+.videogeneric_calidad a {background-image: none; font-style: normal;}
+a.videogeneric_play_grande{background-color: #000; background-repeat: no-repeat; background-position: center 26px;}
+a.videogeneric_play_grande:hover,
+.videogeneric_estado_off_2 .videogeneric_contenedor_video:hover .videogeneric_datos_video a.videogeneric_play_grande {background-color: #DDDDDD; background-repeat: no-repeat; background-position: center -501px;}
+.videogeneric_c_relacionados .videogeneric_foto .videogeneric_boton_play {background-color: #000; background-repeat: no-repeat; background-position: center 6px;}
+.videogeneric_c_relacionados a.videogeneric_video:hover .videogeneric_boton_play {background-color: #fff;}
+a.videogeneric_cerrar {background-image: url(/psdmedia/media/top/skins/meristation/assets/img/cerrar.png); background-repeat: no-repeat; background-position: 0 0; text-indent: -9999px; white-space: nowrap; overflow: hidden; display: block;}
+.videogeneric_boton {position: relative; z-index: 21;}
+.videogeneric_estado_compartiendo .videogeneric_boton {filter: alpha(opacity=20);}

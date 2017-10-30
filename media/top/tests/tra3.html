@@ -1,0 +1,235 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+
+<!--div style='top:0;width:100%;height:auto;background:#191e23;'>
+<a href="http://www.prisaradio.com/es/pagina/musica/" target="_blank"><img style='padding:10px;' width="99" height="22" alt="logo Prisa Música" src="http://yu.los40.com/los40/iconos/v1.x/v1.0/logos/logo_prisa_musica.png"></a>
+</div-->
+
+<form action='' method='get' style='padding:10px;' id='formulario'>
+<input type='text' name='idref' id='_idref'/> <input type='submit'  value='Usar este idref'/>
+<select onchange='if(this.selectedIndex!=0)document.getElementById("_idref").value = this.options[this.selectedIndex].value;'>
+	<option>Algunos ejemplos</option>
+	<option>2017040315219646</option>
+	<option>20161229133554693</option>
+	<option>1480623401_398210</option>
+	<option>cadena_ser</option>
+</select>
+<br>
+<input type='button' onclick='ui.externalOrder(emic.top.ui.hertz_events.EXTERNAL_ORDER_TOKEN,{"token_fb":"123","token_tw":null});' value='Enviar token FB' style='background:#4862a3;border:none;padding:10px;margin:10px 0;'/>
+<input type='button' onclick='ui.externalOrder(emic.top.ui.hertz_events.EXTERNAL_ORDER_TOKEN,{"token_fb":null,"token_tw":"456"});' value='Enviar token TW' style='background:#55acee;border:none;padding:10px;margin:10px 0;'/>
+<br>
+<!--input type='checkbox' name='live' id='live'>live</input-->
+<script>
+//if(window.location.href.indexOf("live")>0){
+//	document.getElementById("live").checked = true;
+//}
+</script>
+<select name='tipo' id='tipo'>
+	<option>big</option>
+	<option name='small'>small</option>
+	<option name='permanente'>permanente</option>
+</select>
+</form>
+<div id='publi' style='width:90px;height:75px;'></div>
+
+	<!--div style='position:absolute;bottom:0;width:100%;' id='ccc'-->
+	<div id='ccc' style='position:relative;'>
+	</div>
+
+	<!--input type='button' value='reset' onclick='mm.seek(0);'/-->
+	<!--input type='button' value='toggle' onclick='tipo=(tipo+1)%2;tr.setType(tipo);'/-->
+	<!--input type='button' value='generate spans' onclick='tr.generateSpans("todotxt",mm);this.style.pointerEvents="none";'/-->
+
+	<!--div id='todotxt' style='font-family:Arial;position:absolute;width:40%;height:auto;right:10px;top:85px;background:#009fe1;padding:20px;line-height:22px;border-radius:20px;'></div-->
+
+<script>
+
+mm_tfp = true;
+
+function getget(name,url) {
+	if (!url) url = window.location.href;
+	//url = url.toLowerCase(); // This is just to avoid case sensitiveness
+	name = name.replace(/[\[\]]/g, "\\$&");// This is just to avoid case sensitiveness for query parameter name
+	var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		results = regex.exec(url);
+	if (!results) return null;
+	if (!results[2]) return '';
+
+	return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+if(window.location.href.indexOf("hide")>0){
+	document.getElementById("formulario").style.display = "none";
+}
+
+var tipo = getget("tipo");
+switch(tipo){
+    case "small":
+		document.getElementById("tipo").selectedIndex = 1;
+    break;
+    case "permanente":
+		document.getElementById("tipo").selectedIndex = 2;
+        document.getElementById("ccc").style.paddingTop = "600px";
+    break;
+	default:
+		document.getElementById("tipo").selectedIndex = 0;
+	break;
+}
+
+
+idref = "20161230121715"; //sin audio
+idref = "20161228154050"; //buenos días tenerife
+idref = "2016122817443203"; //comunitat v
+idref = "20161229133554693"; //buenos días, pepa
+idref = "2017040315219646";
+if(getget("idref")){
+	idref = getget("idref");
+	document.getElementById("_idref").value = getget("idref");
+}
+
+tipo = 0;
+
+window.mm_base = true;
+window.tplib = true;
+
+</script>
+
+<script type="text/javascript"> 
+postsimple = function(){
+	var params = {   
+		"id_cuenta": "demo",
+		"id_player": "241",
+		"id_media": idref,
+		"media_type" : "audio",
+		"id_container": "ccc",
+		"topPlayer":{
+			"media":{"autoplay":false},
+			"ad":{"container":"publi"}
+		}
+	};   
+	mediaTopEmbed = new psd.media.TopEmbed(params);  
+
+	var spaneado = false;
+
+	rui = function(){
+		actualiza = function(data){
+			if(!spaneado){
+				spaneado = true;
+				ui = mediaTopEmbed.getMediaPlayer().getUIModule();
+				//ttr = ui.getget("tr");
+
+		        //ttr.generateSpans("todotxt",mm);
+			}
+		}
+
+		mm = mediaTopEmbed.getMediaPlayer().getMediaModule();
+		mm.addEventListener(emic.top.event.MediaEvent.ON_PROGRESS,actualiza);
+
+
+function onUIEvent(ev){
+    console.log(">>>>>>>>>>>>>>>>>>",ev);
+}
+
+
+    ui = mediaTopEmbed.getMediaPlayer().getUIModule();
+    ui.addEventListener(emic.top.event.UIEvent.ON_ORDER_EXTERNAL,onUIEvent);
+
+
+	}
+
+mediaTopEmbed.addEventListener(psd.media.TopEmbedEvent.EVENT_INI,rui);
+
+}
+</script>
+<script type="text/javascript" src="/psdmedia/media/simple/js/lib/SimpleMediaPlayer.lib.js" onload='postsimple();'></script>
+
+<!--
+<script src="http://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
+-->
+<canvas id="waveform" style='width:50%;'></canvas>
+<!--
+<script>
+
+var wavesurfer = WaveSurfer.create({
+    container: '#waveform',
+    waveColor: 'violet',
+    progressColor: 'purple'
+});
+wavesurfer.load('http://topsslpl-a.akamaihd.net/topprisaradioaudios/201612/29/20161229133554693_1483015039_audio_96.mp4');
+wavesurfer.on('ready', function () {
+    wavesurfer.play();
+});
+
+
+</script>
+
+-->
+
+<!--audio controls id='ww'>
+<source src='ww.mp3'/>
+</audio-->
+
+<script>
+
+dooo = function(){
+var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+var analyser = audioCtx.createAnalyser();
+//var audioElement = document.getElementById("HTML5Controller_ccc_TopPlayer");
+var audioElement = document.getElementById("ww");
+
+//audioElement.crossOrigin = "anonymous";
+audioElement.pause();
+audioElement.play();
+
+var source = audioCtx.createMediaElementSource(audioElement);
+source.connect(analyser);
+analyser.connect(audioCtx.destination);
+
+
+analyser.fftSize = 2048;
+var bufferLength = analyser.frequencyBinCount;
+var dataArray = new Uint8Array(bufferLength);
+analyser.getByteTimeDomainData(dataArray);
+
+// Get a canvas defined with ID "oscilloscope"
+var canvas = document.getElementById("waveform");
+var canvasCtx = canvas.getContext("2d");
+
+// draw an oscilloscope of the current audio source
+
+function draw() {
+  drawVisual = requestAnimationFrame(draw);
+
+  analyser.getByteTimeDomainData(dataArray);
+
+  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+  canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+
+  canvasCtx.beginPath();
+
+  var sliceWidth = canvas.width * 1.0 / bufferLength;
+  var x = 0;
+  for (var i = 0; i < bufferLength; i++) {
+
+    var v = dataArray[i] / 128.0;
+    var y = v * canvas.height / 2;
+
+    if (i === 0) {
+      canvasCtx.moveTo(x, y);
+    } else {
+      canvasCtx.lineTo(x, y);
+    }
+
+    x += sliceWidth;
+  }
+  canvasCtx.lineTo(canvas.width, canvas.height / 2);
+  canvasCtx.stroke();
+};
+
+draw();
+}
+
+</script>

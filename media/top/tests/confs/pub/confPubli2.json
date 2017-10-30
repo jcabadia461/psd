@@ -1,0 +1,90 @@
+{
+    "position": {
+
+        "preroll":{
+            "request": "prueba",
+            "carcasa": "reqFlash"
+        }
+
+        ,"postroll":{
+            "request": "prueba",
+            "carcasa": "carcasa_video"
+        }
+        ,
+
+        "prerollFlash":{
+            "request": "reqFlash",
+            "carcasa": "carcasa_video"
+        }
+        ,
+
+        "postrollHtml5":{
+            "request": "reqHtml5",
+            "carcasa": "carcasa_video"
+        }
+        ,
+
+        "postrollFlash":{
+            "request": "reqFlash",
+            "carcasa": "carcasa_video"
+        }
+
+    },
+    "request": {
+
+        "prueba":{
+            "src":"http://pubads.g.doubleclick.net/gampad/pub?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]",
+            "vars": {
+            },
+            "responseController": "ima3"
+        },
+
+
+        "reqHtml5":{
+            "src": "http://pubads.g.doubleclick.net/gampad/pub",
+            "vars": {
+                "sz": "640x480",
+                "iu": "/7811748/meristation_web/player_video/html5",
+                "ciu_szs": "",
+                "impl": "s",
+                "gdfp_req": 1,
+                "env": "vp",
+                "output": "xml_vast2",
+                "unviewed_position_start": 1,
+                "url": "$VARS[referrer]",
+                "correlator": "$RANDOM[10]",
+                "cust_params": "merikey=$VARS[adTags]%26pos%3D$VARS[position]"
+            },
+            "responseController": "ima_html5"
+        }
+        ,
+
+        "reqFlash":{
+            "src": "http://pubads.g.doubleclick.net/gampad/pub",
+            "vars": {
+                "sz": "640x480",
+                "iu": "/7811748/meristation_web/player_video/flash",
+                "ciu_szs": "",
+                "impl": "s",
+                "gdfp_req": 1,
+                "env": "vp",
+                "output": "xml_vast2",
+                "unviewed_position_start": 1,
+                "url": "$VARS[referrer]",
+                "correlator": "$RANDOM[10]",
+                "cust_params": "merikey=$VARS[adTags]%26pos%3D$VARS[position]"
+            },
+            "responseController": "ima_flash"
+        }
+
+    },
+    "carcasa":
+    {
+        "carcasa_video":{
+            "colorFondo": "",
+            "titulo": "",
+            "segundosSalto": ""
+        }
+    }
+}
+

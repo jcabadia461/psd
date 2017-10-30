@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+
+
+    <script type="text/javascript" src="../js/TopPlayer.lib.js"></script>
+    <script src='http://www.alten-formacion.es/playser/js/vendor/jquery-1.11.0.min.js'></script>
+    <script src='http://10.90.1.61:33399/psdmedia/resources/js/ext/jquery-ui-1.11.2.custom/jquery-ui.min.js'></script>
+
+
+
+
+    <script type="text/javascript">
+
+    var loading = 0,
+        current, requested, interval, segundos = 0;
+
+    var pl, mm, aa, ui;
+    
+    function initPlayer() {
+
+        pl = new emic.top.TopPlayer();
+        mm = pl.getMediaModule();
+        aa = pl.getAdModule();
+        ui = pl.getUIModule();
+
+        mm.addEventListener(emic.top.event.MediaEvent.ON_READY, onMediaHandler);
+        mm.addEventListener(emic.top.event.MediaEvent.ON_MEDIA_BEGIN, onMediaHandler);
+        mm.addEventListener(emic.top.event.MediaEvent.ON_MEDIA_END, onMediaHandler);
+        mm.addEventListener(emic.top.event.MediaEvent.ON_STATUS_CHANGE, onMediaHandler);
+
+
+        var config = {};
+        config.generic = {container: "top_container", id: "topTest", referer: "http://www.mipaginareferer.com"};
+        config.ui = {
+            skin: emic.top.UIModule.SKIN_PLAYSER,
+            overrideNativeControls: true,
+            showPreview: false
+        };
+        config.ad = {
+            conf:"confs/pub/playser/audio.js",
+            pTags: "zoo_madrid_a,zoo_a,comunidad_madrid_a,animales_cautividad_a,reproduccion_a,espana_a,mamiferos_a,animales_a,especies_a,medio_ambiente_a,ccaa,madrid",
+            enabled:false
+        };
+        config.stat = {
+            enabled: false
+        };
+
+        config.media = {
+            controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_TRITON],
+            tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_FLASH, emic.top.MediaModule.TECHNOLOGY_HTML5],
+            autoplay: false,
+            title: "Emisora de pruebas",
+            controllerData: {
+                container_banner_bigbox: "banner-live_synced_bigbox",
+                container_banner_leaderboard: "banner-live_synced_leaderboard",
+                debugInStream: false,
+                compatibleContainer: true
+            },
+            //container: "media_container",
+            id: "RHOZFM"
+        };
+
+        requested = "RHOZFM";
+
+        log("init");
+
+        pl.init(config);
+
+    }
+
+    function loadPlayer(settings){
+
+
+        data.internalData.internalAutoplay = false;
+        data.config(settings);
+
+        if (loading == 0) {
+            loading = 1;
+            player.init(data);
+        }else if (loading == 2){
+
+            segundos = 0;
+            clearInterval(interval);
+            interval = setInterval(function(){
+                segundos++;
+            }, 1000);
+
+
+            player.play();
+        }else{
+            log("Espera a que termine de cargar. Gracias");
+        }
+    }
+
+    function onMediaHandler(e){
+        console.log(e.type);
+        switch (e.type) {
+            case emic.top.event.MediaEvent.ON_READY:
+                loading = 2;
+                    log("librerías de Triton cargadas");
+            break;
+            case emic.top.event.MediaEvent.ON_MEDIA_BEGIN:
+
+                log("Conexión iniciada a: " + requested + " en " + segundos + " segundos.");
+                segundos = 0;
+                clearInterval(interval);
+                current = requested;
+            break;
+            case emic.top.event.MediaEvent.ON_MEDIA_END:
+                log("Conexión finalizada " + current);
+            break;
+
+            case emic.top.event.MediaEvent.ON_STATUS_CHANGE:
+                /*
+                if (e.data.status)
+                    log("Estado cambiado: " + e.data.status);*/
+            break;
+        }
+    }
+
+    function log(msg){
+        var consola = document.getElementById("consola");
+        consola.innerHTML = consola.innerHTML + msg + "\n";
+    }
+
+    function loadStation(id) {
+        var config = {};
+        config.media = {
+            id:id,
+            title:id
+        };
+
+        requested = id;
+        pl.load(config);
+    }
+
+
+</script>
+
+</head>
+
+
+
+
+
+<body onload="initPlayer()">
+<h1>Juego de pruebas conexiones Triton</h1>
+<p>Selecciona una de las tres emisoras o bien introduce una personalizada</p>
+<p>Presiona f12 para ver información adicional en Consola</p>
+<input type="button" id="load" name="load" value="PRUEBAS TRITON" width="50px" onclick="loadStation('RHOZFM')"/>
+<input type="button" id="load2" name="load2" value="LOS40" width="50px" onclick="loadStation('LOS40')"/>
+<input type="button" id="load3" name="load3" value="CADENASER" width="50px" onclick="loadStation('CADENASER')"/>
+<br>
+<input type="button" id="load4" name="load4" value="PERSONALIZADA" width="50px" onclick="loadStation(document.getElementById('personalizada').value)"/>:
+<input type="text" id="personalizada" name="load5" value="" width="100px"/>
+<br>
+<div id="top_container" style="overflow: hidden;margin:auto;height: 90px;width:640px;"></div>
+<div>
+    <div id="media_container" style="position:absolute;overflow: hidden;height: 250px;width:400px;margin:auto; background-color: dodgerblue;left: 10px"></div> <!--640x480-->
+    <textarea id="consola" style="position:absolute;width: 500px; height: 800px; background-color: lightgoldenrodyellow;left: 430px"></textarea>
+</div>
+<div id="banner-live_synced_bigbox" style=";height: 250px;width:300px;margin:auto;display:none"></div><!-- 300x250 -->
+<div id="banner-live_synced_leaderboard" style="height: 90px;width:728px;argin:auto;display:none"></div> <!--728x90-->
+</body>
+</html>

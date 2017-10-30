@@ -1,0 +1,86 @@
+<div class="mm_AudioPlayer xxx mm_AudioPlayer_pequeno" id='{<-%ID%->}_player'>
+	<div class="mm_AudioPlayer_cabecera">
+		<div class="mm_AudioPlayer_poster"><img id='{<-%ID%->}_cover' class="mm_AudioPlayer_imagen" width="" height="" src="../recursos/imagenes/podcast/poster.jpg" alt=""></div>
+		<div class="mm_AudioPlayer_texto">
+			<div class="mm_AudioPlayer_titulo" id='{<-%ID%->}_titulo'></div>
+			<div class="mm_AudioPlayer_descripcion" id='{<-%ID%->}_desc'></div>
+		</div>
+	</div>
+
+	<div class="mm_AudioPlayer_contenedor">
+
+		<div class="mm_controles mm_controles_izda">
+			<button id="{<-%ID%->}_btn_play" class="mm_boton mm_boton_play" arial-label="Botón de reproducción">
+			    
+			    <svg height="100%" version="1.1" viewBox="284.619 36.244 29.765 29.764">			    	
+			    		<path id="mm_icono_play" d="M306.07,50.629l-11.961-7.073c-0.885-0.545-1.607-0.144-1.607,0.894v13.726c0,1.037,0.722,1.438,1.607,0.895l11.961-7.074
+	c0,0,0.432-0.285,0.432-0.683C306.502,50.915,306.07,50.629,306.07,50.629L306.07,50.629z" id="tests"/>
+						<path id="mm_icono_pausa" d="M305.148,55.93c0.038,1.58-0.907,2.883-2.112,2.883s-2.182-1.303-2.182-2.883v-9.617c0-1.39,0.896-2.5,2-2.5
+	s2.026,1.11,2.061,2.5L305.148,55.93z M305.148,55.93L305.148,55.93z M298.148,55.93c0.038,1.58-0.907,2.883-2.112,2.883
+	s-2.182-1.303-2.182-2.883v-9.617c0-1.39,0.896-2.5,2-2.5s2.027,1.11,2.061,2.5L298.148,55.93z M298.148,55.93L298.148,55.93z"/>
+			    	</svg>      
+			</button>
+			<div id="{<-%ID%->}_progress" class="mm_progreso">
+				<div id="" class="mm_progreso_barra">
+					<div id="{<-%ID%->}_barra_azul" class="mm_progreso_barra_porcentaje" style="width: 0;"></div>
+					<span id="{<-%ID%->}_manejador" class="mm_progreso_barra_manejador" tabindex="0" style="left: 0;"></span>
+				</div>	
+			</div>
+
+			<span class="mm_duracion">
+				<span id="{<-%ID%->}_current_time" class="mm_duracion_actual">0:00:00</span> <span id="{<-%ID%->}_total_time" class="mm_duracion_total">0:00:00</span>
+			</span>
+			
+
+		</div>	<!-- == mm_controles_izda == -->
+
+		<div class="mm_controles mm_controles_dcha">
+
+			<div id="{<-%ID%->}_cont_volumen" class="mm_control_volumen">
+				
+				<button id="{<-%ID%->}_btn_volumen" class="mm_boton mm_boton_sonido ">
+				  <svg height="100%" version="1.1" viewBox="284.619 36.244 29.765 29.764">
+				  	
+				  	<path id="mm_icono_sonido" d="M301.252,57.252c2.969-0.416,5.25-2.915,5.25-5.939c0-3.022-2.281-5.524-5.25-5.94v0.87c2.482,0.408,4.375,2.521,4.375,5.07
+	c0,2.549-1.893,4.662-4.375,5.07V57.252z M301.252,47.548v7.563c1.519-0.478,2.629-1.994,2.629-3.798
+	c0-1.803-1.11-3.321-2.629-3.798l0,0 M292.502,48.585L292.502,48.585z M292.502,48.585v5.183l3.094-0.001l3.891,3.463
+	c0.394,0.23,0.891-0.053,0.891-0.506V45.901c0-0.454-0.497-0.736-0.891-0.506l-3.891,3.19H292.502z"/>
+
+<path id="mm_icono_silencio" d="M305.528,45.094l1.474,1.438l-11,11l-1.473-1.438L305.528,45.094z M300.752,57.471c2.969-0.416,5.25-2.915,5.25-5.939
+	c0-1.14-0.322-2.202-0.885-3.11l-0.635,0.635c0.411,0.734,0.645,1.578,0.645,2.475c0,2.549-1.892,4.662-4.375,5.07V57.471z
+	 M303.102,46.432c-0.702-0.427-1.497-0.72-2.35-0.84v0.87c0.616,0.101,1.196,0.308,1.72,0.6L303.102,46.432z M300.752,47.767v1.015
+	l0.725-0.725c-0.228-0.135-0.471-0.243-0.725-0.323V47.767z M300.752,52.782v2.548c1.519-0.479,2.629-1.994,2.629-3.798
+	c0-0.421-0.062-0.825-0.174-1.205L300.752,52.782z M292.002,48.804v5.183l3.094-0.001l0.241,0.21l4.54-4.54V46.12
+	c0-0.454-0.497-0.736-0.891-0.506l-3.891,3.19H292.002z M297.452,56.08l1.534,1.369c0.394,0.23,0.891-0.053,0.891-0.506v-3.287
+	L297.452,56.08z"/>
+				  </svg>
+				</button>
+
+				<div class="mm_volumen">
+			        <div id="{<-%ID%->}_barra_volumen" class="mm_volumen_barra">			
+						<div id="{<-%ID%->}_percent_volumen"  class="mm_volumen_barra_porcentaje" style="width: 70%;" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0% volumen"></div>
+						<span class="mm_volumen_barra_manejador" tabindex="0" style="left: 70%;" draggable="true"></span>
+					</div>
+				</div>
+			</div>
+
+			
+			<a href='' download id="{<-%ID%->}_descarga"
+				class="mm_boton mm_boton_descarga">
+					<svg height="100%" version="1.1"  viewBox="284.619 36.244 29.765 29.764" onmouseover="this.classList.add('x');" onmouseout="this.classList.remove('x');">
+				  	
+						<g id="mm_icono_descarga">
+		<path id="mm_icono_descarga_marco" d="M312.502,49.027v-5.714h-5.652v2.286h3.392v3.429H312.502z M306.85,59.313h5.652v-5.714h-2.261v3.429h-3.392V59.313z
+			 M286.502,53.598v5.714h5.652v-2.285h-3.392v-3.429H286.502z M286.502,43.313v5.714h2.261v-3.429h3.392v-2.286H286.502z"/>
+		<path id="mm_icono_descarga_flecha" class="" d="M302.483,49.827l-1.977,1.8l-0.001-4.943h-2.034v5.284l-2.062-1.972l-1.909,1.831l4.783,4.572l5.108-4.74L302.483,49.827z"
+			/>
+	</g>
+
+					  </svg>
+				
+			</a>
+		</div><!-- == .mm_controles_dcha == -->	
+
+	</div><!-- == .mm_AudioPlayer_contenedor == -->	
+</div><!-- == .mm_Audio_Player == -->
+

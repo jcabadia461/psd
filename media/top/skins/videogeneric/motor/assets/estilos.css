@@ -1,0 +1,383 @@
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_regular.eot');
+    src: url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_regular.eot?#iefix') format('embedded-opentype'),
+         url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_regular.svg') format('svg'),
+         url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_regular.woff') format('woff'),
+         url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_bold.eot');
+    src: url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_bold.eot?#iefix') format('embedded-opentype'),
+         url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_bold.svg') format('svg'),
+         url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_bold.woff') format('woff'),
+         url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_bold_italic.eot');
+    src: url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_bold_italic.eot?#iefix') format('embedded-opentype'),
+         url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_bold_italic.svg') format('svg'),
+         url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_bold_italic.woff') format('woff'),
+         url('/psdmedia/media/top/skins/videogeneric/motor/assets/fonts/open_sans_bold_italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+}
+
+.videogeneric_envoltorio {position: relative; height: 100%; font-family: 'OpenSans', Arial, Helvetica, sans-serif; overflow: hidden; -moz-user-select: -moz-none; -webkit-user-select: none; -o-user-select: none; user-select: none;}
+.videogeneric_envoltorio video {width: 100%; display: block;}
+.videogeneric_envoltorio a {text-decoration: none; outline: 0;}
+.videogeneric_envoltorio a img {border: none;}
+.videogeneric_indent {text-indent: -9999px; white-space: nowrap; overflow: hidden; display: block;}
+.videogeneric_visible {display: block!important; visibility: visible!important;}
+.videogeneric_oculto {display: none!important;}
+.videogeneric_estirar:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}
+
+
+/* CAPAS ------------------------------------------------------------------------------------------------------------------- */
+
+
+/* DATOS VIDEO ------------------------------------------------------------------------------------------------------------------- */
+
+.videogeneric_datos_video {position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%;}
+
+/* boton play grande */
+
+a.videogeneric_play_grande { 
+     background-color: transparent;
+     background-image:url("/psdmedia/media/top/skins/videogeneric/motor/assets/img/spt_iconos.svg");
+     background-position: -6px 111px;
+     background-size: 113%;
+     --bottom: 7%;
+     display: none;
+     height: 96px;
+     --left: 2%;
+     margin: 0;
+     position: absolute;
+     width: 96px;
+     z-index: 2;
+	 left:calc(50% - 48px);
+	 top:calc(50% - 48px);
+}
+a.videogeneric_play_grande:hover {}
+
+/* cargando */
+
+.videogeneric_contenedor_cargando, 
+.videogeneric_interior_cargando {border-radius: 50%;}
+.videogeneric_contenedor_cargando {position: absolute; z-index: 2; top: 50%; left: 50%; width: 24px; height: 24px; padding: 10px; margin: -20px 0 0 -20px; background-color: #444; background-color: rgba( 0, 0, 0, .5 ); -webkit-box-shadow: 0 0 40px rgba( 0, 0, 0, .75 ); box-shadow: 0 0 40px rgba( 0, 0, 0, .75 ); display: none;}
+.videogeneric_interior_cargando {width: 24px; height: 24px; background-color: #bb0000; -webkit-animation: interior_cargando .5s ease infinite; animation: interior_cargando .5s ease infinite;}
+@-webkit-keyframes interior_cargando { from {opacity: .5; -webkit-transform: scale( .75 );} 50% {opacity: 1; -webkit-transform: scale( 1 );} to { opacity: .5; -webkit-transform: scale( .75 ); }}
+@keyframes interior_cargando { from {opacity: .5; transform: scale( .75 );} 50% {opacity: 1; transform: scale( 1 );} to { opacity: .5; transform: scale( .75 ); }}
+
+/* datos */
+
+.videogeneric_datos_video .videogeneric_modulo_datos {background-color: rgba(0,0,0,0.62);}
+.videogeneric_datos_video .videogeneric_titulo {float: left; font-size: 13px; line-height: 34px; color: #fff; padding-left: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 80%; box-sizing: border-box;}
+.videogeneric_datos_video .videogeneric_duracion {float: right; font-size: 12px; line-height: 35px; color: #DDDDDD; padding: 0 15px; background-color: #000; height: 35px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 20%; box-sizing: border-box;}
+
+
+/* contenedores comunes para capas compartir y relacionados */
+
+.videogeneric_posicionador {position: absolute; z-index: 2; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: none;}
+.videogeneric_centrador {height: 100%;}
+
+/* CAPA COMPARTIR ------------------------------------------------------------------------------------------------------------------- */
+
+a.videogeneric_cerrar {position: absolute; z-index: 3; right: 0; top: 0; margin: 3% 3% 0 0; display: block; width: 20px; height: 20px; font-size: 24px; line-height: 17px; color: #bb0000;}
+a.videogeneric_cerrar:hover {color: #DDDDDD;}
+.videogeneric_c_compartir .videogeneric_capa {position: relative; width: 80%; height: auto; margin: 10% auto; box-sizing: border-box; padding: 9% 10%; background-color: rgba(0, 0, 0, 0.8);}
+.videogeneric_c_compartir .videogeneric_rotulo {font-size: 18px; line-height: 22px; margin-bottom: 4%; color: #bb0000; text-align: center;}
+.videogeneric_c_compartir .videogeneric_nombre_video {font-size: 13px; line-height: 15px; margin-bottom: 4%; color: #DDDDDD; text-align: center;}
+.videogeneric_c_compartir .videogeneric_enlaces_redes {width: 136px; margin: 0 auto;}
+.videogeneric_c_compartir a.videogeneric_red {float: left; display: block; width: 58px; height: 58px; margin: 0 5px; background-image: url(/psdmedia/media/top/skins/videogeneric/motor/assets/img/spt_redes.svg); background-repeat: no-repeat; transition: background-color 0.2s ease-out;}
+.videogeneric_c_compartir a.videogeneric_red:hover {background-color: #bb0000;}
+.videogeneric_c_compartir a.videogeneric_twitter {background-position: 0 0; background-color: #598dca;}
+.videogeneric_c_compartir a.videogeneric_facebook {background-position: -60px 0; background-color: #3a589b;}
+
+/* CAPA VIDEOS RELACIONADOS ------------------------------------------------------------------------------------------------------------------- */
+
+.videogeneric_c_relacionados .videogeneric_centrador {background-color: rgba(0, 0, 0, 0.8);}
+.videogeneric_c_relacionados .videogeneric_capa {width: 100%; box-sizing: border-box; padding: 1%;}
+.videogeneric_c_relacionados .videogeneric_rotulo {font-size: 16px; line-height: 20px; color: #a4a4a4; text-align: center;}
+.videogeneric_c_relacionados .videogeneric_enlaces_videos {display: table; width: 100%; margin-top: 6%;}
+.videogeneric_c_relacionados a.videogeneric_video {display: table-cell; width: 33.3%; overflow: hidden; padding: 1% 1% 0; text-align: center;}
+.videogeneric_c_relacionados a.videogeneric_video img {display: block; width: 100%; height: auto; background-color: #fff;}
+.videogeneric_c_relacionados .videogeneric_foto {position: relative;}
+.videogeneric_c_relacionados .videogeneric_foto .videogeneric_boton_play {position: absolute; z-index: 1; top: 50%; left: 50%; display: block; width: 33px; height: 33px; margin: -17px 0 0 -17px; background: rgba(0, 0, 0, 0.7) url(/psdmedia/media/top/skins/videogeneric/motor/assets/img/spt_iconos.svg) no-repeat center 9px/27px auto; border: 1px solid #000;}
+.videogeneric_c_relacionados a.videogeneric_video .videogeneric_titulo {font-size: 13px; line-height: 17px; margin: 2% 0 0; max-height: 37px; color: #DDDDDD; overflow: hidden; text-overflow: ellipsis;}
+.videogeneric_c_relacionados a.videogeneric_video:hover img {opacity: 0.8;}
+.videogeneric_c_relacionados a.videogeneric_video:hover .videogeneric_titulo {color: #fff;}
+.videogeneric_c_relacionados a.videogeneric_video:hover .videogeneric_boton_play {background-color: rgba(255, 255, 255, 0.3); border-color: transparent;}
+
+
+/* BARRA CONTROLES INFERIOR ------------------------------------------------------------------------------------------------------------------- */
+
+.videogeneric_barra_inferior {position: absolute; bottom: 0; background-color: rgba(0,0,0,0.9); width: 100%; height: 35px; opacity: 1;}
+.videogeneric_barra_inferior .videogeneric_controles_izquierda {width: auto; float: left;}
+.videogeneric_barra_inferior .videogeneric_controles_derecha {width: 173px; float: right;}
+
+.videogeneric_boton {float: left;width: 50px;}
+.videogeneric_boton a {display: block; background-image: url(/psdmedia/media/top/skins/videogeneric/motor/assets/img/spt_iconos.svg); background-repeat: no-repeat;}
+.videogeneric_boton a:hover {background-color: #1b1b1b;}
+.videogeneric_boton,
+.videogeneric_boton a {height: 35px;}
+
+/* barra inferior IZQUIERDA ------------------------------------------------------------------------------------------------------------------- */
+
+/* boton play / pausa / recargar */
+
+.videogeneric_play,
+.videogeneric_pausa,
+.videogeneric_recargar {display: none; height: 35px; background-image: url(/psdmedia/media/top/skins/videogeneric/motor/assets/img/spt_iconos.svg); background-repeat: no-repeat; cursor: pointer;background-color:transparent;}
+.videogeneric_play {background-position: 8px 8px;}
+.videogeneric_pausa {background-position: 8px -52px;}
+.videogeneric_recargar {background-position: 8px -459px;}
+.videogeneric_play:hover,
+.videogeneric_pausa:hover,
+.videogeneric_recargar:hover {background-color: #1b1b1b;}
+
+/* boton volumen */
+
+.videogeneric_volumen {z-index: 20;right: 100px;position: absolute;top: 0;}
+.videogeneric_apagado a {background-position: 8px -110px;}
+.videogeneric_bajo a {background-position: 8px -168px;}
+.videogeneric_alto a {background-position: 8px -226px;}
+.videogeneric_volumen .videogeneric_capa_volumen {display: none;}
+.videogeneric_volumen:hover .videogeneric_capa_volumen {display: block; cursor: pointer;}
+
+/* capa volumen */
+
+.videogeneric_volumen .videogeneric_capa_volumen {position: absolute; z-index: 21; bottom: 0; left: -1px; background-color: #1b1b1b; border: 1px solid #000; height: 118px; width: 52px; box-sizing: border-box;}
+.videogeneric_capa_volumen .videogeneric_nivel_volumen {position: relative; z-index: 22; background-color: #000; margin: 12px 14px 0; height: 118px; width: 22px;}
+.videogeneric_capa_volumen .videogeneric_nivel_volumen,
+.videogeneric_capa_volumen .videogeneric_mascara_volumen{height: 70px;}
+.videogeneric_capa_volumen .videogeneric_progreso_volumen,
+.videogeneric_capa_volumen .videogeneric_mascara_volumen {position: absolute; bottom: 0; left: 0; width: 100%;}
+.videogeneric_capa_volumen .videogeneric_progreso_volumen {z-index: 23; background-color: #ffffff;}
+.videogeneric_nivel_volumen:hover .videogeneric_progreso_volumen {background-color: #bb0000;}
+.videogeneric_capa_volumen .videogeneric_mascara_volumen {z-index: 24; background: transparent url(/psdmedia/media/top/skins/videogeneric/motor/assets/img/mascara_volumen.svg) no-repeat bottom center;}
+
+/* barra inferior DERECHA ------------------------------------------------------------------------------------------------------------------- */
+
+.videogeneric_controles_derecha .videogeneric_boton {float: right;}
+
+/* boton compartir */
+
+.videogeneric_compartir a {background-position: 8px -282px;}
+
+/* boton seleccionar calidad */
+
+.videogeneric_calidad {position: relative; width: 70px;}
+.videogeneric_calidad a {position: absolute; z-index: 3; width: 100%; background-image: none; text-align: center; font-style: italic; font-size: 13px; color: #ffffff;}
+.videogeneric_calidad a:hover {color: #FFFFFF;}
+.videogeneric_boton a span {display: inline-block; vertical-align: middle;}
+.videogeneric_calidad a .videogeneric_icono {width: 20px; height: 20px; margin-right: 2px; background: transparent url(/psdmedia/media/top/skins/videogeneric/motor/assets/img/spt_iconos.svg) no-repeat -8px -346px;}
+.videogeneric_boton a .videogeneric_literal {line-height: 36px;}
+
+/* capa seleccionar calidad */
+
+.videogeneric_calidad .videogeneric_capa_calidad {position: absolute; z-index: 2; bottom: 0; left: -1px; background-color: #1b1b1b; border: 1px solid #000; width: 72px; padding: 5px 0 34px; box-sizing: border-box; display: none;}
+.videogeneric_capa_calidad a {position: static; padding: 0; margin: 0; height: auto; line-height: 25px; color: #fff;}
+.videogeneric_capa_calidad a:hover,
+.videogeneric_capa_calidad a.videogeneric_seleccionado {color: #DDDDDD;}
+.videogeneric_capa_calidad a.videogeneric_seleccionado:hover {color: #DDDDDD;}
+.videogeneric_calidad:hover .videogeneric_capa_calidad {display: block; cursor: pointer;}
+
+
+/* boton fullscreen */
+
+
+.videogeneric_fullscreen {float: right;}
+.videogeneric_fullscreen a {background-position: 8px -398px;}
+
+
+/* BARRA PROGRESO ------------------------------------------------------------------------------------------------------------------- */
+
+.videogeneric_contenedor_video {position: relative; height: calc(100% - 35px);}
+.videogeneric_contenedor_progreso,
+.videogeneric_contenedor_progreso .videogeneric_base,
+.videogeneric_contenedor_progreso .videogeneric_cargado,
+.videogeneric_contenedor_progreso .videogeneric_reproducido,
+.videogeneric_contenedor_progreso .videogeneric_tiempo_actual,
+.videogeneric_contenedor_progreso .videogeneric_tiempo_total,
+.videogeneric_contenedor_progreso .videogeneric_contenedor_manejador,
+.videogeneric_contenedor_progreso .videogeneric_manejador,
+.videogeneric_contenedor_progreso .videogeneric_manejador span {position: absolute;}
+.videogeneric_contenedor_progreso {left: 0; top: -25px;}
+.videogeneric_contenedor_progreso .videogeneric_base,
+.videogeneric_contenedor_progreso .videogeneric_cargado,
+.videogeneric_contenedor_progreso .videogeneric_reproducido,
+.videogeneric_contenedor_progreso .videogeneric_tiempo_actual {left: 0; bottom: 0;}
+.videogeneric_contenedor_progreso .videogeneric_base,
+.videogeneric_contenedor_progreso .videogeneric_cargado,
+.videogeneric_contenedor_progreso .videogeneric_reproducido,
+.videogeneric_contenedor_progreso .videogeneric_tiempo_actual,
+.videogeneric_contenedor_progreso .videogeneric_tiempo_total {height: 2px;}
+.videogeneric_contenedor_progreso .videogeneric_base,
+.videogeneric_contenedor_progreso .videogeneric_reproducido,
+.videogeneric_contenedor_progreso .videogeneric_manejador,
+.videogeneric_contenedor_progreso .videogeneric_manejador span {transition: all 0.5s ease-out;}
+.videogeneric_contenedor_progreso .videogeneric_cargado,
+.videogeneric_contenedor_progreso .videogeneric_tiempo_actual,
+.videogeneric_contenedor_progreso .videogeneric_tiempo_total {transition: height 0.5s ease-out;}
+.videogeneric_contenedor_progreso {z-index: 1; height: 25px; width: 100%; cursor: pointer;}
+.videogeneric_contenedor_progreso .videogeneric_base {z-index: 2; background-color: transparent; width: 100%}
+.videogeneric_contenedor_progreso .videogeneric_cargado {z-index: 3; background-color: #3a3a3a;}
+.videogeneric_contenedor_progreso .videogeneric_reproducido {z-index: 4; background-color: #bb0000;}
+.videogeneric_contenedor_progreso .videogeneric_reproducido:hover {z-index: 4;}
+.videogeneric_contenedor_progreso .videogeneric_tiempo_actual {z-index: 5; padding: 0 16px; font-size: 12px; line-height: 25px; color: #ffffff; overflow: hidden;}
+.videogeneric_contenedor_progreso .videogeneric_tiempo_total {z-index: 5; right: 0; bottom: 0; padding: 0 8px; font-size: 12px; line-height: 25px; color: #DDDDDD; overflow: hidden;}
+.videogeneric_contenedor_progreso .videogeneric_manejador {z-index: 6; bottom: 1px; width: 0; height: 0; background-color: #fff; border-radius: 100%; box-shadow: 2px 2px 3px #222;}
+.videogeneric_contenedor_progreso .videogeneric_manejador span {z-index: 7; top: 0; left: 0; width: 0; height: 0; background-color: #bb0000; border-radius: 100%;}
+.videogeneric_contenedor_progreso .videogeneric_manejador:hover span {background-color: #1b1b1b;}
+.videogeneric_envoltorio:hover .videogeneric_base,
+.videogeneric_envoltorio:hover .videogeneric_cargado,
+.videogeneric_envoltorio:hover .videogeneric_reproducido,
+.videogeneric_envoltorio:hover .videogeneric_tiempo_actual,
+.videogeneric_envoltorio:hover .videogeneric_tiempo_total {height: 25px;}
+.videogeneric_envoltorio:hover .videogeneric_manejador {bottom: 1px;height: 24px;margin-left: -16px;width: 24px;} 
+.videogeneric_envoltorio:hover .videogeneric_manejador span {height: 9px;left: 8px;top: 8px;width: 9px;}
+.videogeneric_envoltorio:hover .videogeneric_base {background-color: rgba(27,27,27,0.8);}
+
+/*--jacob
+
+/* thumbnails */
+
+.videogeneric_thumbnails {position: absolute; z-index: 6; left: 0;  bottom: 34px; margin-left: -53px; display: none;}
+.videogeneric_contenedor_progreso:hover .videogeneric_thumbnails {display: block;}
+.videogeneric_thumbnails  .videogeneric_foto {background-repeat: no-repeat; background-color: rgba(0,0,0,.5); border: 2px solid #000;}
+.videogeneric_thumbnails  .videogeneric_foto span {display: block; background-repeat: no-repeat;}
+.videogeneric_tiempo {position: absolute; z-index: 7; bottom: 6px; width: 100%; height: 16px; text-align: center;}
+.videogeneric_tiempo .videogeneric_numero {display: inline-block; height: 16px; font-size: 11px; line-height: 16px; padding: 0 6px; background-color: #000; color: #DDDDDD;}
+.videogeneric_tiempo .videogeneric_pico {position: absolute; left: 0; bottom: -4px; width: 60%; height: 0; line-height: 0;}
+.videogeneric_tiempo .videogeneric_pico:after {position: absolute; right: 0; width: 0; height: 0; border-style: solid; border-width: 7px 9px 0; border-color: transparent; border-top-color: #000; content: "";}
+
+
+/* MODIFICADORES ESTADO PLAYER ----------------------------------------------------------------------------------------------------------- */
+
+/* no iniciado */
+
+.videogeneric_estado_off_1 .videogeneric_contenedor_progreso,
+.videogeneric_estado_off_1 .videogeneric_datos_video a.videogeneric_play_grande {display: none;}
+.videogeneric_estado_off_1 a.videogeneric_play_grande,
+.videogeneric_estado_off_1 .videogeneric_play {display: block;}
+
+/* no iniciado alternativo */
+
+.videogeneric_estado_off_2 .videogeneric_contenedor_progreso,
+.videogeneric_estado_off_2 .videogeneric_barra_inferior {display: none;}
+.videogeneric_estado_off_2 .videogeneric_datos_video {top: auto; bottom: 7%; left: 4%; max-width: 50%; height: 71px; border: 1px solid #000; background-color: rgba(0,0,0,0.62); overflow: hidden;}
+.videogeneric_estado_off_2 .videogeneric_datos_video .videogeneric_modulo_play {display: table-cell;}
+.videogeneric_estado_off_2 .videogeneric_datos_video a.videogeneric_play_grande {visibility: hidden; display: block; position: static; background-color: transparent; margin: 0 10px 0 0; border: 0;}
+.videogeneric_estado_off_2 .videogeneric_contenedor_cargando {position: static; left: 13px; top: 13px; margin: 13px 24px 14px 13px;}
+.videogeneric_estado_off_2 .videogeneric_datos_video .videogeneric_modulo_datos {display: table-cell; vertical-align: middle; width: 100%; background-color: transparent;}
+.videogeneric_estado_off_2 .videogeneric_datos_video .videogeneric_titulo,
+.videogeneric_estado_off_2 .videogeneric_datos_video .videogeneric_duracion {float: none; max-width: none; max-height: 37px; line-height: 17px; background-color: transparent; white-space: normal; text-overflow: clip;}
+.videogeneric_estado_off_2 .videogeneric_datos_video .videogeneric_titulo {padding: 0; font-size: 13px; color: #a0a0a0;}
+.videogeneric_estado_off_2 .videogeneric_datos_video .videogeneric_duracion {padding: 0.5% 0 0; height: auto;}
+.videogeneric_estado_off_2 .videogeneric_contenedor_video:hover {cursor: pointer;}
+.videogeneric_estado_off_2 .videogeneric_contenedor_video:hover .videogeneric_datos_video a.videogeneric_play_grande {background-color: #DDDDDD; background-position: center -531px; cursor: pointer;}
+.videogeneric_estado_off_2 .videogeneric_contenedor_video:hover .videogeneric_datos_video {background-color: rgba(0,0,0,0.9);}
+
+/* reproduciendo */
+
+.videogeneric_estado_on .videogeneric_datos_video {display: none;}
+.videogeneric_estado_on .videogeneric_pausa {display: block;}
+.videogeneric_estado_on .videogeneric_controles {opacity: 0.2; transition: opacity 1.5s ease-in 1.5s;}
+.videogeneric_estado_on:hover .videogeneric_controles  {opacity: 1; transition-duration: 0.1s; transition-delay: 0s; position: relative;}
+
+/*Ocultar reproductor*/
+.videogeneric_estado_on .videogeneric_barra_inferior {
+    transition-duration: 1s; transform: translate(0, 32px);
+    -webkit-transition-duration: 1s; -webkit-transform: translate(0, 32px);
+}
+
+.videogeneric_estado_on:hover .videogeneric_barra_inferior {
+    transform: translate(0, 0); -webkit-transform: translate(0, 0);
+}
+
+/* pausado */
+
+.videogeneric_estado_pausado a.videogeneric_play_grande,
+.videogeneric_estado_pausado .videogeneric_play {display: block;}
+.videogeneric_estado_pausado .videogeneric_datos_video a.videogeneric_play_grande {display: none;}
+
+
+
+/* cargando video */
+
+.videogeneric_estado_cargando .videogeneric_contenedor_cargando {display: block;}
+.videogeneric_estado_cargando .videogeneric_play_grande {display: none!important;}
+
+/* cargando calidad */
+
+.videogeneric_cargando_calidad .videogeneric_calidad a .videogeneric_icono {-webkit-animation: girarueda 2s linear 3s; animation: girarueda 2s linear 3s;}
+@keyframes girarueda { from {transform: rotate(0deg);} to {transform: rotate(360deg);}}
+@-webkit-keyframes girarueda { from {transform: rotate(0deg);} to {transform: rotate(360deg);}}
+
+/* compartiendo */
+
+.videogeneric_estado_compartiendo .videogeneric_c_compartir,
+.videogeneric_estado_compartiendo .videogeneric_play {display: block;}
+.videogeneric_estado_compartiendo .videogeneric_controles {opacity: 0.2;}
+
+.videogeneric_estado_compartiendo .videogeneric_volumen:hover .videogeneric_capa_volumen,
+.videogeneric_estado_compartiendo .videogeneric_calidad:hover .videogeneric_capa_calidad,
+.videogeneric_estado_compartiendo .videogeneric_contenedor_progreso,
+.videogeneric_estado_compartiendo .videogeneric_datos_video{display: none;}
+
+/* finalizado */
+
+.videogeneric_estado_fin .videogeneric_contenedor_video {overflow: hidden /* para la capa de videos relacionados */;}
+.videogeneric_estado_fin .videogeneric_c_relacionados,
+.videogeneric_estado_fin .videogeneric_recargar {display: block;}
+.videogeneric_estado_fin .videogeneric_contenedor_progreso,
+.videogeneric_estado_fin .videogeneric_datos_video {display: none;}
+
+.videogeneric_estado_fin .videogeneric_barra_inferior {
+    transition-duration: 1s;  transform: translate(0, 0);
+    -webkit-transition-duration: 1s;  -webkit-transform: translate(0, 0);
+}
+
+/* MODIFICADORES PARA ELIMINAR CONTROLES ----------------------------------------------------------------------------------------------------------- */
+
+.videogeneric_b_play_0 .videogeneric_play,
+.videogeneric_b_play_0 .videogeneric_pausa,
+.videogeneric_b_play_0 .videogeneric_recargar,
+.videogeneric_b_volumen_0 .videogeneric_volumen,
+.videogeneric_b_compartir_0 .videogeneric_compartir,
+.videogeneric_b_calidad_0 .videogeneric_calidad,
+.videogeneric_b_fullscreen_0 .videogeneric_fullscreen,
+.videogeneric_datos_video_0 .videogeneric_datos_video,
+.videogeneric_titulo_0 .videogeneric_datos_video .videogeneric_titulo,
+.videogeneric_duracion_0 .videogeneric_duracion {display: none;}
+.videogeneric_duracion_0 .videogeneric_datos_video .videogeneric_titulo {max-width: 100%;}
+
+/* sin titulo ni duracion en inicio alternativo */
+
+.videogeneric_titulo_0.videogeneric_duracion_0 .videogeneric_datos_video {width: auto;}
+.videogeneric_estado_off_2.videogeneric_titulo_0.videogeneric_duracion_0 a.videogeneric_play_grande {margin: 0;}
+.videogeneric_titulo_0.videogeneric_duracion_0 .videogeneric_modulo_datos {display: none;}
+
+
+
+
+
+
+.videogeneric_directo {font-family: 'OpenSans', Arial, Helvetica, sans-serif;font-size: 12px;text-transform: uppercase;font-weight: bold;float: left;}
+.videogeneric_directo a {color: #ffffff;display: inline-block;line-height: 35px;padding-right: 9px;background: rgba(0, 0, 0, 0)url("/psdmedia/media/top/skins/videogeneric/motor/assets/img/directo_on.gif") no-repeat scroll right 9px;}
+
+.videogeneric_directo a:hover {color: #dddddd;}
+.videogeneric_directo.videogeneric_parado a {background: rgba(0, 0, 0, 0)url("/psdmedia/media/top/skins/videogeneric/motor/assets/img/directo_off.gif") no-repeat scroll right 9px;}
+.videogeneric_estado_cargando .videogeneric_directo{margin-left:50px;}
+

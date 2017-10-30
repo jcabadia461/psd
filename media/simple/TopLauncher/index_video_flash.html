@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--<script type="text/javascript" src="http://smoda.player-top.prisasd.com/psdmedia/media/simple/js/SimpleMediaPlayer.min.js"></script>-->
+    <!--<script type="text/javascript" src="http://player-top.prisasd.com/psdmedia/media/simple/js/SimpleMediaPlayer.min.js"></script>-->
+    <script type="text/javascript" src="http://10.90.1.61:33399/psdmedia/media/simple/js/SimpleMediaPlayer.min.js"></script>
+    <!--<script type="text/javascript" src="SimpleMediaPlayer.lib.js"></script>-->
+	
+    <!--<script src="http://10.90.213.46:8080/target/target-script-min.js#anonymous"></script>-->
+
+    <!--<script type="text/javascript" src="/psdmedia/media/simple/TopLauncher/data/s_code.js"></script>-->
+    <script type="text/javascript" src="http://10.90.1.61:33399/psdmedia/media/simple/TopLauncher/data/s_code.js"></script>
+
+    <style type="text/css">
+        #top_container2867889892001
+        {
+            width:750px;
+            height:400px;
+            background:#b0c4de;
+        }
+
+    </style>
+
+</head>
+
+<!--"width": "850",
+"height": "500",-->
+
+<!--<body onload="loadPlayer()">-->
+<body>
+
+
+    <div id="top_container2867889892001"></div>
+
+    <script type="text/javascript">
+
+        function loadPlayer()
+        {
+
+            var settings = {
+                "player": {
+                    
+					"width": "750",
+					"height": "400", 
+                    "autoplay": false,
+                    "wmode": "window",
+                    "bgColor": "0x000000",
+                    "container": "top_container2867889892001"
+                },
+                "skin": {
+                    "html5": false,
+                    "color": "0x71BB00",
+                    "profile": "normal", //(normal, mini, mobile)
+                    "volume": true, 
+                    "fullscreen": true,
+					"navigator": true,
+                    "title": " ",
+                    "id": "generic",
+					//"mode": "video" 
+					"volumeType": "extended"
+					//"volumeType": "basic"
+
+                },
+
+                "ws": {
+					"urlBase": "http://fapi-top.prisasd.com/api",
+                    "id_cuenta": "meristation",
+                    "id_video": "20140402031944"
+					
+                    //"urlBase": "http://fapi-top.prisasd.com/api",
+                    //"id_cuenta": "los40videos",
+                    //"id_video": "2287873283001"
+					
+					//"urlBase": "http://fapi-toppre.prisasd.com/api",
+					//"id_cuenta": "los40videos",
+                    //"id_video": "2035670872001"
+                }, 
+
+                /*"ws": {
+                    "urlBase": "http://webfastapi.top.des.prisadigital.int/api",
+                    "id_cuenta": "meristation",
+                    "id_video": "2867889892001"
+                },*/
+
+                "ads": {
+                    //"conf": "http://smoda.player-top.prisasd.com/psdmedia/resources/confs/pub/smoda/portada.xml"
+                    //"conf": "/psdmedia/media/simple/skins/generic/tests/confPubli.xml"  //EJEMPLO DE VPAID
+                    "conf": "/psdmedia/media/simple/TopLauncher/data/confPubli.xml"
+				    //"conf": "/testTop/data/confPubli.xml",
+                    //"tags": "SER_RADIO"
+					
+					//"conf": "http://meristation.player-top.prisasd.com/psdmedia/resources/confs/pub/meristation/video.xml"   
+					//"conf": "//huffingtonpost.player-top.prisasd.com/psdmedia/resources/confs/pub/huffington/video.xml"  
+				    //"conf": "http://huffingtonpost.player-top.prisasd.com/psdmedia/resources/confs/pub/huffington/video.xml"  
+                },
+                "stats": {
+                    //"conf": "http://smoda.player-top.prisasd.com/psdmedia/resources/confs/stats/profiles/smoda.json"
+                    "conf": "/psdmedia/media/simple/TopLauncher/data/stats/profiles/medium_vod_ads.xml"
+                    //"conf": "/testTop/data/stats/profiles/medium_vod_ads.xml"
+                    //"conf": ""
+                },
+
+                "security": {}
+                //base: "http://player-top.prisasd.com/"
+                //base: "http://smoda.player-top.prisasd.com"
+            }
+
+            var mediaLauncherTop = new psd.media.TopLauncher();
+            mediaLauncherTop.addSetting(settings);
+            mediaLauncherTop.init();
+            mediaLauncherTop.addEventListener(psd.media.TopLauncher._EVENT_INI,onSetEvents);
+
+            //EVENTOS
+            function onSetEvents()
+            {
+                //Recogemos eventos
+                var mediaPlayer = mediaLauncherTop.getMediaPlayer();
+
+                mediaPlayer.addEventListener(psd.media.MediaEvent.MEDIA_BEGIN, onMediaEvent);
+                mediaPlayer.addEventListener(psd.media.MediaEvent.MEDIA_COMPLETE, onMediaEvent);
+                mediaPlayer.addEventListener(psd.media.MediaEvent.CUEPOINT_DATA, onMediaEvent);
+                mediaPlayer.addEventListener(psd.media.MediaEvent.INITIALIZED, onMediaEvent);
+                mediaPlayer.addEventListener(psd.media.MediaEvent.MEDIA_START, onMediaEvent);
+                mediaPlayer.addEventListener(psd.media.MediaEvent.MEDIA_STOP, onMediaEvent);
+                mediaPlayer.addEventListener(psd.media.MediaEvent.AD_START, onMediaEvent);
+                mediaPlayer.addEventListener(psd.media.MediaEvent.AD_SKIP, onMediaEvent);
+                mediaPlayer.addEventListener(psd.media.MediaEvent.AD_COMPLETE, onMediaEvent);
+                mediaPlayer.addEventListener(psd.media.MediaEvent.AD_COMPANION_ON, onMediaEvent);
+                mediaPlayer.addEventListener(psd.media.MediaEvent.AD_COMPANION_OFF, onMediaEvent);
+
+            }
+
+            function onMediaEvent(evt)
+            {
+                //console.log("index video - onMediaEvent - evt.type: " + evt.type);
+            }
+            //EVENTOS
+
+			
+        }
+	
+		window.onload = loadPlayer();
+
+    </script>
+
+
+</body>
+</html>

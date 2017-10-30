@@ -1,0 +1,160 @@
+<footer player="">
+ <div class="container">
+   <div id="{<-%ID%->}top_player">
+    <div id="{<-%ID%->}top_player_base" class="commonmm_baseExpand">
+     <div id="{<-%ID%->}MediaModule_top_player_TopPlayer" class="commonmm_sonExpand">
+      <div id="{<-%ID%->}Controller_triton_top_player_TopPlayer" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+       <div id="{<-%ID%->}tdplayer_ondemand">
+        <video id="{<-%ID%->}tdplayer_od_videonode" type="video" height="0%" width="0%" x-webkit-airplay="allow" style="width: 0px; height: 0px; display: none;">
+         <source id="{<-%ID%->}tdplayer_odvideosource" src="">
+         </video>
+         <audio id="{<-%ID%->}tdplayer_od_audionode" type="audio" height="0%" width="0%" x-webkit-airplay="allow">
+          <source id="{<-%ID%->}tdplayer_odaudiosource" src="">
+          </audio>
+        </div>
+      </div>
+    </div>
+    <div id="{<-%ID%->}UIModule_top_player_TopPlayer" class="commonmm_sonExpand">
+      <div id="{<-%ID%->}UIPreview_top_player_TopPlayer" class="commonmm_sonExpand" style="visibility: hidden;"></div>
+      <div id="{<-%ID%->}UISkin_top_player_TopPlayer" class="commonmm_sonExpand" style="">
+       <footer id="{<-%ID%->}playerWrap" class="playerWrap">
+         <div class="container">
+          <!-- Controlaremos mediante un classname cs-alacarta cs-directo cs-playlist en que player estamos -->
+          <div id="player" class="mm_player cs-alacarta">
+           <div class="mm_player-inner">
+            <div class="mm_control">
+              <div class="mm_media-left">
+                <img src="" id="{<-%ID%->}imgCaratula">
+              </div>
+              <button id="{<-%ID%->}btnPlaylist" class="mm_play_list mm_list-show"><span class="fa fa-bars"></span> </button> 
+
+              <div class="mm_content-controls">
+                <button id="{<-%ID%->}btnPrev" class="mm_prev"><span class="fa fa-step-backward"></span> </button>                                       
+                <div id="{<-%ID%->}divBtnPlay" class="mm_bPlay"><!-- genera class="mm_loading" para que el spinner funcione -->
+                  <span id="{<-%ID%->}play_display" class="mm_player_btn_play fa fa-play"><span class="sr-only">Reproducir / Pausar</span></span>
+                  <div class="mm_spinner"></div>
+                </div>                                        
+                <button id="{<-%ID%->}btnNext" class="mm_next"><span class="fa fa-step-forward"></span></button>                                        
+              </div><!-- content-controls -->                                                
+            </div><!--control-->                                            
+            <div class="mm_info">
+             <!-- capa muestra/oculta la barra de progreso -->   
+             <div class="mm_track-wrapper">
+              <div id="{<-%ID%->}divSlideVideo" class="mm_track">
+               <!-- <div class="mm_button_manejador" style="left:20%;"><span></span></div>                                           
+               <div class="mm_player_reproducido" style="width:20%;"></div> 
+               <div class="mm_player_cargado" style="width:70%"></div> -->
+             </div>
+             <div class="mm_time"><span id="{<-%ID%->}spanCurrentTime" class="mm_current-time">00:00:00</span>/<span id="{<-%ID%->}spanTotalTime" class="mm_total-time">00:00:00</span></div>
+           </div><!-- track-wrapper -->
+           <div class="mm_info-bottom">
+            <div class="mm_infoProgram">                                       
+              <div id="{<-%ID%->}divInfoPrograma" class="mm_titulo">
+                <div id="{<-%ID%->}divInfo1" class="mm_label"><span id="{<-%ID%->}spanInfo1"></span><span id="{<-%ID%->}spanspanInfo1"></span></div>
+                <div id="{<-%ID%->}divInfo2" class="mm_sub"><span id="{<-%ID%->}spanInfo2"></span></div>
+                <div id="{<-%ID%->}divInfo3" class="mm_sub"><span id="{<-%ID%->}spanInfo3"></span></div>
+              </div>
+           </div>
+           <div id='{<-%ID%->}volume' class="mm_volume">
+             <div id="{<-%ID%->}mute_display" class="mm_mutear">
+              <span id="{<-%ID%->}spanBtnMutear" class="mm_mute_display icon-volume-2 icons"><span class="sr-only">Volumen/Silenciar</span></span>                       
+              <div id="{<-%ID%->}divSlideVolume" class="mm_slide_volumen"></div>
+            </div>
+          </div>                                                                        
+          <button id="{<-%ID%->}btnOpenShare" class="mm_trigger_player mm_layer-socials-btn"><span class="icon-share-alt"></span></button>
+          <div id="{<-%ID%->}divBtnIrDirecto" class="mm_btnlistener">
+            <a title="Ir al directo">
+              <span class="mm_btn-text"><span class="fa fa-circle"></span>Ir al directo</span>
+              <span class="mm_icon-equalizer"></span>
+            </a>
+          </div>                                  
+          <div id="{<-%ID%->}divEmisora" class="mm_emisora">
+           <!-- Versión Móvil se controla por CSS que salga -->  
+           <div class="mm_button-emisora-movil element_hidden">                           		
+             <button id="{<-%ID%->}btnCambiarEmisoraMovil" class="mm_conf">                           
+               <span class="icon-location-pin icons" title="Cambiar emisora"><span class="sr-only">Cambiar emisora</span></span>
+             </button>
+             <span id="{<-%ID%->}spanNombreEmisoraMovil" class="mm_nombre_emisora" title="Medellin">MED</span> <!-- es la emisora seleccionada en movil -->
+           </div>                                                
+
+          <div id="{<-%ID%->}divButtonSelectMovil" class="mm_button-select-movil">
+            <div id='{<-%ID%->}divSelectEmisoraDisplay' class="mm_button_select_onclick">
+              <div id='{<-%ID%->}divMMSelector' class="mm_selector">
+                <a id='{<-%ID%->}ahrefSelectEmisora' class="mm_selector_enlace" href="#" title="">40 Medellin</a>
+                <div class="mm_selector_opciones">
+                  <ul id='{<-%ID%->}ulEmisoras'>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button id='{<-%ID%->}btnCloseEmisoraMovil' class="mm_btn_close_emisora element_hidden">
+              <img alt="Cerrar" src="{<-%URL_BASE%->}/psdmedia/media/top/skins/oneplayer/img/img_close.png"/>
+            </button>
+          </div>
+
+
+
+       </div><!-- mmemisora -->
+     </div><!-- info-bottom -->                                 
+   </div><!--info -->                              
+ </div><!-- player-inner -->  
+ <div id="{<-%ID%->}divBotonesCompartir" class="mm_shareSocials" style="display: none;">
+  <div class="mm_icons-socials">              
+    <button id="{<-%ID%->}btnCompartirFacebook" class="mm_fb"><span class="icon-social-facebook icons"><span class="sr-only">facebook</span></span></button>            
+    <button id="{<-%ID%->}btnCompartirTwitter" class="mm_tw"><span class="icon-social-twitter icons"><span class="sr-only">twitter</span></span></button>  
+    <button id="{<-%ID%->}btnCompartirDownload" class="mm_down"><span class="icon-cloud-download icons"><span class="sr-only">download</span></span></button>  
+    <a id="{<-%ID%->}ahrefFileToDownload" href="" download hidden></a>
+    <button id="{<-%ID%->}boton_compartir_whatsapp" class="mm_whatsapp"><span class="fa fa-whatsapp" aria-hidden="true"><span class="sr-only">whatsapp</span></span></button>    
+    <button id="{<-%ID%->}boton_compartir_embed" class="mm_embed mm_layer-embed-btn"><span class="fa fa-code" aria-hidden="true"><span class="sr-only">Compartir</span></span></button>                           
+  </div>
+  <button id="{<-%ID%->}btnCloseShare" class="mm_layer-socials-btn position-btn"><img alt="Cerrar" src="{<-%URL_BASE%->}/psdmedia/media/top/skins/oneplayer/img/img_close.png"></button>
+</div>  <!-- mm_shareSocials -->   
+<div id="{<-%ID%->}divLayerEmbed" class="mm_layerEmbed">        
+  <div class="mm_inner-embed">
+    <span class="mm_label_llevate_audio">Llévate el audio</span>
+
+   
+
+    <div id="{<-%ID%->}divMMSelectorSize" class="mm_selector">
+      <a id="{<-%ID%->}ahrefTamanio" class="mm_selector_enlace" href="#" title="">Tamaño</a>
+      <div class="mm_selector_opciones">
+        <ul id="{<-%ID%->}ulSizes" >
+        </ul>
+      </div>
+    </div>
+
+
+   <!-- === .select === -->
+   <textarea class="mm_code" id="{<-%ID%->}textCode">&lt;iframe src="http://play.cadenaser.com/widget/audio/radio_cordoba"  width="100%"  height="102" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</textarea>
+
+   <button id="{<-%ID%->}btnCopiarCodigo" class="mm_button-copy">Copiar código</button>
+ </div>                          
+ <button id="{<-%ID%->}btnCloseLayerEmbed" class="mm_layer-embed-btn position-btn"><img alt="Cerrar" src="{<-%URL_BASE%->}/psdmedia/media/top/skins/oneplayer/img/img_close.png"/></button>
+</div><!-- layerEmbed -->                               
+
+</div><!-- #player/Alacarta -->                        
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+<div class="preRoll hide" ng-class="{'hide': !ads}">
+ <div class="publi preRollAds">
+   <div id="{<-%ID%->}preAds" ng-class="{'ads': prads}" style="visibility: hidden;">
+    <div id="{<-%ID%->}basePubli_top_player_TopPlayer" class="commonmm_baseExpand">
+     <div id="{<-%ID%->}publi_top_player_TopPlayer" class="commonmm_sonExpand_forceson" style="visibility: hidden;">
+       <div style="position: absolute;">
+
+
+       </div>
+     </div>
+   </div>
+ </div>
+ <div id="{<-%ID%->}instreamAds" ng-class="{'ads': !prads}" class="ads"></div>
+</div>
+</div><!-- preRoll -->
+
+</div>
+</footer>

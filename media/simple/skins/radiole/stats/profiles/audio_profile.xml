@@ -1,0 +1,19 @@
+{
+    "config":{
+        "data": [
+		],
+        "plugins": [
+            {	"id": "omniture",
+                "type": "psd.statistics.plugins.OmniturePlugin",
+                "url": "/psdmedia/media/simple/skins/radiole/stats/plugins/omniture_audio.xml"
+            }            
+        ],
+        "routing": [
+            {"name": "mediaBegin", "plugins": "omniture", "type":"custom"},
+            {"name": "mediaComplete", "plugins": "omniture", "type":"custom"},
+            {"name": "adStart", "plugins": "omniture", "type":"custom"},
+            {"name": "adComplete", "plugins": "omniture", "type":"custom"},
+            {"name": "adSkip", "plugins": "omniture", "type":"custom"}
+        ]
+    }
+}

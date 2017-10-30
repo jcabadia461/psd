@@ -1,0 +1,548 @@
+<?php
+header('access-control-allow-origin: http://cadenaser2.pre.prisacom.int');
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<title>Tests SimpleMediaPlayer Maxima FM - Audio</title>
+		<link href="forms.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="/psdmedia/media/simple/js/SimpleMediaPlayer.min.js"></script>
+		<!--<script src="http://10.90.208.220:80/target/target-script-min.js#mc"></script>-->
+		
+		<style type="text/css"> 
+		
+			#menu {
+				float: left;
+				width: 30%;
+				padding: 1%;
+			}
+			
+			#content {
+				float:rigth:
+				width:68%;
+			}
+			
+			#media_player_container
+			{
+				float:left;
+				width:35%;
+				padding: 1%;
+			}
+			
+			#media_player_console
+			{
+				float:right;
+				width:28%;
+				padding: 1%;
+			}
+			
+			#console
+			{
+				height: 100%;
+			}
+			
+		</style>		
+		
+	</head>
+	
+	<body>
+	
+		<div id="menu">
+			
+			<div id="controls" style="text-align:center;">
+			
+				<fieldset>
+					<legend>Controles</legend>
+					<button type="button" name="load_btn" value="Load" onclick="loadPlayer()">Cargar</button>
+					<button type="button" name="play_btn" value="Play" onclick="play()">Play</button>
+					<button type="button" name="pause_btn" value="Pause" onclick="pause()">Pause</button>
+					<button type="button" name="fullscreen_btn" value="FullScreen" onclick="fullscreen()">FullScreen</button>
+					<button type="button" name="isplaying_btn" value="isPlaying" onclick="isPlaying()">IsPlaying</button>
+				</fieldset>
+			</div>
+		
+			<br />
+		
+			<div style="text-align:center;">
+				<form id="settings" action="javascript:loadPlayer();">
+					
+					<fieldset>
+						<legend>Contenido</legend>
+						<div>
+							<label for="content">Elige el video/audio de prueba</label>
+							<select name="content">
+								<option>01.- Audio (mp4) - AkamaiHD</option>
+								<option>02.- Audio (mp3) - Akamai</option>
+								<option>03.- Video (mp4) - Akamai</option>
+								<option>04.- Video (mp4) - AkamaiHD</option>
+								<option>05.- Audio (mp4) - Brightcove</option>
+								<option>06.- Video (mp4) - Brightcove</option>
+								<option>07.- Audio (live) - Streamtheworld</option>
+								<option>08.- Audio (mp4) - Streamtheworld</option>
+								<option>09.- Video (mp4) - Streamtheworld</option>
+								<option>10.- Video - HTML5</option>
+								<option>11.- Video (live) - AkamaiHD</option>
+								<option>12.- Video (mp4) - AkamaiHDS</option>
+								<option>13.- Video (mp4) - Akamai (RTMP)</option>
+							</select>
+						</div>
+					</fieldset>
+					
+					<br />
+					
+					<fieldset>
+						<legend>Player Settings</legend>
+						<div class="inline">
+							<input type="checkbox" name="force_urlbase" />
+							<label for="force_urlbase">Forzar <strong>URL base</strong></label>
+						</div>
+						<div class="inline"><input type="text" name="urlbase" style="width:100%;" /></div>
+						<div class="inline">
+							<input type="checkbox" name="autoplay" />
+							<label for="autoplay">Utilizar <strong>reproducción automática</strong></label>
+						</div>
+						
+						<div class="inline">
+							<input type="checkbox" name="force_mode" />
+							<label for="mode">Orden <strong>modo</strong></label>
+							<select name="mode" value="opaque">
+								<option>flash,html5,directlink</option>
+								<option>directlink,flash,html5</option>
+								<option>html5,directlink,flash</option>
+								<option>flash,directlink</option>
+								<option>flash</option>
+								<option>html5</option>
+								<option>directlink</option>
+							</select>
+						</div>
+						
+						<div class="inline">
+							<input type="checkbox" name="controls" />
+							<label for="controls"><strong>Ocultar Controles</strong> de reproducción</label>
+						</div>
+						<div class="inline">
+							<input type="checkbox" name="force_width" checked="true"/>
+							<label for="force_width">Forzar <strong>ancho</strong> de player</label>
+							<input type="number" name="playerwidth" min="0" value="500" />							
+						</div>
+						<div class="inline">
+							<input type="checkbox" name="force_height" checked="true"/>
+							<label for="force_height">Forzar <strong>alto</strong> de player</label>
+							<input type="number" name="playerheight" min="0" value="500" />
+						</div>
+						<div class="inline">
+							<input type="checkbox" name="force_wmode" />
+							<label for="wmode">Forzar <strong>wmode</strong></label>
+							<select name="wmode" value="opaque">
+								<option>window</option>
+								<option>direct</option>
+								<option>opaque</option>
+								<option>transparent</option>
+								<option>gpu</option>
+							</select>
+						</div>
+						<div class="inline">
+							<label for="bgcolor"><strong>Color</strong> de fondo</label>
+							<input type="color" name="bgcolor" value="#ff0000" style="width:75px;" />
+						</div>
+					</fieldset>
+					
+					<br />
+					
+					<fieldset>
+						<legend>Skin settings</legend>
+						<div class="inline">
+							<input type="checkbox" name="skinhtml5" />
+							<label for="skinhtml5">Utilizar <strong>Skin HTML5</strong></label>
+						</div>	
+					</fieldset>
+					<button type="button" name="fullscreen_btn" value="FullScreen" onclick="cancelFullscreen()">FullScreenOut</button>
+				</form>
+			</div>
+		</div>
+	
+		<div id="content">
+			<div id="media_player_container"></div>
+			
+			<div id="media_player_console">
+				<fieldset>
+					<legend>Consola</legend>
+					<textarea id="console" readonly="readonly" rows="20" cols="25"></textarea>
+				</fieldset>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			
+			function play()
+			{
+				mediaPlayer.play();
+			}
+			
+			function pause()
+			{
+				mediaPlayer.pause();
+			}
+			
+			function fullscreen()
+			{
+				mediaPlayer.requestFullScreen();
+			}
+			
+			function cancelFullscreen()
+			{
+				mediaPlayer.cancelFullScreen();
+			}
+			
+			function isPlaying()
+			{ 
+				alert(mediaPlayer.isPlaying());
+			}			
+			
+			function loadPlayer()
+			{
+				var settingsForm = document.forms[0],
+					playerConfig = { };
+				
+				playerConfig.id = "media_player_container";				
+				if(settingsForm.force_urlbase.checked) { playerConfig.base = settingsForm.urlbase.value; }
+				
+				playerConfig.media = getMedia(settingsForm.content.selectedIndex);
+				
+				playerConfig.ads = {};
+				playerConfig.ads.conf = "confPubli.xml";
+				playerConfig.ads.tags = "SER_RADIO";
+
+				playerConfig.player = {};
+				playerConfig.player.container = "media_player_container";
+				
+				if(settingsForm.force_mode.checked) {playerConfig.player.mode = settingsForm.mode.value;}
+				if(settingsForm.force_wmode.checked) { playerConfig.player.wmode = settingsForm.wmode.value; }
+				if(settingsForm.force_width.checked) { playerConfig.player.width = settingsForm.playerwidth.value; }
+				if(settingsForm.force_height.checked) { playerConfig.player.height = settingsForm.playerheight.value; }
+				
+				if(settingsForm.autoplay.checked) { playerConfig.player.autoplay = "true"; }
+				if(settingsForm.controls.checked) { playerConfig.player.controls = "false"; }
+				playerConfig.player.bgColor = settingsForm.bgcolor.value;
+				
+				playerConfig.skin = {};
+				playerConfig.skin.id = "maximafm_1";
+				
+				if(settingsForm.skinhtml5.checked) { playerConfig.skin.html5 = "true"; }
+				
+				document.getElementById("console").value = "";
+				
+				mediaPlayer = new psd.media.SimpleMediaPlayer(playerConfig);
+				mediaPlayer.addEventListener(psd.media.MediaEvent.MEDIA_BEGIN, onMediaBegin, mediaPlayer);
+				mediaPlayer.addEventListener(psd.media.MediaEvent.MEDIA_COMPLETE, onMediaComplete);
+				mediaPlayer.addEventListener(psd.media.MediaEvent.CUEPOINT_DATA, onCuePointData);
+				mediaPlayer.addEventListener(psd.media.MediaEvent.INITIALIZED, onMediaPlayerInitialized);
+				mediaPlayer.addEventListener(psd.media.MediaEvent.MEDIA_START, onMediaPlayerStart);
+				mediaPlayer.addEventListener(psd.media.MediaEvent.MEDIA_STOP, onMediaPlayerStop);
+				mediaPlayer.init();
+			}
+			
+			function getMedia(id)
+			{
+				var media;
+				
+				
+				
+				switch(id)
+				{
+					case 0:
+					default:
+						media =
+						{
+							type: "audio/mp4"
+							, title: "titulo del audio"
+							, desc: "desc del audio"
+							, src : "http://sermedia-f.akamaihd.net/cadenaser/2011/05/20110501csrcsrcul_11_Aes_LAU.mp4"
+							, srcHTML5 : "http://sermedia-f.akamaihd.net/cadenaser/2011/05/20110501csrcsrcul_11_Aes_LAU.mp4"
+							, clipBegin: "250"
+							, clipEnd: "400"
+							, poster: "http://snapshot.opera.com/resources/BigBuckBunny.png"
+							, cdn: { provider:"akamaihd"}
+							
+						};
+						break;
+						
+					case 1:
+						media = 
+						{
+							/*type: "audio/mpeg"
+							, title: "titulo del audio"
+							, desc: "desc del audio"
+							, src : "http://ipod.cadenaser.com:8085/liveser.mp3"
+							, srcHTML5 : "http://ipod.cadenaser.com:8085/liveser.mp3"
+							, live: true
+							, cdn: { provider:"akamai"}*/
+							
+							type: "audio/mp3" 
+							, title: "titulo del audio" 
+							, desc: "desc del audio"
+							, src : "http://www.maxima.fm/audio/files/426.mp3"
+							, srcHTML5 : "http://www.maxima.fm/audio/files/426.mp3"
+							, live: false 
+							, cdn: { provider:"akamai"}
+						};
+						break;
+						
+					case 2:
+						media = 
+						{
+							type: "video/mp4"
+							, title: "titulo del audio"
+							, desc: "desc del audio"
+							, src : "http://vsermedia-f.akamaihd.net/cadenaser/201305/07/espana/20130507csrcsrnac_5_Ves_LVC.m4v"
+							, srcHTML5 : "http://mediapm.edgesuite.net/ovp/content/demo/video/elephants_dream/elephants_dream_768x428_24.0fps_608kbps.mp4"
+							, clipBegin: "300" 
+							, clipEnd: "600"
+							//, clipDuration : "30"
+							//, live: false
+							, cdn: { provider:"akamai"}						
+						};
+						break;
+						
+					case 3: 
+						media = 
+						{
+							type: "video/mp4"
+							, title: "titulo del audio"
+							, desc: "desc del audio"
+							
+							//DESCARGA
+							, src : "http://efvod-hdnetwork.akamai.com.edgesuite.net/ElephantsDream2_h264_1500@14411"
+							//, clipBegin: "200"
+							//, clipEnd: "400"
+							
+							
+							
+							//DVR-LIVE
+							//, src : "http://meristationlive-f.akamaihd.net/hls_x_1@80209" //Wed Sep 19 15:01:39 GMT+0200
+							//, clipBegin : "25/09/2012 10:31:15"        
+							//, clipBegin : "26/09/2012 12:00:00"       
+							//, clipEnd : "26/09/2012 15:00:00"
+							
+							//timestamp en milisegundos (duration:"1348654500000", ventana grande:"1348664400000" )
+							//ventana que no contiene el live
+							//, clipBegin: "1348079708000" 
+							//, clipEnd: "1348080300000" 
+							
+							//ventana que contiene el live
+							//, clipBegin: "1348653500000" 
+							//, clipEnd:   "1348684400000" 
+							//, absolute: "true"  
+							
+							//segundos relativos
+							/*, clipBegin : "20009"      
+							, clipEnd : "20601"  
+							, absolute: "false"*/
+							
+							
+							, srcHTML5 : "http://efvod-hdnetwork.akamai.com.edgesuite.net/ElephantsDream2_h264_1500@14411"
+							, directLinkUrl: "http://efvod-hdnetwork.akamai.com.edgesuite.net/ElephantsDream2_h264_1500@14411"
+							, cdn: { provider:"akamaihd"}  
+						};
+						break;
+					
+					case 4:
+						media = 
+						{
+							type: "audio/mp4"
+							, title: "titulo del audio"
+							, desc: "desc del audio"
+							, src : "20030612_audio_4"
+							//, srcHTML5 : "http://sermedia-f.akamaihd.net/cadenaser/2011/05/20110501csrcsrcul_11_Aes_LAU.mp4"
+							//, live: false
+							, cdn: { provider: "brightcove" , playerId: "1377059099001" , playerKey: "AQ~~,AAAA3LlbbfE~,fu1xNGlQsiYwiLT2qVUd38HrfPye_Jrn" }
+						};
+						break;
+						
+					case 5:
+						media = 
+						{
+							type: "video/mp4"
+							, title: "titulo del audio"
+							, desc: "desc del audio"
+							, src : "20120103_video_3"
+							, clipBegin: "100"
+							, clipEnd: "200"
+							//, srcHTML5 : "http://sermedia-f.akamaihd.net/cadenaser/2011/05/20110501csrcsrcul_11_Aes_LAU.mp4"
+							//, live: false
+							, cdn: { provider: "brightcove" , playerId: "1270513424001" , playerKey: "AQ~~,AAAA3Llbagk~,4WSD-E691cuaCrOmNTHJ9wDn8DN0r2Pr" }
+						};
+						break;
+						
+					case 6:
+						media = 
+						{
+							/*type: "audio/mp4"
+							, title: "live streamtheworld"
+							, desc: "canal live de streamtheworld"
+							, src: "CADENASER"  
+							, live: true
+							, cdn: { provider: "streamtheworld" }*/
+							
+							type: "audio/mp4"
+							, title: "live streamtheworld"
+							, desc: "canal live de streamtheworld"
+							//, src: "MAXIMAFMAAC"
+							//, srcHTML5: "http://5293.live.streamtheworld.com:80/MAXIMAFM_SC" 
+							, src: "MAXIMAFMANDOTESTAAC"    
+							, srcHTML5: "http://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_SC"
+							, live: true
+							, cdn: { provider: "streamtheworld" }  
+						}
+						break;
+						
+					case 7:
+						media =
+						{
+						
+						
+							/*id=psmedia-player
+							mediaType=audio/mp4
+							mediaTitle=Say nothing
+							mediaDescription=Example
+							mediaSrc=http://www.maxima.fm/audio/files/451.mp3
+							mediaLive=false
+							cdn_provider=streamtheworld
+							autoplay=true
+							skin_id=maximafm_1 
+							skin_html5=true*/
+							
+							//type:"audio/mp3"
+							type:"audio/mp4"
+							, title:"Say nothing"
+							, desc:"Example"
+							//, src:"http://www.maxima.fm/audio/files/451.mp3"
+							, src:"http://ursmediafiles-mobile.media.streamtheworld.com/objetos/audios/dest/010001467476.mp4"
+							, srcHTML5:"http://ursmediafiles-mobile.media.streamtheworld.com/objetos/audios/dest/010001467476.mp4"
+							, live: false
+							, cdn:{ provider : "streamtheworld" }
+							
+							/*type:"audio/mp4" 
+							, title:"Una de las acampadas:\"Lo más importante, el espacio\""
+							, desc:"Una de las acampadas:\"Lo más importante, el espacio\""
+							, src:"http://ursmediafiles-mobile.media.streamtheworld.com/objetos/audios/dest/010001467476.mp4"
+							, srcHTML5:"http://ursmediafiles-mobile.media.streamtheworld.com/objetos/audios/dest/010001467476.mp4"
+							, live: false
+							, cdn:{ provider : "streamtheworld" }*/
+						}
+						break;
+						
+					case 8:
+						media =
+						{
+							type:"video/mp4"
+							, title:"Una de las acampadas:\"Lo más importante, el espacio\""
+							, desc:"Una de las acampadas:\"Lo más importante, el espacio\""
+							, src:"http://ursmediafiles-mobile.media.streamtheworld.com/objetos/videos/dest/010001458476.mp4"
+							, srcHTML5:"http://ursmediafiles-mobile.media.streamtheworld.com/objetos/videos/dest/010001458476.mp4"
+							, clipBegin: "100"
+							, clipEnd: "200"
+							, live: false
+							, cdn:{ provider : "streamtheworld" }
+						}
+						break;
+					
+					case 9:
+						media = 
+						{
+							type:"video/mp4"
+							, tile:"Gatetes"
+							, srcHTML5: ["http://snapshot.opera.com/resources/BigBuckBunny.ogv", "http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"]
+							, poster: "http://snapshot.opera.com/resources/BigBuckBunny.png"
+							, cdn: { provider:"akamai"}
+						}
+						break;
+						
+					case 10:
+						media = 
+						{
+							type: "video/mp4"
+							, title: "titulo del audio"
+							, desc: "desc del audio"
+							, src : "http://liveser-f.akamaihd.net/PrisadRadioVDF_x_1@77247"
+							, srcHTML5 : "http://universal-f.akamaihd.net/i/vdfhtml5_x@80213/master.m3u8"
+							, clipBegin: "400"
+							, clipEnd: "600"
+							, live: true
+							, cdn: { provider:"akamaihd"}
+						};
+						break;
+						
+					case 11:
+						media = 
+						{
+							type: "video/mp4"
+							, title: "titulo del audio"
+							, desc: "desc del audio"
+							, src : "http://zerihdndemo-f.akamaihd.net/z/h264/darkknight/darkknight.smil/manifest.f4m"
+							, srcHTML5 : "http://zerihdndemo-f.akamaihd.net/z/h264/darkknight/darkknight.smil/manifest.f4m"
+							, live: false
+							, cdn: { provider:"akamaihds"}
+						};
+						break;
+						
+					case 12:
+						media = 
+						{
+							type: "video/mp4"
+							//, src : "rtmp://cp67126.edgefcs.net/ondemand/mp4:mediapm/ovp/content/test/video/spacealonehd_sounas_640_300.mp4"
+							//, src : "rtmp://cp14314.edgefcs.net/ondemand/14314/maxima/2012/09/IvanGough-Feenixpawl-Georgi Kay-InmyMind" //maxima
+							//, src : "rtmp://cp54139.live.edgefcs.net/live/SerOndaMedia@44303" 
+							, src : "rtmp://cp14314.edgefcs.net/ondemand/14314/radiole/2012/OrigenFL"
+							, cdn: { provider:"akamai"}
+						}
+				}
+				
+				return media;
+			}
+			
+			function onMediaComplete()
+			{
+				console.log("***onMediaComplete");
+				document.getElementById("console").value+="Fin de reproducción...\n";
+			}
+			
+			function onMediaPlayerInitialized()
+			{
+				document.getElementById("console").value+="Inicialización del player completa...\n";
+			}
+			
+			function onMediaPlayerStart()
+			{
+				console.log("*** START");
+				document.getElementById("console").value+="Reproducción en marcha(START EVENT)...\n";
+			}
+			
+			function onMediaPlayerStop()
+			{
+				console.log("*** STOP");
+				document.getElementById("console").value+="Reproducción parada(STOP EVENT)...\n";
+			}
+			
+			function onMediaBegin(evt)
+			{
+				document.getElementById("console").value+="Inicio de reproducción...\n";
+			}
+			
+			function onCuePointData(evt)
+			{
+				if(evt.data.name=="track")
+				{
+					document.getElementById("console").value+="Ahora suena: "+evt.data.cueTitle+" de "+evt.data.artistName+"\n";
+				}
+				
+				if(evt.data.name=="break")
+				{
+					document.getElementById("console").value+="Corte publicitario "+evt.data.adID+" durante "+evt.data.cueTimeDuration/1000+" s.\n";
+				}
+			}
+			
+		</script>
+		
+	</body> 
+</html>

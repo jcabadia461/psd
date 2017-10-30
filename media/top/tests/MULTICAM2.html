@@ -1,0 +1,87 @@
+
+<!--<script src='http://sdes1lnx.prisacom.int:33354/psdmedia/media/simple/js/SimpleMediaPlayer.min.js'></script>-->
+<!--script src='http://sdes1lnx.prisacom.int:33354/psdmedia/media/top/widgets/multicam/Multicam.js'></script--> 
+
+<script src='/psdmedia/media/top/widgets/multicam/Multicam.js'></script>
+
+<script src='http://prisamusicales.player-top.prisasd.com/psdmedia/media/simple/js/SimpleMediaPlayer.min.js'></script>
+<!--script src='http://prisamusicales.player-top.prisasd.com/psdmedia/media/top/widgets/multicam/Multicam.js'></script-->
+
+
+<div style='style:position:relative;'>
+    <div class='capacontenedora' style='width:600px;height:400px;position:absolute;left:10px;top:10px;' id='cont'></div>
+    <div class='capacontenedora' style='width:300px;height:200px;position:absolute;left:620px;top:10px;' id='cont2'></div>
+    <div class='capacontenedora' style='width:300px;height:200px;position:absolute;left:920px;top:10px;' id='cont3'></div>
+    <!--<div class='capacontenedora' style='width:300px;height:200px;position:absolute;left:620px;top:210px;' id='cucu'></div>
+    <div class='capacontenedora' style='width:300px;height:200px;position:absolute;left:920px;top:10px;' id='ono'></div>
+    <div class='capacontenedora' style='width:300px;height:200px;position:absolute;left:920px;top:210px;' id='unu'> </div>-->
+</div>
+
+<style>
+.capacontenedora{
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+</style> 
+
+<script>
+
+idmedio = "elpais";
+idplayer = 113;
+
+    var c1 = {
+      "id_cuenta": idmedio,
+      "media_type": "video",
+      "id_player": idplayer,
+      "id_media": "channel3ak",
+      "id_container": "cont",
+      "overwriteWidth": "640",
+      "overwriteHeight": "360",
+      "dev":false,
+	  "topPlayer":{"media":{"autoplay":false}}
+    };
+    var c2 = {
+      "id_cuenta": idmedio,
+      "media_type": "video",
+      "id_player": idplayer,
+      "id_media": "channel2ak",
+      "id_container": "cont2",
+      "overwriteWidth": "640",
+      "overwriteHeight": "360",
+      "dev":false,
+      "topPlayer":{"media":{"autoplay":false}}
+    };
+    var c3 = {
+      "id_cuenta": idmedio,
+      "media_type": "video",
+      "id_player": idplayer,
+      "id_media": "channel1ak",
+      "id_container": "cont3",
+      "overwriteWidth": "640",
+      "overwriteHeight": "360",
+      "dev":false,
+      "topPlayer":{"media":{"autoplay":false}}
+    };
+
+
+
+	imagenes = ["http://vdvmedia.los40.com/top/201411/26/20141126133120_1417005147_still.jpg"];
+	confs = [c1,c2,c3];
+	
+	//containers = ["casa","coco","cucu","ono","unu"];
+
+    /*conf = {
+        "id_cuenta": "los40videos",
+        "media_type": "video",
+        "id_player": "109",
+        "dev": true
+    };*/
+	//signals = ["20140929185014","20141126133120","20141126133120","20140929174533","20140929174533"];
+
+    //mm = new Multicam(containers,conf,signals); 
+    mm = new Multicam(confs,imagenes);
+    mm.run();
+
+</script>
+

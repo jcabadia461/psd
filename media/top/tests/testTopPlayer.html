@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+ 
+   <script type="text/javascript" src="../js/TopPlayer.lib.js"></script>
+<!--<script type="text/javascript" src="http://www.cadenaser.com/js/s_code.js"></script>-->
+<script type="text/javascript" src="js/s_code.js"></script>
+<script src='js/screenfull.min.js'></script>
+
+<script src='http://www.alten-formacion.es/playser/js/vendor/jquery-1.11.0.min.js'></script>
+
+        <script src='http://10.90.1.61:33399/psdmedia/resources/js/ext/jquery-ui-1.11.2.custom/jquery-ui.min.js'></script>
+
+</head>
+<body>
+<div id="banner-live_synced_bigbox" style=";height: 250px;width:300px;margin:auto;display:none"></div><!-- 300x250 -->
+<div id="banner-live_synced_leaderboard" style="height: 90px;width:728px;argin:auto;display:none"></div> <!--728x90-->
+<input type="button" id="reloadF4M" name="reloadF4M" value="reloadF4M" width="50px" onclick="reloadF4M()"/>
+<input type="button" id="reloadF4M2" name="reloadF4M2" value="reloadF4M2" width="50px" onclick="reloadF4M2()"/>
+<input type="button" id="reloadHTML5_2" name="reloadHTML5_2" value="reload" width="50px" onclick="reloadHTML5_2()"/>
+<br>
+Pruebas Triton:
+<input type="button" id="reloadTriton" name="TRITON" value="TRITON pruebas" width="50px" onclick="reloadTriton('RHOZFM')"/>
+<input type="button" id="reloadTriton" name="TRITON" value="BARCELONA" width="50px" onclick="reloadTriton('SER_BARCELONA')"/>
+<input type="button" id="reloadTriton" name="TRITON" value="CADENASER" width="50px" onclick="reloadTriton('CADENASER')"/>
+<input type="button" id="reloadTriton" name="TRITON" value="LOS40" width="50px" onclick="reloadTriton('LOS40')"/>
+<input type="button" id="reloadTriton" name="TRITON" value="LA PALMA" width="50px" onclick="reloadTriton('SER_LA_PALMA')"/>
+<br>
+<input type="button" id="reloadMP3" name="MP3" value="mp3" width="50px" onclick="reloadMP3()"/>
+<input type="button" id="loadPubli" name="publi" value="Custom click" width="50px" onclick="customClick()"/>
+
+<input type="button" value="bot" onclick="bot()"/>
+<br>
+<input type='button' value='poner titulo subtitulo imagen' onclick='ponertsi();'/>
+<div id="top_container" style="overflow: hidden;margin:auto;height: 480px;width:640px"></div> <!--640x480-->
+<div class="commonmm_baseExpand"></div>
+<div id="ad_container" style="overflow: hidden;height: 480px;width:640px;margin:auto;"></div> <!--640x480-->
+<div id="topui_container" style="overflow: hidden;margin:auto;height:100px;width:640px;"></div> <!--640x480-->
+<div id="topui_container2" style="overflow: hidden;margin:auto;height:100px;width:640px;"></div> <!--640x480-->
+<div id="media_container" style="overflow: hidden;height: 0px;width:0px;margin:auto;display:none"></div> <!--640x480-->
+<textarea id="consola" style="position:absolute;width: 500px; height: 800px; background-color: lightgoldenrodyellow;left: 430px"></textarea>
+    <script>
+
+
+
+function ponertsi(){
+
+pl.getUIModule().externalOrder(emic.top.ui.ORDER_TITLE_SUBTITLE_IMAGE,{"title":"titulito","subtitle":"subtitulito","image":"/psdmedia/media/top/skins/playser2/assets/img/locutor_directos.png"});
+
+
+}
+
+function customClick(){
+
+	//console.log(emic.spectrum);	
+	//mm.preloadController(emic.top.MediaModule.CONTROLLER_TYPE_TRITON);
+	var elem = document.getElementById("top_container");
+	screenfull.request(elem)
+
+
+
+
+}
+
+		function loadPubliDirect(){
+			
+			ply.gerMediaModule().play();
+	
+		}
+
+        function reloadF4M(){
+
+            var config = {};
+            config.generic = {container: "top_container", id:"topTest"};
+            config.ui = {
+                skin: emic.top.UIModule.SKIN_PLAYSER2,
+                poster: "http://img1.meristation.com/files/imagecache/inline/imagenes/general/image_321402_fit_620.jpg",
+                overrideNativeControls: false,
+                skinData:{
+                    mode: "audio",
+                    volume: "true"
+                }
+            };
+
+            config.ad = {
+                container: "",
+                conf:"confs/pub/confPubli2.json",
+                pTags: "madrid,deportes",
+                enabled:false
+            };
+
+            config.media = {
+                controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_AKAMAIHDS, emic.top.MediaModule.CONTROLLER_TYPE_HTML5NATIVE],
+                tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_FLASH],
+                mimetype:"video/mp4",
+                controllerData: {
+
+                },
+                url:'http://meristation-vh.akamaihd.net/z/topmeri/20146/10/bfb1403dbb8f3e6726a2f40c3a74fddc_,500,1000,3000,.mp4.csmil/manifest.f4m'
+				//url:"http://playser-vh.akamaihd.net/z/playser/20148/8/1e6cf29ff8724691a1835d91cca4d223_96.mp4/manifest.f4m"
+
+            };
+
+            pl.load(config);
+
+
+        }
+        function reloadF4M2(){
+
+            var config = {};
+            config.generic = {container: "top_container", id:"topTest"};
+            config.ui = {
+                skin: emic.top.UIModule.SKIN_TEST,
+                poster: "http://media2.meristation.com/topmeri/20147/30/20140730085952_1406703638_still.jpg",
+                overrideNativeControls: false,
+                skinData:{
+                    mode: "audio",
+                    volume: "true"
+                },
+                showPreview:true
+            };
+
+            config.ad = {
+                container: "",
+                conf:"confs/pub/confPubli.json",
+                pTags: "madrid,deportes"
+            };
+
+            config.media = {
+                controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_AKAMAIHDS, emic.top.MediaModule.CONTROLLER_TYPE_HTML5NATIVE],
+                tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_FLASH],
+                mimetype:"video/mp4",
+                controllerData: {
+
+                },
+                url:'http://meristation-vh.akamaihd.net/z/topmeri/20147/30/b4ce6eb623f490c156df9a3e0c993038_,500,1000,1500,2000,3000,.mp4.csmil/manifest.f4m'
+
+            };
+
+            pl.load(config);
+
+
+        }
+
+        function reloadHTML5_2(){
+
+            var config = {};
+            config.media = {
+                controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_HTML5NATIVE],
+                tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_HTML5],
+                url:'http://media2.meristation.com/topmeri/20147/30/899c79830a02b38c8dd8d578bce09a2d_500.mp4',
+                mimetype:"video/mp4"
+            };
+            config.ad = {
+                conf:"confs/pub/confPubli.json",
+                pTags: "barcelona, politica"
+            };
+            config.ui = {
+                poster: "http://media2.meristation.com/topmeri/20147/30/20140730085952_1406703638_still.jpg"
+            };
+
+            pl.load(config);
+
+
+        }
+
+        function reloadTriton(id){
+
+            var config = {};
+            config.media = {
+                controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_TRITON],
+				isLive: true,
+                tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_FLASH, emic.top.MediaModule.TECHNOLOGY_HTML5],
+                controllerData: {
+                    container_banner_bigbox: "banner-live_synced_bigbox",
+                    container_banner_leaderboard: "banner-live_synced_leaderboard",
+                    debugInStream: false,
+                    compatibleContainer: true
+                },
+                //container: "media_container",
+				id: id,
+//                id:"LOS40"
+//                id:"RHOZFM",
+				title: "Triton: " + id
+            };
+            config.ad = {
+                //conf:"confs/pub/confPubli.json",
+                pTags: "barcelona, politica",
+				enabled: true
+            };
+            config.ui = {
+                poster: "http://2.bp.blogspot.com/-2zPgtB5CbSg/UR961MI31dI/AAAAAAAAApY/iwS07XQovJ8/s1600/Los-40-Principales.jpg",
+                showPreview: false
+            };
+
+            pl.load(config);
+        }
+
+        function reloadMP3(){
+
+            var config = {};
+            config.media = {
+                controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_AKAMAIHD, emic.top.MediaModule.CONTROLLER_TYPE_HTML5NATIVE],
+                //tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_HTML5],
+				tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_FLASH, emic.top.MediaModule.TECHNOLOGY_HTML5],
+                url:"rsc/test1.mp3",
+                mimetype:"audio/mp3",
+				title: "Cancion ejemplo",
+				autoplay: false,
+				isLive:false
+            };
+            config.ad = {
+                container: "ad_container",
+                conf:"/psdmedia/resources/confs/pub/playser/video_pruebas_carcasa.json",
+                pTags: "barcelona, politica",
+                enabled: true
+            };
+            config.ui = {
+                poster: "http://upload.wikimedia.org/wikipedia/commons/5/5e/MP3_logo.png",
+                showPreview : false
+            };
+
+            pl.load(config);
+        }
+
+        var pl = new emic.top.TopPlayer();
+        mm = pl.getMediaModule();
+        aa = pl.getAdModule();
+        ui = pl.getUIModule();
+
+        /*mm.addEventListener(emic.top.event.MediaEvent.ON_READY, onMediaHandler);
+        mm.addEventListener(emic.top.event.MediaEvent.ON_CUE, onMediaHandler);
+        mm.addEventListener(emic.top.event.MediaEvent.ON_ERROR, onMediaHandler);
+        mm.addEventListener(emic.top.event.MediaEvent.ON_AD_INSTREAM_START, onMediaHandler);
+        mm.addEventListener(emic.top.event.MediaEvent.ON_AD_INSTREAM_END, onMediaHandler);
+        mm.addEventListener(emic.top.event.MediaEvent.ON_STATUS_CHANGE, onMediaHandler);
+        mm.addEventListener(emic.top.event.MediaEvent.ON_SWITCH_REQUEST, onMediaHandler);
+        mm.addEventListener(emic.top.event.MediaEvent.ON_SWITCH_COMPLETE, onMediaHandler);
+	    mm.addEventListener(emic.top.event.MediaEvent.ON_PRELOAD_CONTROLLER_COMPLETE, onMediaHandler);	
+
+        aa.addEventListener(emic.top.event.AdEvent.ON_AD_INSTREAM_START, onAdHandler);
+        aa.addEventListener(emic.top.event.AdEvent.ON_AD_INSTREAM_END, onAdHandler);
+        aa.addEventListener(emic.top.event.AdEvent.ON_AD_VIDEO_START, onAdHandler);
+        aa.addEventListener(emic.top.event.AdEvent.ON_AD_VIDEO_END, onAdHandler);
+*/
+        //TODO: Probar si funciona bien la configuración sucesiva (sin machacar)
+		//dmena conejitoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo iid
+
+        var config = {};
+        config.generic = {container: "top_container", id:"topTest"};
+        config.ui = {
+          skin: emic.top.UIModule.SKIN_MERISTATION,
+//          poster: "http://notmykids.net/assets/video/big_buck_bunny.jpg",
+			poster:'http://media2.meristation.com/topmeri/20152/24/20150224170406_1424794048_thumbnail.jpg',
+          overrideNativeControls: true,
+          showPreview: false,
+          skinData:{
+		      //hidePlaypause : "true",
+			  //hideSocial: "true",
+			  type: "big",
+			  hashtag: "#hasttag",
+ 			  pie: "#pie",
+  	 		  tipoNoticia: "Tipo Noticia",
+			  embedMode: true,
+			  hideSocial: true	
+          }
+        };
+        config.ad = {
+            //container: "ad_container",
+            //conf:"confs/pub/playser/audio.js",
+            conf:"/psdmedia/resources/confs/pub/playser/video_pruebas_carcasa.json",
+			pTags: "zoo_madrid_a,zoo_a,comunidad_madrid_a,animales_cautividad_a,reproduccion_a,espana_a,mamiferos_a,animales_a,especies_a,medio_ambiente_a,ccaa,madrid",
+            enabled:false
+        };
+        config.stat = {
+            conf:"confs/stats/profiles/playser.json",
+            enabled:true,
+            extraData:{
+                canal: "CanalPrueba",
+                seccionTematica: "Sección Temática prueba",
+                programa: "Programa prueba",
+                seccion: "Sección prueba",
+                objeto_ed: "Objeto editorial prueba",
+                id_usuario: "Userid prueba",
+                titulo_pagina: "Título página prueba",
+                id:"myId",
+                seccion_escucha: "Sección escucha prueba"
+            }
+        };
+
+        config.media = {
+            controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_AKAMAIHDS, emic.top.MediaModule.CONTROLLER_TYPE_HTML5NATIVE],
+            tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_FLASH],
+            //container: "media_container",
+            //container: "",
+            autoplay: false,
+            title:"BIG BUNNY",
+            id:"myId",
+			renditions:[{bitrate:"30000",label:"alta"},{bitrate:"1500",label:"media"},{bitrate:"500",label:"baja"}],
+			mimeType:"video/mp4",
+            controllerData: {
+            },
+            url:'http://meristation-vh.akamaihd.net/z/topmeri/20152/24/acc3ef69d013ce5479d7dd40ae4a3cae_,500,1500,3000,.mp4.csmil/manifest.f4m',
+			urlMosaic:'http://media2.meristation.com/topmeri/20152/24/mosaic_acc3ef69d013ce5479d7dd40ae4a3cae.jpg'
+            //url:'http://www.w3schools.com/html/mov_bbb.mp4'
+        };
+
+/*
+ config.media = {
+            //controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_YOUTUBE],
+			controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_AKAMAIHD, emic.top.MediaModule.CONTROLLER_TYPE_HTML5NATIVE],
+            tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_FLASH],
+            //container: "media_container",
+            //container: "",
+            autoplay: false,
+            title:"Youtube TEST",
+            id:"pKZa-Kb4Nng",
+            mimeType:"audio/mp4",
+			isLive:true,
+            controllerData: {
+            },
+            //url:'http://meristation-vh.akamaihd.net/z/topmeri/20146/10/bfb1403dbb8f3e6726a2f40c3a74fddc_,500,1000,3000,.mp4.csmil/manifest.f4m'
+            url:'http://cadenaser-lh.akamaihd.net/CANAL1SER_x_1@145507'
+        };
+
+*/
+
+/*
+			 config.media = {
+                controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_AKAMAIHD, emic.top.MediaModule.CONTROLLER_TYPE_HTML5NATIVE],
+                tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_FLASH, emic.top.MediaModule.TECHNOLOGY_HTML5],
+				//tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_HTML5],
+                url:"rsc/test1.mp3",
+                mimetype:"audio/mp3",
+                title: "Cancion ejemplo",
+                autoplay: false,
+				isLive:false
+            };
+*/
+/*
+		 config.media = {
+                controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_TRITON],
+                isLive: true,
+                autoplay:false,
+				tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_FLASH, emic.top.MediaModule.TECHNOLOGY_HTML5],
+                controllerData: {
+                    container_banner_bigbox: "banner-live_synced_bigbox",
+                    container_banner_leaderboard: "banner-live_synced_leaderboard",
+                    debugInStream: false,
+					version:"2.4",
+                    compatibleContainer: true
+                },
+                //container: "media_container",
+//                id: id,
+                id:"LOS40",
+				idTOP:"id5",
+//                id:"RHOZFM",
+                title: "Triton estaci�n prueba"
+            };
+
+
+*/
+		emic.top.debugTop = true;
+		emic.top.externalConsole = "consola";
+
+        pl.init(config);
+
+
+        //var plui = new emic.top.TopUIPlayer();
+
+        //TODO: Probar si funciona bien la configuración sucesiva (sin machacar)
+        var configui = {};
+        configui.generic = {container: "topui_container", id:"topuiTest", height:100};
+        configui.ui = {
+          skin: emic.top.UIModule.SKIN_PLAYSER,
+          poster: "http://notmykids.net/assets/video/big_buck_bunny.jpg",
+          overrideNativeControls: true,
+          showPreview: false,
+          skinData:{
+		      //hidePlaypause : "true",
+			  //hideSocial: "true",
+			  type: "small",
+			  hashtag: "#hasttag",
+ 			  pie: "#pie",
+  	 		  tipoNoticia: "Tipo Noticia"
+          }
+        };
+        configui.ad = {
+            //container: "ad_container",
+            conf:"confs/pub/playser/audio.js",
+            pTags: "zoo_madrid_a,zoo_a,comunidad_madrid_a,animales_cautividad_a,reproduccion_a,espana_a,mamiferos_a,animales_a,especies_a,medio_ambiente_a,ccaa,madrid",
+            enabled:true
+        };
+        configui.stat = {
+            conf:"confs/stats/profiles/playser.json",
+            enabled:false,
+            extraData:{
+                canal: "CanalPrueba",
+                seccionTematica: "Sección Temática prueba",
+                programa: "Programa prueba",
+                seccion: "Sección prueba",
+                objeto_ed: "Objeto editorial prueba",
+                id_usuario: "Userid prueba",
+                titulo_pagina: "Título página prueba",
+                seccion_escucha: "Sección escucha prueba"
+            }
+        };
+
+        configui.media = {
+            controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_AKAMAIHDS, emic.top.MediaModule.CONTROLLER_TYPE_HTML5NATIVE],
+            tecPriorityPC: [emic.top.MediaModule.TECHNOLOGY_HTML5],
+            //container: "media_container",
+            //container: "",
+            autoplay: false,
+            id:"myId",
+			idTOP:"top9",
+            title:"BIG BUNNY",
+			mimeType:"audio/mp4",
+            controllerData: {
+            },
+            //url:'http://meristation-vh.akamaihd.net/z/topmeri/20146/10/bfb1403dbb8f3e6726a2f40c3a74fddc_,500,1000,3000,.mp4.csmil/manifest.f4m'
+            url:'http://www.w3schools.com/html/mov_bbb.mp4'
+        };
+//        config.media = {
+//            controllerPriority: [emic.top.MediaModule.CONTROLLER_TYPE_TRITON],
+//            container: "media_container",
+//            isLive: "true",
+//            controllerData: {
+//                container_banner_bigbox: "banner-live_synced_bigbox",
+//                container_banner_leaderboard: "banner-live_synced_leaderboard"
+//            },
+//            id:'RHOZFM'
+//        };
+
+
+
+        //plui.init(configui, pl);
+/*
+
+        var plui2 = new emic.top.TopUIPlayer();
+        configui.generic.container = "topui_container2";
+        configui.generic.id = "topuiTest2";
+        configui.media.id = "myId2";
+		configui.media.idTOP = "top10";
+        configui.media.url = "http://media2.meristation.com/topmeri/20147/30/899c79830a02b38c8dd8d578bce09a2d_500.mp4";
+        configui.media.title = "Video html5 2";
+        configui.ui.poster = "http://media2.meristation.com/topmeri/20147/30/20140730085952_1406703638_still.jpg";
+
+        plui2.init(configui, pl);
+*/
+
+        function onMediaHandler(e){
+
+            console.log("MEDIA Evento test:", e.type);
+
+            switch (e.type){
+
+                case emic.top.event.MediaEvent.ON_READY:
+                    //pl.config({media:{id:'RHOZFM'}});
+                    //pl.config({media:{id:'LOS40'}});
+                    console.log("REady!!!");
+                    //mm.play();
+                break;
+                case emic.top.event.MediaEvent.ON_STATUS_CHANGE:
+                    console.log("STATUS: ",mm.getStatus());
+                break;
+                case emic.top.event.MediaEvent.ON_CUE:
+                    console.log('Artist: ' + ev.data.cuePoint.artistName + '<BR>Title: ' + ev.data.cuePoint.cueTitle);
+                break;
+            }
+        }
+
+        function onAdHandler(e){
+            console.log("AD Evento test:", e.type, e.data, e.id);
+            switch (e.type){
+
+                case emic.top.event.AdEvent.ON_AD_INSTREAM_START:
+                    try{
+                        document.getElementById(e.id).style.display = "";
+                    }catch (e){
+
+                    }
+                break;
+                case emic.top.event.AdEvent.ON_AD_INSTREAM_END:
+                    try{
+                        document.getElementById(e.id).style.display = "none";
+                    }catch (e){
+
+                    }
+                break;
+                case emic.top.event.AdEvent.ON_AD_VIDEO_START:
+
+                break;
+                case emic.top.event.AdEvent.ON_AD_VIDEO_END:
+
+                break;
+            }
+        }
+
+    </script>
+
+
+
+</body>
+</html>

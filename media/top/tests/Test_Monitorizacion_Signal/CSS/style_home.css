@@ -1,0 +1,50 @@
+body{
+
+    min-width: 900px;
+}
+
+
+@media (max-width: 2500px) {
+
+    .head {
+
+
+        height: 100px;
+        background-color: #000000;
+        padding-top: 5px;
+
+
+    }
+
+
+
+}
+
+@media (max-width: 1480px) {
+
+    .head {
+
+        width: 714px;
+        height: 100px;
+        background-color: #000000;
+        padding-top: 5px;
+
+
+    }
+
+    .head_title {
+        padding-top: 40px;
+        width: 30%;
+        text-align: center;
+        visibility: hidden;
+    }
+
+
+    .head_options{
+
+        padding-top: 40px;
+        width: 30%;
+        text-align: right;
+    }
+
+}

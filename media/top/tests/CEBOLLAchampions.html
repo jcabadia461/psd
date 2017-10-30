@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+</head>
+<!-- desarrollo -->
+<!-- integracion -->
+<!--script type='text/javascript' src='http://playerint.top.prisasd.com/psdmedia/media/simple/js/SimpleMediaPlayer.min.js'></script-->
+<!-- produccion -->
+<!--script type='text/javascript' src='http://player-top.prisasd.com/psdmedia/media/simple/js/SimpleMediaPlayer.min.js'></script-->
+
+<body>
+
+<script>
+tplib = true;
+mm_timeout_mbl = true;
+mm_base = true;
+</script>
+
+<script type="text/javascript" src="http://player-top.prisasd.com/psdmedia/media/simple/js/lib/SimpleMediaPlayer.lib.js"></script>
+
+
+<div id='superior' style='height:0px;width:100%;'>
+            <div id="listita" style='width:25%;height:100%;background:red;position:relative;float:left;'></div>
+            <div id="container0" style='width:50%;height:100%;position:relative;float:left;'></div><!--contenedor de video-->
+            <div id="listita2" style='width:25%;height:100%;background:red;position:relative;float:left;'></div>
+
+
+</div>
+<script type="text/javascript">
+
+initialplayerwidth = document.getElementById("container0").style.width;
+initialplaylistwidth = document.getElementById("listita").style.width;
+
+resize_16_9 = function(contenedor,cont_player,cont_lista){
+	var movil = false;
+
+	var anchuracontenedor = contenedor.offsetWidth;
+	var anchuratotal = cont_player.offsetWidth;
+
+    if(anchuracontenedor<768){
+        anchuratotal = anchuracontenedor;
+        movil = true;
+		cont_player.style.width = "100%";
+    }else{
+		cont_player.style.width = initialplayerwidth;		
+		anchuratotal = cont_player.offsetWidth;
+		movil = false;
+	}
+
+	var alturatotal = Math.floor(anchuratotal*9/16);
+	
+	//cont_player.style.width = anchuratotal + "px";
+	cont_player.style.height = alturatotal + "px";
+	
+	for(i in cont_lista){
+		if(movil){
+			cont_lista[i].style.width = "100%";
+//			cont_lista[i].style.float = "right";
+		}
+		else{
+			cont_lista[i].style.width = initialplaylistwidth;
+		}
+	    //cont_lista[i].style.width = Math.floor((anchuracontenedor - cont_player.offsetWidth)/cont_lista.length - 10) + "px";
+		cont_lista[i].style.height = alturatotal + "px";
+	}
+}
+
+var autonext = true;
+var repeat = false;
+
+if(window.location.search.indexOf("autonext")>0)
+	autonext = true;
+if(window.location.search.indexOf("repeatall")>0)
+	repeat = "all";
+if(window.location.search.indexOf("repeatone")>0)
+    repeat = 1;
+
+
+c_player = {
+        "dev": false,
+        "id_cuenta": "elpais",
+        "media_type": "video",
+        "id_player": "141",
+        "id_media": "20160304214415",
+        "id_container": "container0",
+		"topPlayer":{"media":{"autoplay":true}}
+    };
+c_playlist = {
+		"dev": false,
+		"URL_list":"http://webfastapi.top.des.prisadigital.int/api/search/elpais/video/?order=true&from=0&size=12&tags=s(mc)",
+		"URL_list":"http://webfastapi.top.des.prisadigital.int/api/buscar/elpais/video/?order=true&from=0&size=5&texto=real+madrid",
+	//	"URL_list":"http://fapi-top.prisasd.com/api/buscar/elpais/video/?order=true&from=0&size=5&texto=debate",
+//		"URL_list":"http://fapi-top.prisasd.com/api/v1/search/elpais/video/tags?tags=m(premiososcar2016)&orderBy=islive|desc",
+        "items_page": 20,
+        "startingIndex": 0,
+        "repeat": 2,
+        "autoplay": true,
+        "id_cuenta": "elpais",
+        "id_container_playlist": "listita",
+        "skin":"lista",
+        "autoNext":true,
+        "skinPlaylist":"lista",
+		"playerPercent":0,
+		"reload_secs":30
+};
+c_playlist2 = {
+        "dev": false,
+        "URL_list":"http://fapi-top.prisasd.com/api/buscar/elpais/video/?order=true&from=0&size=8&texto=barcelona",
+        "items_page": 20,
+        "startingIndex": 0,
+        "repeat": 2,
+        "autoplay": true,
+        "id_cuenta": "elpais",
+        "id_container_playlist": "listita2",
+        "skin":"lista",
+        "autoNext":true,
+        "skinPlaylist":"lista",
+		"reload_secs":29
+};
+
+var cebolla = new psd.media.TopEmbedPlaylist(c_player,[c_playlist,c_playlist2]);
+cebolla.init();
+
+resize_16_9(document.getElementById("superior"),document.getElementById("container0"),[document.getElementById("listita"),document.getElementById("listita2")]);
+
+
+window.onresize = function(){
+resize_16_9(document.getElementById("superior"),document.getElementById("container0"),[document.getElementById("listita"),document.getElementById("listita2")]);
+};
+
+</script>
+
+
+
+</body>
+</html>
+

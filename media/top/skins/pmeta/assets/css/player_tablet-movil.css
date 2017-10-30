@@ -1,0 +1,6 @@
+
+/* PLAYER tablet-movil en playser - reescritura de player-desktop.css ====================================================================================================================== */
+
+.player .info .label {display: none;}
+.player .embed .inner-embed,
+.player .info .conf-emisora .inner-conf {padding-left: 0;}

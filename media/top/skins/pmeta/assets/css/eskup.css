@@ -1,0 +1,58 @@
+
+@import "http://cadenaser00.epimg.net/Estilos/v1.x/v1.0/eskup.css";
+
+#contenedor {max-width: 730px;}
+
+.aviso {margin: 10px;}
+.mensajes {padding-bottom: 0;}
+.article {margin: 0;}
+.article .nombres {color: #4dc5ad}
+.article .comentario {margin: 0 10px 1px;}
+.article .comentario .contenedorbotones a.responder {color: #4dc5ad}
+.article .comentario .contenedorbotones .fecha a:hover {color: #000;}
+.article .escribirmensaje {margin-bottom: 0;}
+
+.article .comentario p a, .article .comentario .contenidomensaje a {color: #4dc5ad}
+.article .comentario p a:hover, .article .comentario .contenidomensaje a:hover {color: #333;}
+.mensajes .comentario p.respuesta {margin-left: 0;}
+.mensajes .comentario p.respuesta a {background-image: url(../img/sprite-eskup.png); background-position: 0 -50px }
+.mensajes .flotante .comentario .nombres {color: #4dc5ad}
+.article .contenedorcolumnas .flotante .comentario .contenidomensaje {margin-left: 11%;}
+.provisional .article .contenedorcolumnas .comentario {padding-top: 34px;}
+
+.escribirmensaje .aviso {margin: 10px 0;}
+.escribirmensaje .contenedorinferior .botones .imagen {background-image: url(../img/sprite-eskup.png); background-position: 0 0 }
+.escribirmensaje .contenedorinferior .botones .boton:hover,
+.escribirmensaje .contenedorinferior .opciones a.borrarimagen:hover {color: #000}
+.escribirmensaje .contenedorsuperior textarea.cajaactiva {padding: 10px;box-sizing: border-box; width: 100%;}
+
+.contenedorpaginacion {background: none; margin-top: 20px;}
+.paginacion {background: none; height: 46px; padding: 0;}
+.paginacion ul li a {background-color: #4dc5ad;border: 0;}
+.paginacion ul li a:hover {background-color: #333;}
+
+.recargar, .refresco a {background-image: url(../img/sprite-eskup.png); background-position: 15px -99px;}
+.recargar:hover {opacity: 0.7;}
+
+.aviso_nombre_apellidos.aviso_ser {margin-bottom: 10px!important; text-align: center; background-color: transparent!important;}
+.aviso_nombre_apellidos.aviso_ser .aviso_nombre_apellidos_texto {font-weight: 400!important; font-size: 12px!important; text-transform: uppercase; text-shadow: 1px 1px 0 #fff; color: #999; padding: 7px 14px 7px 34px!important; background-position: 9px -3962px!important; background-color: #f3f3f3!important; border-radius: 100px;}
+
+
+@media (max-width: 320px) {
+	.provisional .article {background: #f1f1f1;}
+	.article .comentario p,
+	.article .comentario .contenidomensaje {font-size: 13px; line-height: 1.4em;}
+	.article .nombre,
+	.mensajes .comentario .tema,
+	.article .contenedorcolumnas .flotante .comentario .contenidomensaje {font-size: 12px}
+	.article .contenedorcolumnas .flotante .comentario .contenidomensaje {margin-left: 4%; padding-top: 47px; padding-right: 10px;}
+	.article .contenedorcolumnas .flotante .fotocompleta {margin: 10px 0 0 0;}
+	.article .comentario .contenedorbotones .fecha {font-size: 11px;}
+	.escribirmensaje .contenedorinferior .opciones {margin: 0; max-width: 226px; left: -3px;}
+	.escribirmensaje .contenedorinferior .opciones span {display: block;}
+	.escribirmensaje .contenedorinferior .opciones a.borrarimagen {margin: 20px 0 10px; display: inline-block;}
+	.mensajes {padding-top: 1px;}
+	.aviso_nombre_apellidos.aviso_ser {position: relative;}
+	.aviso_nombre_apellidos.aviso_ser .aviso_nombre_apellidos_texto {font-size: 10px!important; line-height: 16px; background-image: none!important; padding: 15px 14px 10px 14px!important;}
+	.aviso_nombre_apellidos.aviso_ser .aviso_nombre_apellidos_texto:before {content:""; position: absolute; top: -5px; left: 50%; transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); width: 19px; height: 24px; background: url(http://eskup.elpais.com/Iconos/v1.x/v1.0/sprite_neutro.png) no-repeat 0 -3964px; }
+}
