@@ -1,2 +1,0 @@
-_advert="_advert";
-
